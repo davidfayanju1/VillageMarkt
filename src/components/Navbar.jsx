@@ -65,14 +65,14 @@ const Navbar = () => {
           speed={800}
         >
           <SwiperSlide>
-            <p className="text-dark-green w-full text-center">
+            <p className="text-dark-green w-full text-center font-normal">
               From Farm To Your Doorstep
             </p>
           </SwiperSlide>
           <SwiperSlide>
             <Link
               to={"/"}
-              className="block underline text-dark-green w-full text-center "
+              className="block underline text-dark-green w-full text-center font-normal"
             >
               Free Delivery on N30,000 and over
             </Link>
