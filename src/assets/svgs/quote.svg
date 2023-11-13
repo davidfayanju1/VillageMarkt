@@ -1,0 +1,22 @@
+<svg
+                class="d-block"
+                width="48"
+                height="48"
+                viewBox="0 0 24 24"
+                fill="#74A343"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M4.63316 16.8603L8.64819 11.1262L10.2865 12.2734L6.27146 18.0074L4.63316 16.8603Z"
+                ></path>
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M14.6297 16.8603L18.6448 11.1262L20.2831 12.2734L16.268 18.0074L14.6297 16.8603Z"
+                ></path>
+                <circle cx="7" cy="9.99268" r="4"></circle>
+                <circle cx="17" cy="9.99268" r="4"></circle>
+              </svg>
