@@ -30,7 +30,7 @@ const Herosection = () => {
             to save on your purchases.
           </i>
         </p>
-        <div className="button_flex flex flex-wrap items-start md:w-full w-[90%] bg-red-900 gap-[1rem] mt-[3rem]">
+        <div className="button_flex flex flex-wrap items-start md:w-full w-[90%]  gap-[1rem] mt-[3rem]">
           <Link
             to={"/products"}
             className="md:text-[1.2rem] text-white font-medium py-[.7rem] md:px-[2.3rem] px-[1.5rem] flex items-center justify-center bg-dark-green rounded-[25px] font-serif md:min-w-[14rem]"
