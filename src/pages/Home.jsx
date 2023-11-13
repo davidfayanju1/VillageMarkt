@@ -3,7 +3,7 @@ import MainLayout from "../layout/MainLayout";
 import Herosection from "../components/home/Herosection";
 import Navbar from "../components/Navbar";
 import TextArea from "../components/home/TextArea";
-import Carousel from "../components/home/carousel";
+import Carousel from "../components/home/Carousel";
 import Slider from "../components/home/Slider";
 import Categories from "../components/home/Categories";
 import Bundles from "../components/home/Bundles";
