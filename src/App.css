@@ -84,8 +84,8 @@ body {
 @media screen and (max-width: 768px) {
   .mySwiper .swiper-button-next,
   .mySwiper .swiper-button-prev {
-    height: 2rem !important;
-    width: 2rem !important;
+    height: 2.4rem !important;
+    width: 2.4rem !important;
   }
 
   .mySwiper .swiper-button-next::after,
