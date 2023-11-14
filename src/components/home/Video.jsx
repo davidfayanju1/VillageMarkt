@@ -37,7 +37,7 @@ const Video = () => {
                 offering an array of wholesome products to support your
                 well-being.
               </p>
-              <div className="button_flex flex md:flex-row flex-col items-center justify-center w-[50%] gap-[1rem] mt-[3rem]">
+              <div className="button_flex flex flex-wrap items-center justify-center md:w-[50%] w-full gap-[1rem] mt-[3rem]">
                 <Link
                   to={"/products/all"}
                   className="md:text-[1.2rem] text-white font-medium py-[.7rem] md:px-[2.3rem] px-[1.5rem] flex items-center justify-center bg-dark-green rounded-[25px] font-serif md:min-w-[7rem]"

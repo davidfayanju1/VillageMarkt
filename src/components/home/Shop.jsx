@@ -10,36 +10,36 @@ const Shop = () => {
       <div className="main-container relative">
         <marquee
           behaviour="alternate"
-          scrollamount="15"
-          className="cursor-default py-[.5rem] bg-carpet-green relative"
+          scrollamount="10"
+          className="cursor-default md:py-[.5rem] py-[.2rem] bg-carpet-green relative"
         >
           <div className="flex items-center gap-[5rem]">
-            <span className="text-white font-serif text-[1.9rem] font-semibold">
+            <span className="text-white font-serif md:text-[1.9rem] text-[1.1rem] font-semibold">
               • Fresh Foods • Healthy Buy • From Farm 🚜 to Doorstep
             </span>
-            <span className="text-white font-serif text-[1.9rem] font-semibold">
+            <span className="text-white font-serif md:text-[1.9rem] text-[1.1rem] font-semibold">
               • Fresh Foods • Healthy Buy • From Farm 🚜 to Doorstep
             </span>
-            <span className="text-white font-serif text-[1.9rem] font-semibold">
+            <span className="text-white font-serif md:text-[1.9rem] text-[1.1rem] font-semibold">
               • Fresh Foods • Healthy Buy • From Farm 🚜 to Doorstep
             </span>
-            <span className="text-white font-serif text-[1.9rem] font-semibold">
+            <span className="text-white font-serif md:text-[1.9rem] text-[1.1rem] font-semibold">
               • Fresh Foods • Healthy Buy • From Farm 🚜 to Doorstep
             </span>
-            <span className="text-white font-serif text-[1.9rem] font-semibold">
+            <span className="text-white font-serif md:text-[1.9rem] text-[1.1rem] font-semibold">
               • Fresh Foods • Healthy Buy • From Farm 🚜 to Doorstep
             </span>
-            <span className="text-white font-serif text-[1.9rem] font-semibold">
+            <span className="text-white font-serif md:text-[1.9rem] text-[1.1rem] font-semibold">
               • Fresh Foods • Healthy Buy • From Farm 🚜 to Doorstep
             </span>
-            <span className="text-white font-serif text-[1.9rem] font-semibold">
+            <span className="text-white font-serif md:text-[1.9rem] text-[1.1rem] font-semibold">
               • Fresh Foods • Healthy Buy • From Farm 🚜 to Doorstep
             </span>
           </div>
         </marquee>
         <button
           onClick={() => setToggle(!toggle)}
-          className="absolute top-[8px] right-[5%] flex items-center justify-center hover:opacity-[.9] transition-all delay-[.5sec] h-[2.75rem] w-[2.75rem] rounded-full bg-white border-solid border-[1.5px] border-gray-400 hover:border-gray-500"
+          className="absolute md:top-[8px] top-0 right-[5%] flex items-center justify-center hover:opacity-[.9] transition-all delay-[.5sec] md:h-[2.75rem] md:w-[2.75rem] p-[.2rem] rounded-full bg-white border-solid border-[1.5px] border-gray-400 hover:border-gray-500"
         >
           {toggle ? <Pause /> : <Play />}
         </button>

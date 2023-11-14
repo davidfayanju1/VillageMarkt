@@ -9,12 +9,6 @@ import {
   UserDark,
   CartDark,
 } from "../assets/svgs/svg-icons";
-import { Swiper, SwiperSlide } from "swiper/react";
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/navigation";
-// import required modules
-import { Autoplay, Navigation } from "swiper/modules";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { toggleOpen } from "../redux/slices/toggleSlice";
@@ -32,9 +26,9 @@ const Navbar = () => {
     const handleScroll = () => {
       const currentScroll = window.scrollY;
 
-      if (prevScroll < currentScroll) {
+      if (window.scrollY >= 25 && prevScroll < currentScroll) {
         setTop(false);
-      } else if (window.scrollY >= 40 && prevScroll > currentScroll) {
+      } else if (window.scrollY >= 30 && prevScroll > currentScroll) {
         setFixed(true);
         setTop(true);
       } else {
@@ -53,34 +47,8 @@ const Navbar = () => {
 
   return (
     <nav>
-      <section className="top_ad bg-lemon-accent w-full h-[2.5rem] py-[.5rem]">
-        <Swiper
-          navigation={true}
-          modules={[Navigation, Autoplay]}
-          autoplay={{ delay: 4000 }}
-          className="nav-swiper"
-          slidesPerView={1}
-          loop={true}
-          centeredSlides={false}
-          speed={800}
-        >
-          <SwiperSlide>
-            <p className="text-dark-green w-full text-center md:font-normal font-light">
-              From Farm To Your Doorstep
-            </p>
-          </SwiperSlide>
-          <SwiperSlide>
-            <Link
-              to={"/"}
-              className="block underline text-dark-green w-full text-center md:font-normal font-light"
-            >
-              Free Delivery on N30,000 and over
-            </Link>
-          </SwiperSlide>
-        </Swiper>
-      </section>
       <hgroup
-        className={`z-[1000] md:px-[4rem] px-[1rem] py-[2rem] ${
+        className={`z-[1000] md:px-[4rem] px-[1rem] py-[1rem] ${
           fixed ? "bg-cream border-b-gray-200 border-b-[2px]" : "bg-transparent"
         } fixed ${fixed ? "top-[0px]" : "top-[2.5rem]"} left-0 w-full ${
           top ? "flex" : "hidden"
@@ -94,7 +62,7 @@ const Navbar = () => {
             />
           ) : (
             <Burger
-              className="cursor-pointer"
+              className="cursor-pointer text-[8rem]"
               onClick={() => dispatch(toggleOpen())}
             />
           )}
@@ -102,7 +70,7 @@ const Navbar = () => {
             <img
               src="https://villagemarkt.com/cdn/shop/files/vm_for_light_bg.png?v=1694611856"
               alt="logo-image"
-              className="w-[2rem] h-[2rem]"
+              className="w-[2rem] h-[3rem]"
             />
           </Link>
         </div>
