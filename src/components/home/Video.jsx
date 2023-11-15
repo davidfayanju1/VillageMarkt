@@ -23,7 +23,7 @@ const Video = () => {
             <img src="//villagemarkt.com/cdn/shop/files/preview_images/64adab73e148418db873388db0761837.thumbnail.0000000000_small.jpg?v=1697538338"></img>
           </video>
         </div>
-        <div className="details-container absolute top-[12%] left-[6%] z-[6] w-[89%]">
+        <div className="details-container absolute md:top-[12%] top-[190px] left-[6%] z-[6] w-[89%]">
           <section className="flex items-center justify-center mb-[6rem] w-full">
             <hgroup className="w-full flex flex-col items-center justify-center text-center">
               <span className="block text-light-green text-center mb-[1rem] md:text-[1.05rem]">

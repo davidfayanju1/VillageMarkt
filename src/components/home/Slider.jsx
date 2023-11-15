@@ -39,7 +39,7 @@ const Slider = () => {
         </Marquee>
         <button
           onClick={() => setToggle(!toggle)}
-          className="z-[100] absolute md:top-[8px] top-[5px] right-[5%] flex items-center justify-center hover:opacity-[.9] transition-all delay-[.5sec] md:h-[2.75rem] md:w-[2.75rem] p-[.2rem] rounded-full bg-white border-solid border-[1.5px] border-gray-400 hover:border-gray-500"
+          className="z-[100] absolute md:top-[8px] top-[12%] right-[5%] flex items-center justify-center hover:opacity-[.9] transition-all delay-[.5sec] md:h-[2.75rem] md:w-[2.75rem] p-[.2rem] rounded-full bg-white border-solid border-[1.5px] border-gray-400 hover:border-gray-500"
         >
           {toggle ? <Pause /> : <Play />}
         </button>

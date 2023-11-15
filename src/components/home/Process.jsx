@@ -81,7 +81,7 @@ const Process = () => {
         </div>
       </div>
 
-      <div className="desktop md:hidden block pl-[4rem] pr-[2rem] mx-auto">
+      <div className="mobile md:hidden block pl-[4rem] pr-[2rem] mx-auto">
         <div className="cards-container flex flex-col items-center justify-center">
           {stages.map((stage) => (
             <div className="group w-full relative after:absolute after:top-0 after:left-[-40px] after:block after:bg-white after:border-carpet-green after:border-solid after:border-[6px] after:w-[1.5rem] after:h-[1.5rem] after:rounded-full">
@@ -92,7 +92,7 @@ const Process = () => {
                       {stage.stage}
                     </span>
                     <div className="flex items-center justify-between">
-                      <span className="text-black font-semibold font-serif text-[.8rem]">
+                      <span className="block text-black font-semibold font-serif text-[1rem]">
                         {stage.title}
                       </span>
 
