@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Pause, Play } from "../../assets/svgs/svg-icons";
 import { Link } from "react-router-dom";
+import Marquee from "react-fast-marquee";
 
 const Shop = () => {
   const [toggle, setToggle] = useState(true);
@@ -8,10 +9,12 @@ const Shop = () => {
     <section className="md:py-[3rem] bg-primary">
       {/* marquee */}
       <div className="main-container relative">
-        <marquee
+        <Marquee
           behaviour="alternate"
           scrollamount="10"
-          className="cursor-default md:py-[.5rem] py-[.2rem] bg-carpet-green relative"
+          className="cursor-default md:py-[.5rem] py-[.5rem] bg-carpet-green relative"
+          speed={150}
+          play={toggle ? true : false}
         >
           <div className="flex items-center gap-[5rem]">
             <span className="text-white font-serif md:text-[1.9rem] text-[1.1rem] font-semibold">
@@ -36,10 +39,10 @@ const Shop = () => {
               • Fresh Foods • Healthy Buy • From Farm 🚜 to Doorstep
             </span>
           </div>
-        </marquee>
+        </Marquee>
         <button
           onClick={() => setToggle(!toggle)}
-          className="absolute md:top-[8px] top-0 right-[5%] flex items-center justify-center hover:opacity-[.9] transition-all delay-[.5sec] md:h-[2.75rem] md:w-[2.75rem] p-[.2rem] rounded-full bg-white border-solid border-[1.5px] border-gray-400 hover:border-gray-500"
+          className="z-[10] absolute md:top-[8px] top-0 right-[5%] flex items-center justify-center hover:opacity-[.9] transition-all delay-[.5sec] md:h-[2.75rem] md:w-[2.75rem] p-[.2rem] rounded-full bg-white border-solid border-[1.5px] border-gray-400 hover:border-gray-500"
         >
           {toggle ? <Pause /> : <Play />}
         </button>
