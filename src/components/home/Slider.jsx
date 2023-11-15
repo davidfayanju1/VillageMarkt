@@ -9,10 +9,8 @@ const Slider = () => {
       <div className="main-container slider-statement relative">
         <Marquee
           behaviour="alternate"
-          // scrollamount="10"
-          className="slider-statement cursor-default md:py-[.5rem] py-[.5rem] bg-carpet-green relative"
-          speed={150}
-          // pauseOnClick={true}
+          className="slider-statement cursor-default py-[.5rem] bg-carpet-green relative"
+          speed={120}
           play={toggle ? true : false}
         >
           <div className="element flex items-center gap-[5rem]">
@@ -41,7 +39,7 @@ const Slider = () => {
         </Marquee>
         <button
           onClick={() => setToggle(!toggle)}
-          className="z-[100] absolute md:top-[8px] top-[-5px] right-[5%] flex items-center justify-center hover:opacity-[.9] transition-all delay-[.5sec] md:h-[2.75rem] md:w-[2.75rem] p-[.2rem] rounded-full bg-white border-solid border-[1.5px] border-gray-400 hover:border-gray-500"
+          className="z-[100] absolute md:top-[8px] top-[5px] right-[5%] flex items-center justify-center hover:opacity-[.9] transition-all delay-[.5sec] md:h-[2.75rem] md:w-[2.75rem] p-[.2rem] rounded-full bg-white border-solid border-[1.5px] border-gray-400 hover:border-gray-500"
         >
           {toggle ? <Pause /> : <Play />}
         </button>
