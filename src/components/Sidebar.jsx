@@ -102,14 +102,14 @@ const Sidebar = () => {
       {open && (
         <motion.div
           {...panelBg}
-          className={`aside_container fixed top-0 left-0 h-full w-full z-[900000] bg-black-overlay-2 overflow-hidden aside`}
+          className="aside_container fixed top-0 left-0 h-full w-full z-[900000] bg-black-overlay-2 overflow-hidden aside"
         >
           <motion.aside
             {...panel}
-            className="bg-primary overflow-x-hidden absolute top-0 left-0 h-screen md:w-[27rem] w-full z-[10000] overflow-y-scroll"
+            className="bg-primary overflow-x-hidden absolute top-0 left-0 h-screen pb-[3rem] md:w-[27rem] w-full z-[10000] overflow-y-scroll"
           >
             <div className="content w-full">
-              <div className="stroke bg-primary fixed top-0 left-0 z-[2] md:w-[26.1rem] w-full after:block after:w-full after:h-[.03rem] after:bg-gray-400">
+              <div className="stroke bg-primary sticky top-0 left-0 z-[2] md:w-[26.1rem] w-full after:block after:w-full after:h-[.03rem] after:bg-gray-400">
                 <div className="menu md:px-[2rem] px-[1rem] py-[1rem] w-full flex items-center justify-between">
                   <span className="block font-serif text-[1.4rem] text-dark-green">
                     Menu
@@ -122,7 +122,7 @@ const Sidebar = () => {
               </div>
 
               {/* Links */}
-              <section className="links mt-[4rem] md:px-[1.8rem] px-[1rem] py-[2rem] after:block after:w-full after:h-[.03rem] after:bg-gray-400">
+              <section className="links md:px-[1.8rem] px-[1rem] py-[2rem] after:block after:w-full after:h-[.03rem] after:bg-gray-400">
                 <div className="shop mb-[1rem]">
                   <motion.div
                     className="flex items-center justify-between"

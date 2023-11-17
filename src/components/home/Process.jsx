@@ -104,7 +104,7 @@ const Process = () => {
                       ) : (
                         <ArrowUp
                           onClick={handleClose}
-                          className="cursor-pointer"
+                          className="cursor-pointer font-bold"
                         />
                       )}
                     </div>
