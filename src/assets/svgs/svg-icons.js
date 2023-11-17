@@ -20,6 +20,8 @@ import { ReactComponent as mail } from "./mail.svg";
 import { ReactComponent as twitter } from "./twitter.svg";
 import { ReactComponent as insta } from "./insta.svg";
 import { ReactComponent as cancel } from "./cancel.svg";
+import { ReactComponent as arrowRight } from "./arrow-right.svg";
+import { ReactComponent as filter } from "./filter.svg";
 
 export const Burger = React.memo(hamburger);
 export const Search = React.memo(search);
@@ -42,3 +44,5 @@ export const Twitter = React.memo(twitter);
 export const Instagram = React.memo(insta);
 export const Cancel = React.memo(cancel);
 // export const arrowDown = React.memo(arrowDown);
+export const ArrowRight = React.memo(arrowRight);
+export const Filter = React.memo(filter);
