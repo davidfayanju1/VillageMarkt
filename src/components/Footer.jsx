@@ -16,7 +16,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="md:px-[4rem] px-[2rem] py-[2rem] bg-primary">
+    <footer className="md:px-[4rem] px-[1.5rem] py-[2rem] bg-primary">
       <section
         onClick={scrollTop}
         className="to-top cursor-pointer mb-[3rem] flex items-center justify-start"
