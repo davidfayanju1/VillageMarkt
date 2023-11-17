@@ -12,7 +12,7 @@ const Shop = () => {
         <Marquee
           behaviour="alternate"
           scrollamount="10"
-          className="cursor-default py-[.5rem] bg-carpet-green relative"
+          className="cursor-default py-[.6rem] bg-carpet-green relative"
           speed={120}
           play={toggle ? true : false}
         >

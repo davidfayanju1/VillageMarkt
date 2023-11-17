@@ -143,7 +143,7 @@ const Sidebar = () => {
                   )}
                 </div>
 
-                <Link to={"/"}>
+                <Link to={"/"} onClick={() => dispatch(toggleClose())}>
                   <motion.div
                     {...text(0.2)}
                     className="block mb-[1rem] font-serif text-[1.2rem] py-[.5rem] text-dark-green"
@@ -173,7 +173,8 @@ const Sidebar = () => {
                         <Link
                           to={link.link}
                           key={link.name}
-                          className="block p-[.7rem] text-dark-green hover:bg-accent-green text-[1.05rem]"
+                          className="block p-[.7rem] text-dark-green hover:bg-accent-green-2 text-[1.05rem]"
+                          onClick={() => dispatch(toggleClose())}
                         >
                           {link.name}
                         </Link>
@@ -182,7 +183,10 @@ const Sidebar = () => {
                   )}
                 </div>
 
-                <Link to={"/contact-us"}>
+                <Link
+                  to={"/contact-us"}
+                  onClick={() => dispatch(toggleClose())}
+                >
                   <motion.div
                     {...text(0.4)}
                     className="block mb-[1rem] font-serif text-[1.2rem] py-[.5rem] text-dark-green"
@@ -191,7 +195,7 @@ const Sidebar = () => {
                   </motion.div>
                 </Link>
 
-                <Link to={"/bundles"}>
+                <Link to={"/bundles"} onClick={() => dispatch(toggleClose())}>
                   <motion.div
                     {...text(0.5)}
                     className="block mb-[1rem] font-serif text-[1.2rem] py-[.5rem] text-dark-green"
@@ -211,6 +215,7 @@ const Sidebar = () => {
                 <Link
                   to={"tel:+2349068626856"}
                   className="flex mb-[1.6rem] items-center gap-[.6rem]"
+                  onClick={() => dispatch(toggleClose())}
                 >
                   <div className="h-[2rem] w-[2rem] flex items-center justify-center rounded-full bg-accent-yellow">
                     <Telephone />
@@ -220,6 +225,7 @@ const Sidebar = () => {
                 <Link
                   to={"mailto:villagemarkt@gmail.com"}
                   className="flex mb-[2rem] items-center gap-[.6rem]"
+                  onClick={() => dispatch(toggleClose())}
                 >
                   <div className="flex items-center justify-center h-[2rem] w-[2rem] rounded-full bg-accent-yellow">
                     <Mail />
