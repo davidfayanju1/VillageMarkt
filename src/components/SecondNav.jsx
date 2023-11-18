@@ -50,7 +50,7 @@ const SecondNav = () => {
     <AnimatePresence mode="wait" initial={false}>
       <motion.hgroup
         className={` md:px-[4rem] px-[1rem] py-[1rem] bg-cream border-b-gray-200 border-b-[2px] ${
-          fixed ? "sticky top-0" : "static"
+          fixed ? "sticky top-0 z-[100]" : "static"
         } left-0 w-full flex items-center justify-between`}
       >
         <div className="logo flex items-center gap-[2rem]">
