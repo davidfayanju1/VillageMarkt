@@ -46,7 +46,7 @@ const FilterSection = () => {
         </ul>
       </nav>
       <hgroup>
-        <span className="title block font-serif md:text-[2.5rem] text-[2rem] md:text-left text-center mb-[4rem]">
+        <span className="title block font-serif md:text-[2.5rem] text-[2rem] md:text-left text-center mb-[6rem]">
           Products
         </span>
       </hgroup>
@@ -63,17 +63,21 @@ const FilterSection = () => {
           <span className="block product_number text-gray-400 md:w-[10rem] w-[40%]">
             {144} Products
           </span>
-          <div className="relative md:min-w-[11rem] w-[60%]">
-            <select className="sort-component py-[.8rem] px-[1rem] w-full appearance-none hover:border-[3px] border-solid border-gray-300 border-[1px] p-[.5rem] flex items-center justify-center bg-transparent">
+          <div className="relative md:min-w-[13rem] w-[60%]">
+            <select className="sort-component py-[.8rem] px-[1rem] w-full appearance-none hover:border-[3px] transition-all delay-[.25s] ease-in-out border-solid border-gray-300 border-[1px] p-[.5rem] flex items-center justify-center bg-transparent">
               {/* <option value="" hidden selected></option> */}
-              <option value="male" selected>
+              <option value="alphabetically" selected>
                 Aphabetically, A-Z
               </option>
-              <option value="male">Aphabetically, Z-A</option>
-              <option value="female">Featured</option>
-              <option value="female">Best Selling</option>
+              <option value="reverse alphabetically">Aphabetically, Z-A</option>
+              <option value="featured">Featured</option>
+              <option value="best selling">Best Selling</option>
+              <option value="price">Price low to high</option>
+              <option value="reverse price">Price high to low</option>
+              <option value="date">Date, old to new</option>
+              <option value="reverse date">Date, new to old</option>
             </select>
-            <Down className="absolute top-[15px] right-[5px]" />
+            <Down className="absolute top-[15px] right-[9.6px]" />
           </div>
         </div>
       </section>

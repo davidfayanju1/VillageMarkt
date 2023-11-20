@@ -22,6 +22,7 @@ import { ReactComponent as insta } from "./insta.svg";
 import { ReactComponent as cancel } from "./cancel.svg";
 import { ReactComponent as arrowRight } from "./arrow-right.svg";
 import { ReactComponent as filter } from "./filter.svg";
+import { ReactComponent as paginationRight } from "./pagination-right.svg";
 
 export const Burger = React.memo(hamburger);
 export const Search = React.memo(search);
@@ -46,3 +47,4 @@ export const Cancel = React.memo(cancel);
 // export const arrowDown = React.memo(arrowDown);
 export const ArrowRight = React.memo(arrowRight);
 export const Filter = React.memo(filter);
+export const PaginationRight = React.memo(paginationRight);
