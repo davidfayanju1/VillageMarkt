@@ -51,7 +51,7 @@ const ProductsGrid = () => {
 
   return (
     <>
-      <section className="products-grid w-full md:mt-[3rem] md:px-[4rem] px-[1.5rem] pb-[8rem]">
+      <section className="products-grid w-full md:px-[4rem] px-[1.5rem] pb-[8rem] pt-[3rem] bg-primary">
         {products.map((element) => (
           <Link to={`/proucts/${element.name}`} key={element.name}>
             <div

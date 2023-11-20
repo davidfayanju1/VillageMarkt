@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { PaginationLeft, PaginationRight } from "../../assets/svgs/svg-icons";
 
 const Pagination = ({ products }) => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -42,21 +43,21 @@ const Pagination = ({ products }) => {
   };
   return (
     <div>
-      <div className="pagination flex items-center justify-center gap-[.25rem]">
+      <div className="pagination bg-primary flex items-center justify-center gap-[.25rem]">
         <button
-          className="bg-light-gray dark:bg-carousel dark:border-opacity-5 flex items-center justify-center w-[1.75rem] h-[1.75rem] text-base border-light-gray border-solid border-[1px] rounded-[.25rem]"
+          className="bg-light-gray dark:bg-carousel dark:border-opacity-5 flex items-center justify-center w-[3rem] rounded-full h-[3rem] text-base border-light-gray border-solid border-[1px]"
           onClick={onPrevClick}
           disabled={activePage === 1}
         >
-          <ChevronLeft />
+          <PaginationLeft />
         </button>
         {btnCount.map((btn) => (
           <button
             key={Math.random()}
             className={
               btn === activePage
-                ? "bg-white dark:bg-dark-primary text-yellow-400 w-[1.75rem] h-[1.75rem] text-[.8125rem] font-light rounded-[.25rem] border-light-gray border-solid border-[1px]"
-                : "rounded-[.25rem] text-gray bg-light-gray dark:bg-dark-primary w-[1.75rem] h-[1.75rem] border-light-gray border-solid border-[1px] text-[.8125rem]"
+                ? "bg-white dark:bg-dark-primary text-yellow-400 w-[3rem] rounded-full h-[3rem] text-[.8125rem] font-light border-light-gray border-solid border-[1px]"
+                : "text-gray bg-light-gray dark:bg-dark-primary w-[3rem] rounded-full h-[3rem] border-light-gray border-solid border-[1px] text-[.8125rem]"
             }
             onClick={() => handleChange(btn)}
           >
@@ -64,11 +65,11 @@ const Pagination = ({ products }) => {
           </button>
         ))}
         <button
-          className="w-[1.75rem] h-[1.75rem] bg-light-gray dark:border-opacity-5 dark:bg-carousel flex items-center justify-center text-base border-light-gray border-solid border-[1px] rounded-[.25rem]"
+          className="w-[3rem] rounded-full h-[3rem] bg-light-gray dark:border-opacity-5 dark:bg-carousel flex items-center justify-center text-base border-light-gray border-solid border-[1px]"
           onClick={onNextClick}
           disabled={activePage === btnCount.length}
         >
-          <ChevronRight />
+          <PaginationRight />
         </button>
       </div>
     </div>
