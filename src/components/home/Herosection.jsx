@@ -38,7 +38,7 @@ const Herosection = () => {
             Shop Products
           </Link>
           <Link
-            to={"/products/"}
+            to={"/collections"}
             className="md:text-[1.2rem] text-dark-green font-medium py-[.7rem] md:px-[2.3rem] px-[1.5rem] flex items-center justify-center bg-white rounded-[25px] font-serif md:min-w-[14rem]"
           >
             Shop Categories

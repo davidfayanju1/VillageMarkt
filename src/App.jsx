@@ -2,8 +2,9 @@ import { useState } from "react";
 import "./App.css";
 import { createBrowserRouter } from "react-router-dom";
 import Home from "./pages/Home";
-import { home, products } from "./utils/routes";
+import { collections, home, products } from "./utils/routes";
 import Products from "./pages/Products";
+import Collections from "./pages/Collections";
 
 export const router = createBrowserRouter([
   {
@@ -13,5 +14,9 @@ export const router = createBrowserRouter([
   {
     path: products,
     element: <Products />,
+  },
+  {
+    path: collections,
+    element: <Collections />,
   },
 ]);
