@@ -110,7 +110,7 @@ const Collections = () => {
           </span>
         </hgroup>
 
-        <div className="products grid md:grid-cols-[repeat(auto-fit,_minmax(200px,_1fr))] grid-cols-[repeat(auto-fit,_minmax(100px,_1fr))] md:gap-[2rem] gap-[.8rem]">
+        <div className="products grid md:grid-cols-[repeat(auto-fit,_minmax(200px,_1fr))] grid-cols-[repeat(auto-fit,_minmax(150px,_1fr))] md:gap-[2rem] gap-[.8rem]">
           {productsCategories.map((product) => (
             <div
               className="card relative overflow-hidden cursor-pointer h-full before:absolute before:top-0 before:left-0 before:w-full before:h-full mb-[4rem] before:z-[2] before:content-[''] before:bg-gradient-to-b before:from-black-overlay-light before:to-black-overlay"
