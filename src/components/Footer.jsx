@@ -11,7 +11,7 @@ const Footer = () => {
   const scrollTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth", 
+      behavior: "smooth",
     });
   };
 
@@ -111,7 +111,7 @@ const Footer = () => {
             <form>
               <input
                 type="text"
-                className="w-full mb-[1rem] outline-none px-[1.1rem] py-[1rem] placeholder:text-[1.05rem] placeholder:text-gray-300 text-gray-400"
+                className="w-full mb-[1rem] rounded-none outline-none px-[1.1rem] py-[1rem] placeholder:text-[1.05rem] placeholder:text-gray-300 text-gray-400"
                 placeholder="Enter your email address"
               />
               <button

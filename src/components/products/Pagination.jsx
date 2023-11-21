@@ -43,9 +43,11 @@ const Pagination = ({ products }) => {
   };
   return (
     <div>
-      <div className="pagination bg-primary flex items-center justify-center gap-[.25rem]">
+      <div className="pagination pb-[8rem] bg-primary flex items-center justify-center gap-[.8rem]">
         <button
-          className="bg-light-gray dark:bg-carousel dark:border-opacity-5 flex items-center justify-center w-[3rem] rounded-full h-[3rem] text-base border-light-gray border-solid border-[1px]"
+          className={`flex items-center justify-center w-[3.5rem] rounded-full h-[3.5rem] border-light-gray border-solid border-[1.5px] ${
+            activePage === 1 ? "bg-gray-300 opacity-25" : ""
+          }`}
           onClick={onPrevClick}
           disabled={activePage === 1}
         >
@@ -56,8 +58,8 @@ const Pagination = ({ products }) => {
             key={Math.random()}
             className={
               btn === activePage
-                ? "bg-white dark:bg-dark-primary text-yellow-400 w-[3rem] rounded-full h-[3rem] text-[.8125rem] font-light border-light-gray border-solid border-[1px]"
-                : "text-gray bg-light-gray dark:bg-dark-primary w-[3rem] rounded-full h-[3rem] border-light-gray border-solid border-[1px] text-[.8125rem]"
+                ? "text-[1.5rem] text-white font-serif bg-dark-green dark:bg-dark-primary w-[3.5rem] rounded-full h-[3.5rem] font-light"
+                : "text-gray bg-light-gray dark:bg-dark-primary w-[3.5rem] rounded-full h-[3.5rem] border-light-gray border-solid border-[1.5px] text-[1.5rem] font-serif"
             }
             onClick={() => handleChange(btn)}
           >
@@ -65,7 +67,9 @@ const Pagination = ({ products }) => {
           </button>
         ))}
         <button
-          className="w-[3rem] rounded-full h-[3rem] bg-light-gray dark:border-opacity-5 dark:bg-carousel flex items-center justify-center text-base border-light-gray border-solid border-[1px]"
+          className={`w-[3.5rem] rounded-full h-[3.5rem] bg-light-gray dark:border-opacity-5 dark:bg-carousel flex items-center justify-center text-base border-light-gray border-solid border-[1.5px] ${
+            activePage === btnCount.length ? "bg-gray-300 opacity-25" : ""
+          }`}
           onClick={onNextClick}
           disabled={activePage === btnCount.length}
         >
