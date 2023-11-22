@@ -47,11 +47,11 @@ const Process = () => {
   ];
   return (
     <section className="py-[4rem] bg-primary md:px-[4rem] w-full">
-      <hgroup className="flex flex-col items-center justify-center mb-[6rem]">
+      <hgroup className="flex flex-col items-center justify-center md:mb-[6rem] mb-[4rem]">
         <span className="block text-light-green mb-[1rem] md:text-[1.05rem] text-[.9rem]">
           WE ALWAYS HAVE YOU IN MIND
         </span>
-        <h2 className="mb-[1.5rem] font-cooper md:text-[3.8vw] text-[1.5rem] md:font-bold text-dark-green font-normal">
+        <h2 className="mb-[1.5rem] font-cooper md:text-[3.8vw] text-[1.5rem] font-bold text-dark-green">
           OUR PROCESS
         </h2>
       </hgroup>
@@ -92,7 +92,7 @@ const Process = () => {
                       {stage.stage}
                     </span>
                     <div className="flex items-center justify-between">
-                      <span className="block text-black font-semibold font-cooper text-[1.18rem]">
+                      <span className="block text-black font-semibold font-cooper md:text-[1.18rem] text-[1rem]">
                         {stage.title}
                       </span>
 

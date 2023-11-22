@@ -48,7 +48,7 @@ const Testimonials = () => {
   ];
   return (
     <section className=" py-[2rem] md:min-h-[45rem] bg-primary">
-      <hgroup className="md:px-[4rem] px-[2rem] font-cooper mb-[4rem] md:font-semibold font-medium md:text-[4vw] text-[2rem] text-dark-green">
+      <hgroup className="md:px-[4rem] px-[2rem] font-cooper mb-[4rem] font-semibold md:text-[4vw] text-[2rem] text-dark-green">
         Testimonials
       </hgroup>
 

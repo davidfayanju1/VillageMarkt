@@ -16,7 +16,7 @@ const Fresh = () => {
           <span className="block text-light-green mb-[1rem] md:text-[1.05rem] text-[.9rem]">
             CAREFULLY HAND-PICKED BY QUALITY FARMERS AND DEDICATED FOODIES LOL.
           </span>
-          <h2 className="mb-[1.5rem] font-cooper md:text-[3.8vw] text-[1.5rem] md:font-bold text-dark-green font-normal">
+          <h2 className="mb-[1.5rem] font-cooper md:text-[3.8vw] text-[1.55rem] font-bold text-dark-green">
             IF IT'S NOT FRESH, IT'S NOT FROM US
           </h2>
           <p className="text-[.9rem] font-normal md:w-[57%] mb-[3rem]">

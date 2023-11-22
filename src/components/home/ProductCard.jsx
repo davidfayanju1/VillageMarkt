@@ -61,7 +61,7 @@ const ProductCard = () => {
           // when window width is >= 640px
           340: {
             slidesPerView: 1,
-            spaceBetween: -107,
+            spaceBetween: -67,
           },
 
           640: {
@@ -84,7 +84,7 @@ const ProductCard = () => {
         {cardElements.map((element) => (
           <SwiperSlide>
             <div
-              className="card relative md:h-[22.52rem] h-[15rem] md:w-[21.4rem] w-[15rem] after:absolute after:top-0 after:left-0 after:w-full after:h-full mb-[4rem] after:z-[1] after:bg-gradient-to-b after:from-black-overlay-light after:to-black-overlay"
+              className="card relative md:h-[22.52rem] h-[18rem] md:w-[21.4rem] w-[18rem] after:absolute after:top-0 after:left-0 after:w-full after:h-full mb-[4rem] after:z-[1] after:bg-gradient-to-b after:from-black-overlay-light after:to-black-overlay"
               key={element.name}
               onMouseEnter={() => setChange(element.id)}
               onMouseLeave={() => setChange("")}
@@ -98,7 +98,7 @@ const ProductCard = () => {
                     : ""
                 }`}
               />
-              <div className="details-container absolute md:top-[62%] md:left-[6%] top-[40%] left-[6%] z-[6] w-[89%]">
+              <div className="details-container absolute md:top-[62%] md:left-[6%] top-[50%] left-[6%] z-[6] w-[89%]">
                 <small className="text-gray-200">Village Markt</small>
                 <span className="block name font-cooper text-white text-[1.2rem] font-[600]">
                   {element.name}

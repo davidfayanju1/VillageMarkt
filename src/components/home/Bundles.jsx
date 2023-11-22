@@ -25,7 +25,7 @@ const Bundles = () => {
           <span className="block text-light-green text-center mb-[1rem] md:text-[1.05rem]">
             SAVE ON BUNDLES
           </span>
-          <h2 className="mb-[1.5rem] font-cooper text-center md:text-[2.9rem] text-[1.8rem] md:font-bold text-dark-green font-normal">
+          <h2 className="mb-[1.5rem] font-cooper text-center md:text-[2.9rem] text-[1.8rem] font-bold text-dark-green">
             Our Bundle Collections
           </h2>
           <p className="text-[1rem] max-w-[30rem] w-[90%] font-normal text-center">

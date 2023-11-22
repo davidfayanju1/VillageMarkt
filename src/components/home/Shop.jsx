@@ -53,7 +53,7 @@ const Shop = () => {
           <span className="block text-light-green text-center mb-[1rem] md:text-[1.05rem]">
             SHOP WITH VILLAGE MARKT
           </span>
-          <h2 className="mb-[1.5rem] md:w-[90%] w-[95%] font-cooper text-center md:text-[3.9vw] text-[1.65rem] md:font-bold text-dark-green font-normal">
+          <h2 className="mb-[1.5rem] md:w-[90%] w-[95%] font-cooper text-center md:text-[3.9vw] text-[1.65rem] font-bold text-dark-green">
             Organic, Sustainably Farmed, Ethically Sourced.
           </h2>
           <p className="text-[1rem] md:w-[90%] font-normal text-center">

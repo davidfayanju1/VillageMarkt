@@ -20,7 +20,7 @@ const Herosection = () => {
         </div>
       </div>
       <div className="hero_text z-[500] absolute md:top-[19.7%] top-[32%] md:left-[5.5%] left-[4%] md:w-[55%] w-[95%]">
-        <h1 className="mb-[2rem] font-cooper text-white md:text-[6.5vw] text-[2rem] md:font-semibold">
+        <h1 className="mb-[2rem] font-cooper text-white md:text-[6.5vw] text-[2rem] font-semibold">
           From Farm To Your Doorstep
         </h1>
         <p className="text-white md:w-[75%] w-[90%]">

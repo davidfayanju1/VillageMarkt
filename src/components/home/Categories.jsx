@@ -40,7 +40,7 @@ const Categories = () => {
             WE HAVE CAREFULLY CURATED SOME AMAZING PRODUCTS WITH LOVE IN OUR
             HEARTS.
           </span>
-          <h2 className="mb-[1.5rem] font-cooper text-center md:text-[2.9rem] text-dark-green text-[1.5rem] md:font-[600] font-normal">
+          <h2 className="mb-[1.5rem] font-cooper text-center md:text-[2.9rem] text-dark-green text-[1.5rem] font-semibold">
             Choose from our extensive range of products categories
           </h2>
           <p className="text-[1rem] font-normal md:w-[86%] text-center">
@@ -101,7 +101,7 @@ const Categories = () => {
             // when window width is >= 640px
             340: {
               slidesPerView: 1,
-              spaceBetween: -107,
+              spaceBetween: -197,
             },
 
             640: {
@@ -123,7 +123,7 @@ const Categories = () => {
         >
           {productsCategories.map((product) => (
             <SwiperSlide>
-              <div className="container overflow-hidden md:h-[24.52rem] h-[15rem] w-[15rem] md:w-[18.8rem] transition-transform delay-[0.25sec] ease-in-out">
+              <div className="container overflow-hidden h-[14rem] w-[10rem]  transition-transform delay-[0.25sec] ease-in-out">
                 <div
                   className="card relative overflow-hidden cursor-pointer h-full before:absolute before:top-0 before:left-0 before:w-full before:h-full mb-[4rem] before:z-[2] before:content-[''] before:bg-gradient-to-b before:from-black-overlay-light before:to-black-overlay"
                   key={product.img}
@@ -136,12 +136,12 @@ const Categories = () => {
                     />
                   </div>
                   <div className="details-container absolute top-[62%] left-[6%] z-[6] w-[89%] text-center">
-                    <span className="block name font-serif text-white text-[1.4rem] font-[500]">
+                    <span className="block name font-serif text-white text-[1.2rem] font-[500]">
                       {product.category}
                     </span>
                     <Link
                       to={`/product/${product.category}`}
-                      className="text-white underline font-serif text-[1.1rem]"
+                      className="text-white underline font-serif text-[1rem]"
                     >
                       View {product.quantity} products
                     </Link>
