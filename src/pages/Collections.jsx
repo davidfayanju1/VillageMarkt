@@ -6,7 +6,6 @@ import SecondLayout from "../layout/SecondLayout";
 
 const Collections = () => {
   useTitle("Collections-Village Markt");
-
   // fruits, grains,oil,proteins
 
   const productsCategories = [
@@ -105,7 +104,7 @@ const Collections = () => {
           </ul>
         </nav>
         <hgroup>
-          <span className="title block font-serif md:text-[2.5rem] text-[2rem] md:text-left text-center mb-[6rem]">
+          <span className="title font-[600] font-cooper text-dark-green block md:text-[2.8rem] text-[2rem] md:text-left text-center mb-[4rem]">
             Collections
           </span>
         </hgroup>
@@ -124,12 +123,12 @@ const Collections = () => {
                 />
               </div>
               <div className="details-container absolute top-[79%] left-[6%] z-[6] w-[89%] text-left">
-                <span className="block name font-serif text-white md:text-[1.2rem] text-[.82rem] font-[500]">
+                <span className="block name font-cooper text-white md:text-[1.1rem] text-[.82rem] font-[600]">
                   {product.category}
                 </span>
                 <Link
                   to={`/product/${product.category}`}
-                  className="text-white underline font-serif md:text-[1rem] text-[.9rem]"
+                  className="text-white underline font-cooper font-[600] md:text-[.95rem] text-[.9rem]"
                 >
                   View {product.quantity} products
                 </Link>

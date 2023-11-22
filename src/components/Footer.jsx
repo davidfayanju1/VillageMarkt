@@ -21,7 +21,7 @@ const Footer = () => {
         onClick={scrollTop}
         className="to-top cursor-pointer mb-[3rem] flex items-center justify-start"
       >
-        <span className="block underline text-dark-green font-serif text-[1.1rem]">
+        <span className="block underline text-dark-green font-cooper text-[.9rem] font-semibold">
           Back to Top
         </span>
         <ToTop />
@@ -29,7 +29,7 @@ const Footer = () => {
       <section className="section-container flex flex-wrap  items-start justify-between gap-[2rem]">
         <div className="section_container md:w-[25%]">
           <div className="about">
-            <span className="block font-serif text-dark-green text-[1.1rem]">
+            <span className="block font-cooper text-dark-green text-[1rem] font-bold">
               About our store
             </span>
             <img
@@ -44,7 +44,7 @@ const Footer = () => {
             </span>
           </div>
           <div className="contact_us ">
-            <span className="block font-serif mb-[2rem] text-[1.1rem] text-dark-green">
+            <span className="block font-cooper mb-[2rem] text-[1rem] font-bold text-dark-green">
               Contact us
             </span>
             <Link
@@ -71,7 +71,7 @@ const Footer = () => {
         </div>
 
         <div className="collection">
-          <span className="block mb-[1.4rem] font-serif text-[1.1rem] font-medium">
+          <span className="block mb-[1.4rem] font-cooper text-[1rem] font-bold">
             Collection
           </span>
           <Link to={"/search"} className="block mb-[1rem] hover:underline">
@@ -82,7 +82,7 @@ const Footer = () => {
           </Link>
         </div>
         <div className="help">
-          <span className="block mb-[1.4rem] font-serif text-[1.1rem] text-dark-green">
+          <span className="block mb-[1.4rem] font-cooper text-[1rem] font-bold text-dark-green">
             Need Help?
           </span>
           <Link to={"/"} className="block hover:underline">
@@ -101,7 +101,7 @@ const Footer = () => {
 
         <div className="newsletter">
           <div className="new-letter mb-[2rem] md:w-[16rem] min-h-[10rem] py-[2rem] px-[1.3rem] bg-dark-green">
-            <h2 className="title font-serif text-[1.3rem] text-white mb-[.8rem]">
+            <h2 className="title font-cooper font-bold text-[1rem] text-white mb-[.8rem]">
               Newsletter
             </h2>
             <span className="block text-white mb-[.8rem]">
@@ -116,14 +116,14 @@ const Footer = () => {
               />
               <button
                 type="submit"
-                className="font-serif text-dark-green bg-white w-full rounded-full py-[1rem] text-[1.2rem] font-medium"
+                className="font-cooper text-dark-green bg-white w-full rounded-full py-[1rem] text-[1.2rem] font-bold"
               >
                 Subscribe
               </button>
             </form>
           </div>
           <div className="follow_us flex flex-col md:items-start items-center">
-            <span className="block title font-bold text-[1.1rem] text-dark-green font-serif mb-[1.1rem]">
+            <span className="block title font-bold text-[1.1rem] text-dark-green font-cooper mb-[1.1rem]">
               Follow us
             </span>
             <div className="svg_container flex items-center gap-[1.1rem]">

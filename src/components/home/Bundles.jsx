@@ -14,18 +14,18 @@ const Bundles = () => {
     },
     {
       img: "https://villagemarkt.com/cdn/shop/files/Frame_184.jpg?v=1697546081&width=950",
-      name: "OTHER BUNDLE",
+      name: "OTHER BUNDLES",
       link: "bundles",
     },
   ];
   return (
     <div className="md:min-h-[58rem] bg-primary md:pb-[10rem] pb-[7rem]">
-      <section className="flex items-center justify-center md:mb-[6rem] mb-[4rem] w-full">
+      <section className="flex items-center justify-center w-full">
         <hgroup className="md:max-w-[55%] w-full flex flex-col items-center justify-center text-center">
           <span className="block text-light-green text-center mb-[1rem] md:text-[1.05rem]">
             SAVE ON BUNDLES
           </span>
-          <h2 className="mb-[1.5rem] font-serif text-center md:text-[2.9rem] text-[1.8rem] md:font-medium font-normal">
+          <h2 className="mb-[1.5rem] font-cooper text-center md:text-[2.9rem] text-[1.8rem] md:font-bold text-dark-green font-normal">
             Our Bundle Collections
           </h2>
           <p className="text-[1rem] max-w-[30rem] w-[90%] font-normal text-center">
@@ -45,7 +45,7 @@ const Bundles = () => {
         <div className="flex items-center justify-center md:flex-nowrap flex-wrap gap-[1px] w-full md:px-[4rem]">
           {products?.map((product) => (
             <Link
-              to={"/bundles"}
+              to={`/bundles/${product.name}`}
               className="card relative h-[22.52rem] md:w-[21.4rem] w-[91%] after:absolute after:top-0 after:left-0 after:w-full after:h-full after:z-[1] after:bg-gradient-to-b after:from-black-overlay-light after:to-black-overlay"
               key={product.name}
             >
@@ -55,10 +55,10 @@ const Bundles = () => {
                 className="h-full w-full object-cover relative mb-[8rem] z-[1]"
               />
               <div className="details-container text-center absolute top-[72%] left-[6%] z-[6] w-[89%]">
-                <span className="block name font-serif text-white text-[1.4rem] font-[500]">
+                <span className="block mb-[1rem] name font-cooper text-white text-[1.2rem] font-semibold">
                   {product.name}
                 </span>
-                <span className="block text-white font-serif text-[1rem] underline">
+                <span className="block text-white font-cooper font-semibold text-[1rem] underline">
                   Check Bundle
                 </span>
               </div>

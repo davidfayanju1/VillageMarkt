@@ -20,7 +20,7 @@ const Herosection = () => {
         </div>
       </div>
       <div className="hero_text z-[500] absolute md:top-[19.7%] top-[32%] md:left-[5.5%] left-[4%] md:w-[55%] w-[95%]">
-        <h1 className="mb-[2rem] font-serif text-white md:text-[6vw] text-[2rem] md:font-semibold">
+        <h1 className="mb-[2rem] font-cooper text-white md:text-[6.5vw] text-[2rem] md:font-semibold">
           From Farm To Your Doorstep
         </h1>
         <p className="text-white md:w-[75%] w-[90%]">
@@ -33,13 +33,13 @@ const Herosection = () => {
         <div className="button_flex flex flex-wrap items-start md:w-full w-[90%]  gap-[1rem] mt-[3rem]">
           <Link
             to={"/products"}
-            className="md:text-[1.2rem] text-white font-medium py-[.7rem] md:px-[2.3rem] px-[1.5rem] flex items-center justify-center bg-dark-green rounded-[25px] font-serif md:min-w-[14rem]"
+            className="md:text-[1.2rem] text-white font-bold py-[.7rem] md:px-[2.3rem] px-[1.5rem] flex items-center justify-center bg-dark-green rounded-[25px] font-cooper md:min-w-[14rem]"
           >
             Shop Products
           </Link>
           <Link
             to={"/collections"}
-            className="md:text-[1.2rem] text-dark-green font-medium py-[.7rem] md:px-[2.3rem] px-[1.5rem] flex items-center justify-center bg-white rounded-[25px] font-serif md:min-w-[14rem]"
+            className="md:text-[1.2rem] text-dark-green font-bold py-[.7rem] md:px-[2.3rem] px-[1.5rem] flex items-center justify-center bg-white rounded-[25px] font-cooper md:min-w-[14rem]"
           >
             Shop Categories
           </Link>

@@ -100,7 +100,7 @@ const ProductCard = () => {
               />
               <div className="details-container absolute md:top-[62%] md:left-[6%] top-[40%] left-[6%] z-[6] w-[89%]">
                 <small className="text-gray-200">Village Markt</small>
-                <span className="block name font-serif text-white text-[1.4rem] font-[500]">
+                <span className="block name font-cooper text-white text-[1.2rem] font-[600]">
                   {element.name}
                 </span>
                 <span className="block text-white">From {element.price}</span>

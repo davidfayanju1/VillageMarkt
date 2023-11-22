@@ -40,7 +40,7 @@ const Categories = () => {
             WE HAVE CAREFULLY CURATED SOME AMAZING PRODUCTS WITH LOVE IN OUR
             HEARTS.
           </span>
-          <h2 className="mb-[1.5rem] font-serif text-center md:text-[2.9rem] text-[1.5rem] md:font-medium font-normal">
+          <h2 className="mb-[1.5rem] font-cooper text-center md:text-[2.9rem] text-dark-green text-[1.5rem] md:font-[600] font-normal">
             Choose from our extensive range of products categories
           </h2>
           <p className="text-[1rem] font-normal md:w-[86%] text-center">
@@ -73,13 +73,13 @@ const Categories = () => {
                   className="image hover:scale-[1.1] transition-transform delay-[0.25sec] ease-in-out h-full w-full object-cover relative mb-[8rem] z-[1]"
                 />
               </div>
-              <div className="details-container absolute top-[62%] left-[6%] z-[6] w-[89%] text-center">
-                <span className="block name font-serif text-white text-[1.4rem] font-[500]">
+              <div className="details-container absolute top-[75%] left-[6%] z-[6] w-[89%] text-center">
+                <span className="block name font-cooper text-white text-[1.3rem] font-[600]">
                   {product.category}
                 </span>
                 <Link
                   to={`/product/${product.category}`}
-                  className="text-white underline font-serif text-[1.1rem]"
+                  className="text-white underline font-cooper text-[1rem] font-bold"
                 >
                   View {product.quantity} products
                 </Link>
@@ -155,7 +155,7 @@ const Categories = () => {
       <section className="more_collection_button flex  items-center justify-center w-full mt-[6rem]">
         <Link
           to={"/collections"}
-          className="block bg-accent-green hover:opacity-[.8] hover:border-solid hover:border-[2px] hover:border-gray-400 hover:transition-all hover:delay-[.25s] hover:ease-in-out transition-all delay-[.25s] ease-in-out font-serif text-white font-semibold text-[1.1rem] max-w-[15rem] rounded-full py-[.7rem] w-[90%] text-center"
+          className="block bg-accent-green hover:opacity-[.8] hover:border-solid hover:border-[2px] hover:border-gray-400 hover:transition-all hover:delay-[.25s] hover:ease-in-out transition-all delay-[.25s] ease-in-out font-cooper text-white font-semibold text-[1.1rem] max-w-[13rem] rounded-full py-[.7rem] w-[90%] text-center"
         >
           View all collections
         </Link>

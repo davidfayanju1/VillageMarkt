@@ -103,6 +103,7 @@ const Sidebar = () => {
         <motion.div
           {...panelBg}
           className="aside_container fixed top-0 left-0 h-full w-full z-[900000] bg-black-overlay-2 overflow-hidden aside"
+          // onClick={() => dispatch(toggleClose())}
         >
           <motion.aside
             {...panel}
@@ -129,7 +130,7 @@ const Sidebar = () => {
                     onClick={() => setSideOpen(!sideOpen)}
                     {...text(0.1)}
                   >
-                    <span className="block font-serif text-[1.2rem] text-dark-green">
+                    <span className="block cursor-pointer font-serif text-[1.2rem] text-dark-green">
                       Shop
                     </span>
                     <button>
@@ -157,7 +158,7 @@ const Sidebar = () => {
                     className="flex items-center justify-between"
                     onClick={() => setSecondsideOpen(!secondsideOpen)}
                   >
-                    <span className="block font-serif text-[1.2rem] text-dark-green">
+                    <span className="block cursor-pointer font-serif text-[1.2rem] text-dark-green">
                       Categories
                     </span>
                     <button>

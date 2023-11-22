@@ -154,7 +154,7 @@ const ProductsGrid = () => {
             <div className="details-containe md:pl-[.9rem] mt-[.8rem]">
               <small className="text-gray-400">Village Markt</small>
               <Link to={`/products/${element.name}`}>
-                <span className="block name font-serif md:text-[1.2rem] font-[500] text-black">
+                <span className="block name font-cooper md:text-[1.2rem] text-dark-green font-bold">
                   {element.name}
                 </span>
                 <span className="block text-black md:text-[1rem]">

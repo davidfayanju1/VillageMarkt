@@ -29,7 +29,7 @@ const Video = () => {
               <span className="block text-light-green text-center mb-[1rem] md:text-[1.05rem]">
                 HEALTHY WHOLEFOODS FROM THE FARM
               </span>
-              <h2 className="mb-[1.5rem] text-white font-serif text-center md:text-[3.4vw] text-[1.8rem] md:font-medium font-normal">
+              <h2 className="mb-[1.5rem] text-white font-cooper text-center md:text-[4vw] text-[1.8rem] md:font-bold font-normal">
                 It pays to eat Healthy
               </h2>
               <p className=" text-white text-[1rem] max-w-[30rem] w-[90%] text-center font-bold">
@@ -40,13 +40,13 @@ const Video = () => {
               <div className="button_flex flex flex-wrap items-center justify-center md:w-[50%] w-full gap-[1rem] mt-[3rem]">
                 <Link
                   to={"/products/all"}
-                  className="md:text-[1.2rem] text-white font-medium py-[.7rem] md:px-[2.3rem] px-[1.5rem] flex items-center justify-center bg-dark-green rounded-[25px] font-serif md:min-w-[7rem]"
+                  className="md:text-[1.1rem] text-white font-bold py-[.7rem] md:px-[2.3rem] px-[1.5rem] flex items-center justify-center bg-dark-green rounded-[25px] font-cooper md:min-w-[7rem]"
                 >
                   Discover
                 </Link>
                 <Link
                   to={"/products/"}
-                  className="md:text-[1.2rem] text-dark-green font-medium py-[.7rem] md:px-[2rem] px-[1.5rem] flex items-center justify-center bg-white rounded-[25px] font-serif md:min-w-[7rem]"
+                  className="md:text-[1.1rem] text-dark-green font-bold py-[.7rem] md:px-[2rem] px-[1.5rem] flex items-center justify-center bg-white rounded-[25px] font-cooper md:min-w-[7rem]"
                 >
                   Eat Healthy
                 </Link>

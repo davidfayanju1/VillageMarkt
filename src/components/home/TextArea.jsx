@@ -7,7 +7,7 @@ const TextArea = () => {
         <span className="block text-light-green mb-[1rem] md:text-[1.37rem]">
           GET THESE AND MORE DELIVERED TO YOUR DOORSTEP
         </span>
-        <h2 className="mb-[1.3rem] font-serif md:text-[3.8vw] text-[1.5rem] md:font-medium font-normal">
+        <h2 className="mb-[1.3rem] font-cooper md:text-[4.5vw] text-[1.5rem] md:font-[600] text-dark-green font-normal">
           Today's Farm Fresh Recommendations
         </h2>
         <p className="text-[1.1rem] font-normal w-[90%]">

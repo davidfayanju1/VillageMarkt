@@ -51,7 +51,7 @@ const Process = () => {
         <span className="block text-light-green mb-[1rem] md:text-[1.05rem] text-[.9rem]">
           WE ALWAYS HAVE YOU IN MIND
         </span>
-        <h2 className="mb-[1.5rem] font-serif md:text-[3.8vw] text-[1.5rem] md:font-medium font-normal">
+        <h2 className="mb-[1.5rem] font-cooper md:text-[3.8vw] text-[1.5rem] md:font-bold text-dark-green font-normal">
           OUR PROCESS
         </h2>
       </hgroup>
@@ -62,10 +62,10 @@ const Process = () => {
             <div className="group w-[28%] h-[25rem] relative after:absolute after:top-[-12%] after:block after:bg-white after:border-carpet-green after:border-solid after:border-[6px] after:w-[1.5rem] after:h-[1.5rem] after:rounded-full">
               <div className="card_container flex flex-col items-start before:w-full before:h-[.25rem] before:block before:absolute before:top-[-9%] before:left-0 before:bg-carpet-green before:">
                 <div className="card h-full w-[91%]">
-                  <span className="mb-[.5rem] process_btn font-serif font-semibold bg-carpet-green rounded-full text-white w-[6rem] flex items-center justify-center">
+                  <span className="mb-[.5rem] process_btn font-cooper font-semibold bg-carpet-green rounded-full text-white w-[6rem] flex items-center justify-center">
                     {stage.stage}
                   </span>
-                  <span className="text-black block font-semibold font-serif text-[1rem]">
+                  <span className="text-black block font-semibold font-cooper text-[1.18rem]">
                     {stage.title}
                   </span>
                   <img
@@ -92,7 +92,7 @@ const Process = () => {
                       {stage.stage}
                     </span>
                     <div className="flex items-center justify-between">
-                      <span className="block text-black font-semibold font-serif text-[1rem]">
+                      <span className="block text-black font-semibold font-cooper text-[1.18rem]">
                         {stage.title}
                       </span>
 

@@ -46,14 +46,14 @@ const FilterSection = () => {
         </ul>
       </nav>
       <hgroup>
-        <span className="title block font-serif md:text-[2.5rem] text-[2rem] md:text-left text-center mb-[6rem]">
+        <span className="title block font-cooper font-bold md:text-[2.8rem] text-[2rem] md:text-left text-center mb-[6rem] text-dark-green">
           Products
         </span>
       </hgroup>
 
       <section className="filter flex md:flex-row flex-col gap-[2rem] items-center md:justify-between justify-center">
-        <button className="font-serif md:w-[8rem] w-full text-[1.1rem] filter border-solid border-[2px] border-gray-300 rounded-full text-center transition-all ease-in-out delay-100">
-          <div className="inner-container flex md:gap-0 gap-[.5rem] items-center justify-center hover:border-gray-700 hover:border-[1px] hover:border-solid w-full h-full rounded-full px-[1rem] py-[.6rem] transition-all ease-in-out delay-[.25s]">
+        <button className="font-cooper font-semibold md:w-[8rem] w-full text-[1.1rem] filter border-solid border-[2px] border-gray-300 rounded-full text-center transition-all ease-in-out delay-100">
+          <div className="inner-container flex md:gap-[.5rem] gap-[.5rem] items-center justify-center hover:border-gray-700 hover:border-[1px] hover:border-solid w-full h-full rounded-full px-[1rem] py-[.6rem] transition-all ease-in-out delay-[.25s]">
             Filter
             <Filter />
           </div>

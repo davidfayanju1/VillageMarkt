@@ -14,25 +14,25 @@ const Slider = () => {
           play={toggle ? true : false}
         >
           <div className="element flex items-center gap-[5rem]">
-            <span className="text-white font-serif md:text-[1.9rem] text-[1.3rem] font-semibold">
+            <span className="text-white font-cooper md:text-[1.9rem] text-[1.3rem] font-[800]">
               • Fresh Foods • Healthy Buy • From Farm 🚜 to Doorstep
             </span>
-            <span className="text-white font-serif md:text-[1.9rem] text-[1.3rem] font-semibold">
+            <span className="text-white font-cooper md:text-[1.9rem] text-[1.3rem] font-[800]">
               • Fresh Foods • Healthy Buy • From Farm 🚜 to Doorstep
             </span>
-            <span className="text-white font-serif md:text-[1.9rem] text-[1.3rem] font-semibold">
+            <span className="text-white font-cooper md:text-[1.9rem] text-[1.3rem] font-[800]">
               • Fresh Foods • Healthy Buy • From Farm 🚜 to Doorstep
             </span>
-            <span className="text-white font-serif md:text-[1.9rem] text-[1.3rem] font-semibold">
+            <span className="text-white font-cooper md:text-[1.9rem] text-[1.3rem] font-[800]">
               • Fresh Foods • Healthy Buy • From Farm 🚜 to Doorstep
             </span>
-            <span className="text-white font-serif md:text-[1.9rem] text-[1.3rem] font-semibold">
+            <span className="text-white font-cooper md:text-[1.9rem] text-[1.3rem] font-[800]">
               • Fresh Foods • Healthy Buy • From Farm 🚜 to Doorstep
             </span>
-            <span className="text-white font-serif md:text-[1.9rem] text-[1.3rem] font-semibold">
+            <span className="text-white font-cooper md:text-[1.9rem] text-[1.3rem] font-[800]">
               • Fresh Foods • Healthy Buy • From Farm 🚜 to Doorstep
             </span>
-            <span className="text-white font-serif md:text-[1.9rem] text-[1.3rem] font-semibold">
+            <span className="text-white font-cooper md:text-[1.9rem] text-[1.3rem] font-[800]">
               • Fresh Foods • Healthy Buy • From Farm 🚜 to Doorstep
             </span>
           </div>

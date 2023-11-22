@@ -48,7 +48,7 @@ const Testimonials = () => {
   ];
   return (
     <section className=" py-[2rem] md:min-h-[45rem] bg-primary">
-      <hgroup className="md:px-[4rem] px-[2rem] font-serif mb-[4rem] md:font-semibold font-medium md:text-[5vw] text-[2rem]">
+      <hgroup className="md:px-[4rem] px-[2rem] font-cooper mb-[4rem] md:font-semibold font-medium md:text-[4vw] text-[2rem] text-dark-green">
         Testimonials
       </hgroup>
 
@@ -98,7 +98,7 @@ const Testimonials = () => {
                 />
                 <Quote className="absolute bottom-0 left-0" />
               </div>
-              <span className="block name font-serif font-semibold text-[1.1rem]">
+              <span className="block name font-cooper font-semibold text-[1.1rem]">
                 {testimonial.name}
               </span>
               <small className="profession text-gray-400">

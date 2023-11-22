@@ -16,7 +16,7 @@ const Fresh = () => {
           <span className="block text-light-green mb-[1rem] md:text-[1.05rem] text-[.9rem]">
             CAREFULLY HAND-PICKED BY QUALITY FARMERS AND DEDICATED FOODIES LOL.
           </span>
-          <h2 className="mb-[1.5rem] font-serif md:text-[3.8vw] text-[1.5rem] md:font-medium font-normal">
+          <h2 className="mb-[1.5rem] font-cooper md:text-[3.8vw] text-[1.5rem] md:font-bold text-dark-green font-normal">
             IF IT'S NOT FRESH, IT'S NOT FROM US
           </h2>
           <p className="text-[.9rem] font-normal md:w-[57%] mb-[3rem]">
@@ -25,7 +25,7 @@ const Fresh = () => {
           </p>
           <Link
             to={"/collections"}
-            className="block bg-accent-green hover:opacity-[.8] hover:border-solid hover:border-[2px] hover:border-gray-400 hover:transition-all hover:delay-[.25s] hover:ease-in-out transition-all delay-[.25s] ease-in-out font-serif text-white font-semibold text-[1.1rem] max-w-[7rem] rounded-full py-[.7rem] w-[90%] text-center"
+            className="block bg-accent-green hover:opacity-[.8] hover:border-solid hover:border-[2px] hover:border-gray-400 hover:transition-all hover:delay-[.25s] hover:ease-in-out transition-all delay-[.25s] ease-in-out font-cooper text-white font-bold text-[1.1rem] max-w-[7rem] rounded-full py-[.7rem] w-[90%] text-center"
           >
             Indulge
           </Link>
