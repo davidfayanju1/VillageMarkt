@@ -131,7 +131,7 @@ const ProductsGrid = () => {
 
   return (
     <>
-      <section className="w-full items-center justify-center xl:px-[4rem] md:px-[2rem] flex flex-wrap md:gap-[2rem] gap-[.5rem] pb-[8rem] md:pt-[3rem] bg-primary">
+      <section className="w-full grid xl:grid-cols-[repeat(auto-fit,_minmax(450px,_1fr))] md:grid-cols-[repeat(auto-fit,_minmax(200px,_1fr))] grid-cols-[repeat(auto-fit,_minmax(100px,_1fr))] gap-[2rem] md:px-[3.3rem] px-[1.5rem] pb-[8rem] md:pt-[3rem] bg-primary">
         {values.map((element) => (
           <div
             className="product_card"
@@ -139,7 +139,7 @@ const ProductsGrid = () => {
             //   onMouseLeave={() => setChange("")}
             key={Math.random()}
           >
-            <div className="img_container relative md:min-h-[24rem] md:w-[15rem] h-[11rem] overflow-hidden">
+            <div className="img_container relative md:min-h-[24rem] h-[11rem] overflow-hidden">
               <Link to={`/products/${element.name}`}>
                 <img
                   src={element.img}
