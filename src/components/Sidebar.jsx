@@ -112,7 +112,7 @@ const Sidebar = () => {
             <div className="content w-full">
               <div className="stroke bg-primary sticky top-0 left-0 z-[2] md:w-[26.1rem] w-full after:block after:w-full after:h-[.03rem] after:bg-gray-400">
                 <div className="menu md:px-[2rem] px-[1rem] py-[1rem] w-full flex items-center justify-between">
-                  <span className="block font-serif text-[1.4rem] text-dark-green">
+                  <span className="block font-cooper text-[1.2rem] font-bold text-dark-green">
                     Menu
                   </span>
                   <Cancel
@@ -130,7 +130,7 @@ const Sidebar = () => {
                     onClick={() => setSideOpen(!sideOpen)}
                     {...text(0.1)}
                   >
-                    <span className="block cursor-pointer font-serif text-[1.2rem] text-dark-green">
+                    <span className="block cursor-pointer font-cooper text-[1rem] font-bold text-dark-green">
                       Shop
                     </span>
                     <button>
@@ -147,7 +147,7 @@ const Sidebar = () => {
                 <Link to={"/"} onClick={() => dispatch(toggleClose())}>
                   <motion.div
                     {...text(0.2)}
-                    className="block mb-[1rem] font-serif text-[1.2rem] py-[.5rem] text-dark-green"
+                    className="block mb-[1rem] font-cooper text-[1rem] font-bold py-[.5rem] text-dark-green"
                   >
                     Home
                   </motion.div>
@@ -158,7 +158,7 @@ const Sidebar = () => {
                     className="flex items-center justify-between"
                     onClick={() => setSecondsideOpen(!secondsideOpen)}
                   >
-                    <span className="block cursor-pointer font-serif text-[1.2rem] text-dark-green">
+                    <span className="block cursor-pointer font-cooper text-[1rem] font-bold text-dark-green">
                       Categories
                     </span>
                     <button>
@@ -190,7 +190,7 @@ const Sidebar = () => {
                 >
                   <motion.div
                     {...text(0.4)}
-                    className="block mb-[1rem] font-serif text-[1.2rem] py-[.5rem] text-dark-green"
+                    className="block mb-[1rem] font-cooper text-[1rem] font-bold py-[.5rem] text-dark-green"
                   >
                     Contact Us
                   </motion.div>
@@ -199,7 +199,7 @@ const Sidebar = () => {
                 <Link to={"/bundles"} onClick={() => dispatch(toggleClose())}>
                   <motion.div
                     {...text(0.5)}
-                    className="block mb-[1rem] font-serif text-[1.2rem] py-[.5rem] text-dark-green"
+                    className="block mb-[1rem] font-cooper text-[1rem] font-bold py-[.5rem] text-dark-green"
                   >
                     Bundles
                   </motion.div>
@@ -210,7 +210,7 @@ const Sidebar = () => {
                 {...text(1.1)}
                 className="contact_us block md:px-[1.8rem] px-[1rem] mb-[2rem] after:block after:w-full after:h-[.03rem] after:bg-gray-400"
               >
-                <span className="block font-serif mb-[2rem] text-[1.1rem] text-dark-green">
+                <span className="block font-cooper text-[1rem] font-bold mb-[2rem] text-dark-green">
                   Contact us
                 </span>
                 <Link
@@ -245,7 +245,7 @@ const Sidebar = () => {
                   Your account
                   <Link
                     to={"/login"}
-                    className="font-serif text-[1rem] font-medium underline"
+                    className="font-cooper text-[.8rem] font-bold underline"
                   >
                     Login
                   </Link>

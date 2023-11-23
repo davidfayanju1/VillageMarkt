@@ -104,7 +104,7 @@ const Collections = () => {
           </ul>
         </nav>
         <hgroup>
-          <span className="title font-[600] font-cooper text-dark-green block md:text-[2.8rem] text-[2rem] md:text-left text-center mb-[4rem]">
+          <span className="title font-[600] font-cooper text-dark-green block md:text-[2.8rem] text-[2rem] mb-[4rem]">
             Collections
           </span>
         </hgroup>
@@ -112,18 +112,18 @@ const Collections = () => {
         <div className="products grid md:grid-cols-[repeat(auto-fit,_minmax(200px,_1fr))] grid-cols-[repeat(auto-fit,_minmax(150px,_1fr))] md:gap-[2rem] gap-[.8rem]">
           {productsCategories.map((product) => (
             <div
-              className="card relative overflow-hidden cursor-pointer h-full before:absolute before:top-0 before:left-0 before:w-full before:h-full mb-[4rem] before:z-[2] before:content-[''] before:bg-gradient-to-b before:from-black-overlay-light before:to-black-overlay"
+              className="card relative overflow-hidden cursor-pointer h-[16rem] before:absolute before:top-0 before:left-0 before:w-full before:h-full before:z-[2] before:content-[''] before:bg-gradient-to-b before:from-black-overlay-light before:to-black-overlay"
               key={product.category}
             >
               <div className="image-container w-full h-full overflow-hidden">
                 <img
                   src={product.img}
                   alt={product.category}
-                  className="image hover:scale-[1.1] transition-transform delay-[0.25sec] ease-in-out h-full w-full object-cover relative mb-[8rem] z-[1]"
+                  className="image hover:scale-[1.1] transition-transform delay-[0.25sec] ease-in-out h-full w-full object-cover relative z-[1]"
                 />
               </div>
-              <div className="details-container absolute top-[79%] left-[6%] z-[6] w-[89%] text-left">
-                <span className="block name font-cooper text-white md:text-[1.1rem] text-[.82rem] font-[600]">
+              <div className="details-container absolute md:top-[79%] top-[70%] left-[6%] z-[6] w-[89%] text-left">
+                <span className="block name font-cooper text-white md:text-[1.1rem] text-[.85rem] font-[600]">
                   {product.category}
                 </span>
                 <Link

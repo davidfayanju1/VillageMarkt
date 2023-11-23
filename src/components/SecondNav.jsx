@@ -63,7 +63,7 @@ const SecondNav = () => {
             <img
               src="https://villagemarkt.com/cdn/shop/files/vm_for_light_bg.png?v=1694611856"
               alt="logo-image"
-              className="w-[2rem] h-[3rem]"
+              className="w-[2.3rem] h-[3.2rem]"
             />
           </Link>
         </div>
