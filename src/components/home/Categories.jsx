@@ -50,9 +50,9 @@ const Categories = () => {
         </hgroup>
       </section>
       {/* product categories */}
-      <div className="asterisk_container flex items-start justify-start md:px-[3.3rem] mb-[-3rem] w-full">
-        <div className=" h-[10rem] w-[10rem] rounded-full bg-light-green-2 flex items-center justify-center z-[2]">
-          <span className="asterisk_content font-serif text-[1.2rem] font-medium w-[50%] text-center text-white">
+      <div className="flex items-start justify-start md:px-[3.3rem] mb-[-3rem] w-full">
+        <div className="asterisk_content h-[10rem] w-[10rem] rounded-full bg-light-green-2 flex items-center justify-center z-[2]">
+          <span className="font-cooper text-[1rem] font-bold w-[50%] text-center text-white">
             Fresh Farm Food
           </span>
         </div>

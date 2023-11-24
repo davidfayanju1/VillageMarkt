@@ -7,8 +7,8 @@ const Fresh = () => {
       <div className="content-container flex md:flex-row flex-col gap-[2rem] items-center justify-between">
         <section className="text-section md:max-w-[55%] w-[95%] flex flex-col justify-start items-start">
           <div className="asterisk_container flex items-end justify-end md:mt-[-6rem] w-full">
-            <div className=" h-[9rem] w-[9rem] rounded-full bg-light-green-2 flex items-center justify-center z-[2]">
-              <span className="asterisk_content text-white font-serif text-[1.15rem] font-medium w-[80%] text-center">
+            <div className="star_content h-[9rem] w-[9rem] rounded-full bg-light-green-2 flex items-center justify-center z-[2]">
+              <span className=" text-white font-cooper text-[1.15rem] font-bold w-[80%] text-center">
                 Today's farm fresh
               </span>
             </div>

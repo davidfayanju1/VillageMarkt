@@ -36,8 +36,8 @@ const Bundles = () => {
       </section>
       <div className="products_container">
         <div className="asterisk_container flex items-end justify-end md:px-[3.3rem] mb-[-3rem] w-full">
-          <div className=" h-[10rem] w-[10rem] rounded-full bg-accent-yellow flex items-center justify-center z-[2]">
-            <span className="asterisk_content text-dark-green font-serif text-[1.3rem] font-medium w-[60%] text-center">
+          <div className="asterisk_content h-[10rem] w-[10rem] rounded-full bg-accent-yellow flex items-center justify-center z-[2]">
+            <span className="text-dark-green font-cooper text-[1.3rem] font-bold w-[60%] text-center">
               Save Now
             </span>
           </div>
