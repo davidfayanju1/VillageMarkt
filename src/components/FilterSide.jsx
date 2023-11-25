@@ -54,7 +54,7 @@ const FilterSide = () => {
                   />
                 </div>
               </section>
-              <section className="filters overflow-y-scroll px-[2rem] py-[3rem] flex flex-col gap-[5rem] md:h-[70vh] h-[75vh]">
+              <section className="filters overflow-y-scroll px-[2rem] py-[3rem] flex flex-col gap-[5rem] md:h-[70vh] h-[72vh]">
                 <div className="availability_container">
                   <button
                     onClick={() => setToggleSvg(!toggleSvg)}
