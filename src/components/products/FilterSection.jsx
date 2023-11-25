@@ -1,8 +1,11 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { ArrowRight, Down, Filter } from "../../assets/svgs/svg-icons";
-
+import { useDispatch } from "react-redux";
+import { filterOpen } from "../../redux/slices/toggleFilter";
 const FilterSection = () => {
+  const dispatch = useDispatch();
+
   return (
     <section className="min-h-[60vh] bg-primary md:px-[4rem] py-[1rem] px-[1.4rem]">
       <nav className="md:mb-[5rem] mb-[4rem]">
@@ -52,7 +55,10 @@ const FilterSection = () => {
       </hgroup>
 
       <section className="filter flex md:flex-row flex-col gap-[2rem] items-center md:justify-between justify-center">
-        <button className="font-cooper font-semibold md:w-[8rem] w-full text-[1.1rem] filter border-solid border-[2px] border-gray-300 rounded-full text-center transition-all ease-in-out delay-100">
+        <button
+          onClick={() => dispatch(filterOpen())}
+          className="font-cooper font-semibold md:w-[7rem] w-full text-[1.1rem] filter border-solid border-[2px] border-gray-300 rounded-full text-center transition-all ease-in-out delay-100"
+        >
           <div className="inner-container flex md:gap-[.5rem] gap-[.5rem] items-center justify-center hover:border-gray-700 hover:border-[1px] hover:border-solid w-full h-full rounded-full px-[1rem] py-[.6rem] transition-all ease-in-out delay-[.25s]">
             Filter
             <Filter />
