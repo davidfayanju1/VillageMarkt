@@ -60,8 +60,8 @@ const Process = () => {
         <div className="cards-container flex items-center">
           {stages.map((stage) => (
             <div className="group w-[28%] h-[25rem] relative after:absolute after:top-[-12%] after:block after:bg-white after:border-carpet-green after:border-solid after:border-[6px] after:w-[1.5rem] after:h-[1.5rem] after:rounded-full">
-              <div className="card_container flex flex-col items-start before:w-full before:h-[.25rem] before:block before:absolute before:top-[-9%] before:left-0 before:bg-carpet-green before:">
-                <div className="card h-full w-[91%]">
+              <div className="card_container flex flex-col items-start before:w-full before:h-[.25rem] before:block before:absolute before:top-[-9%] before:left-0 before:bg-carpet-green">
+                <div className="card  h-full w-[91%]">
                   <span className="mb-[.5rem] process_btn font-cooper font-semibold bg-carpet-green rounded-full text-white w-[6rem] flex items-center justify-center">
                     {stage.stage}
                   </span>

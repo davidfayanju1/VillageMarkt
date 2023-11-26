@@ -112,7 +112,7 @@ const Collections = () => {
         <div className="products grid md:grid-cols-[repeat(auto-fit,_minmax(200px,_1fr))] grid-cols-[repeat(auto-fit,_minmax(150px,_1fr))] md:gap-[2rem] gap-[.8rem]">
           {productsCategories.map((product) => (
             <div
-              className="card relative overflow-hidden cursor-pointer md:h-[22rem] h-[16rem] before:absolute before:top-0 before:left-0 before:w-full before:h-full before:z-[2] before:content-[''] before:bg-gradient-to-b before:from-black-overlay-light before:to-black-overlay"
+              className="card_overlay relative overflow-hidden cursor-pointer md:h-[22rem] h-[16rem] before:absolute before:top-0 before:left-0 before:w-full before:h-full before:z-[2] before:content-[''] before:bg-gradient-to-b before:from-black-overlay-light before:to-black-overlay"
               key={product.category}
             >
               <div className="image-container w-full h-full overflow-hidden">

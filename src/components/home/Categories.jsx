@@ -63,7 +63,7 @@ const Categories = () => {
         {productsCategories.map((product) => (
           <div className="container overflow-hidden h-[24.52rem] w-[18.8rem] transition-transform delay-[0.25sec] ease-in-out">
             <div
-              className="card relative overflow-hidden cursor-pointer h-full before:absolute before:top-0 before:left-0 before:w-full before:h-full mb-[4rem] before:z-[2] before:content-[''] before:bg-gradient-to-b before:from-black-overlay-light before:to-black-overlay"
+              className="card_overlay relative overflow-hidden cursor-pointer h-full before:absolute before:top-0 before:left-0 before:w-full before:h-full mb-[4rem] before:z-[2] before:content-[''] before:bg-gradient-to-b before:from-black-overlay-light before:to-black-overlay"
               key={product.img}
             >
               <div className="image-container w-full h-full overflow-hidden">
