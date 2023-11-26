@@ -6,6 +6,7 @@ import SecondNav from "../components/SecondNav";
 import { useLocation } from "react-router-dom";
 import FilterSide from "../components/FilterSide";
 import Search from "../components/SearchModal";
+import CartPage from "../components/CartPage";
 
 const SecondLayout = ({ children }) => {
   const location = useLocation();
@@ -16,6 +17,7 @@ const SecondLayout = ({ children }) => {
 
   return (
     <>
+      <CartPage />
       <Search />
       <FilterSide />
       <Sidebar />
