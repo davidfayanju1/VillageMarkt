@@ -9,7 +9,7 @@ const ErrorPage = () => {
 
   return (
     <SecondLayout>
-      <div className="main_page_container min-h-screen flex flex-col items-center text-center bg-primary pt-[5rem]">
+      <div className="main_page_container min-h-screen flex flex-col items-center text-center bg-primary md:py-[5rem] pt-[5rem]">
         <span className="block text-light-green text-center mb-[1rem] md:text-[1.05rem] text-[.9rem]">
           404-PAGE NOT FOUND
         </span>

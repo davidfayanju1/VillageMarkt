@@ -54,7 +54,7 @@ const FilterSide = () => {
                   />
                 </div>
               </section>
-              <section className="filters overflow-y-scroll px-[2rem] py-[3rem] flex flex-col gap-[5rem] md:h-[70vh] h-[72vh]">
+              <section className="filters overflow-y-scroll px-[2rem] py-[3rem] flex flex-col gap-[5rem] md:h-[70vh] h-screen">
                 <div className="availability_container">
                   <button
                     onClick={() => setToggleSvg(!toggleSvg)}
@@ -119,7 +119,7 @@ const FilterSide = () => {
                 </div>
               </section>
 
-              <section className="bg-primary w-full before:block before:w-full before:h-[.03rem] before:bg-gray-400">
+              <section className="aside_footer sticky bottom-0 left-0 bg-primary w-full before:block before:w-full before:h-[.03rem] before:bg-gray-400">
                 <div className="menu md:px-[2rem] px-[1rem] py-[1rem] w-full flex items-center justify-between gap-[1rem]">
                   <button className="md:text-[1rem] text-dark-green font-bold py-[.9rem] w-full flex items-center justify-center bg-transparent border-solid border-[1px] border-gray-300 rounded-[25px] font-cooper">
                     Clear all
