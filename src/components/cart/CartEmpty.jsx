@@ -55,8 +55,8 @@ const CartEmpty = () => {
                 Your cart is empty
               </span>
               <Link
-                to={"/"}
-                className="md:text-[1rem] text-white font-bold py-[.9rem] w-[13rem] flex items-center justify-center hover:opacity-[.8] hover:border-solid hover:border-[2px] hover:border-gray-400 hover:transition-all hover:delay-[.25s] hover:ease-in-out transition-all delay-[.25s] ease-in-out bg-accent-green rounded-[25px] font-cooper"
+                to={"/products"}
+                className="md:text-[1rem] text-white font-bold py-[.8rem] w-[13rem] flex items-center justify-center hover:opacity-[.8] hover:border-solid hover:border-[2px] hover:border-gray-400 hover:transition-all hover:delay-[.25s] hover:ease-in-out transition-all delay-[.25s] ease-in-out bg-accent-green rounded-[25px] font-cooper"
                 onClick={() => dispatch(cartClose())}
               >
                 Continue Shopping
