@@ -13,6 +13,7 @@ import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { toggleOpen } from "../redux/slices/toggleSlice";
 import { navOpen } from "../redux/slices/navToggle";
+import { cartOpen } from "../redux/slices/cartToggle";
 
 const Navbar = () => {
   const [fixed, setFixed] = useState(false);
@@ -82,7 +83,9 @@ const Navbar = () => {
           <button className="hidden md:block">
             {fixed ? <UserDark /> : <User />}
           </button>
-          <button>{fixed ? <CartDark /> : <Cart />}</button>
+          <button onClick={() => dispatch(cartOpen())}>
+            {fixed ? <CartDark /> : <Cart />}
+          </button>
         </div>
       </hgroup>
     </nav>

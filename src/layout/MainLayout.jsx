@@ -5,6 +5,7 @@ import Sidebar from "../components/Sidebar";
 import TopNav from "../components/TopNav";
 import { useLocation } from "react-router-dom";
 import Search from "../components/SearchModal";
+import CartPage from "../components/CartPage";
 
 const MainLayout = ({ children }) => {
   const location = useLocation();
@@ -15,6 +16,7 @@ const MainLayout = ({ children }) => {
 
   return (
     <div>
+      <CartPage />
       <Search />
       <Sidebar />
       <TopNav />

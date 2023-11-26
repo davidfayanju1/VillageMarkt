@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Cancel, Search } from "../assets/svgs/svg-icons";
 import { useDispatch, useSelector } from "react-redux";
 import { navClose } from "../redux/slices/navToggle";
@@ -8,6 +8,13 @@ const SearchModal = () => {
   const dispatch = useDispatch();
   const { open } = useSelector((store) => store.navToggle);
 
+  useEffect(() => {
+    if (open) {
+      document.body.classList.add("overflow-y-hidden");
+    } else {
+      document.body.classList.remove("overflow-y-hidden");
+    }
+  }, [open]);
   // desktop
   const openTop = {
     initial: { y: "-100%" },

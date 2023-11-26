@@ -9,6 +9,8 @@ import {
 import { useDispatch } from "react-redux";
 import { toggleOpen } from "../redux/slices/toggleSlice";
 import { AnimatePresence, motion } from "framer-motion";
+import { navOpen } from "../redux/slices/navToggle";
+import { cartOpen } from "../redux/slices/cartToggle";
 
 const SecondNav = () => {
   const [fixed, setFixed] = useState(false);
@@ -68,11 +70,15 @@ const SecondNav = () => {
           </Link>
         </div>
         <div className="icons_section flex items-center gap-[1rem]">
-          <Search />
-          <div className="hidden md:block">
+          <button onClick={() => dispatch(navOpen())}>
+            <Search />
+          </button>
+          <button className="hidden md:block">
             <UserDark />
-          </div>
-          <CartDark />
+          </button>
+          <button onClick={() => dispatch(cartOpen())}>
+            <CartDark />
+          </button>
         </div>
       </motion.hgroup>
     </AnimatePresence>
