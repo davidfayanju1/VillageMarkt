@@ -5,6 +5,7 @@ import Footer from "../components/Footer";
 import SecondNav from "../components/SecondNav";
 import { useLocation } from "react-router-dom";
 import FilterSide from "../components/FilterSide";
+import Search from "../components/SearchModal";
 
 const SecondLayout = ({ children }) => {
   const location = useLocation();
@@ -15,6 +16,7 @@ const SecondLayout = ({ children }) => {
 
   return (
     <>
+      <Search />
       <FilterSide />
       <Sidebar />
       <TopNav />

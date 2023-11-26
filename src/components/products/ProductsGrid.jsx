@@ -117,6 +117,7 @@ const ProductsGrid = () => {
     }
     setCurrentPage((prev) => prev - 1);
     setActivePage((prev) => prev - 1);
+    window.scrollTo(0, 0);
   };
 
   // Next
@@ -127,6 +128,8 @@ const ProductsGrid = () => {
     }
     setCurrentPage((prev) => prev + 1);
     setActivePage((prev) => prev + 1);
+
+    window.scrollTo(0, 0);
   };
 
   return (

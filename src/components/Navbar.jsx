@@ -12,6 +12,7 @@ import {
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { toggleOpen } from "../redux/slices/toggleSlice";
+import { navOpen } from "../redux/slices/navToggle";
 
 const Navbar = () => {
   const [fixed, setFixed] = useState(false);
@@ -74,12 +75,14 @@ const Navbar = () => {
             />
           </Link>
         </div>
-        <div className="icons_section flex items-center gap-[1rem]">
-          {fixed ? <Search /> : <SearchWhite />}
-          <div className="hidden md:block">
+        <div className="icons_section cursor-pointer flex items-center gap-[1rem]">
+          <button onClick={() => dispatch(navOpen())}>
+            {fixed ? <Search /> : <SearchWhite />}
+          </button>
+          <button className="hidden md:block">
             {fixed ? <UserDark /> : <User />}
-          </div>
-          {fixed ? <CartDark /> : <Cart />}
+          </button>
+          <button>{fixed ? <CartDark /> : <Cart />}</button>
         </div>
       </hgroup>
     </nav>
