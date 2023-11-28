@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { Cancel } from "../../assets/svgs/svg-icons";
+import { Bin, Cancel, MinusIcon, PlusIcon } from "../../assets/svgs/svg-icons";
 import { useDispatch, useSelector } from "react-redux";
 import { cartClose } from "../../redux/slices/cartToggle";
 import { Link } from "react-router-dom";
@@ -49,22 +49,78 @@ const CartFilled = ({ cart }) => {
                 />
               </div>
             </section>
-            <section className="cards overflow-y-scroll md:h-[52vh] h-[55vh] overflow-hidden p-[1.5rem]">
+            <section className="cards overflow-y-scroll overflow-hidden p-[1.5rem] md:h-[55vh] h-[60vh]">
+              {/* progress bar */}
+              <div className="progress mb-[1.4rem] after:mt-[2rem] after:w-full after:h-[.05rem] after:bg-gray-300 after:block">
+                <span className="block text-dark-green text-[.92rem]">
+                  Your order qualifies for free shipping
+                </span>
+                <div className="items_flex flex items-center justify-center gap-[.7rem]">
+                  <div className="progressbar overflow-hidden w-[90%] bg-gray-200 rounded-full h-[.55rem]">
+                    <div
+                      className={`bar bg-carpet-green rounded-full w-[${100}%] h-full`}
+                    ></div>
+                  </div>
+                  <span className="block text-dark-green">N100.00NGN</span>
+                </div>
+              </div>
               {cart.map((item) => (
-                <div className="item_card" key={item.id}>
-                  <span className="block">Cart items LELEYII SEHH!!!</span>
+                <div
+                  className="item_card mb-[1.4rem] after:mt-[2rem] after:w-full after:h-[.05rem] after:bg-gray-200 after:block"
+                  key={item.id}
+                >
+                  <div className="card_details flex items-start justify-between">
+                    <div className="items-container">
+                      <div className="image_container flex items-start gap-[.8rem]">
+                        <img
+                          src={item.img}
+                          alt={item.name}
+                          className="w-[5rem] h-[5rem] object-cover"
+                        />
+                        <div className="details_container">
+                          <span className="block text-gray-400 text-[.8rem]">
+                            Village Markt
+                          </span>
+                          <span className="price font-cooper font-bold text-dark-green">
+                            {item.name}
+                          </span>
+                          <div className="icons mt-[2rem] flex gap-[.3rem]">
+                            <div className="plus_minus w-[9rem] border-solid rounded-full border-gray-300 border-[1px] flex items-center justify-between px-[.9rem] py-[.2rem]">
+                              <button>
+                                <MinusIcon />
+                              </button>
+                              <span className="block">{item.qty}</span>
+                              <button>
+                                <PlusIcon />
+                              </button>
+                            </div>
+                            <button className="delete_icon border-solid border-[1px] border-gray-300 rounded-full w-[2.6rem] h-[2.6rem] flex items-center justify-center hover:border-black hover:transition-all hover:ease-in-out hover:delay-[.25s] transition-all ease-in-out delay-[.25s]">
+                              <Bin />
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="price text-carpet-green font-semibold text-[1rem]">
+                      N{item.price}.00NGN
+                    </div>
+                  </div>
                 </div>
               ))}
+
+              <div className="order_note">
+                <span className="block font-cooper font-bold"></span>
+              </div>
             </section>
 
-            <section className="cart-footer sticky bottom-0 left-0 w-full border-t-[1.2px] border-gray-300 flex flex-col gap-[.5rem] h-[6rem] md:px-[1.5rem] px-[1rem] pt-[1rem]">
+            <section className="cart-footer sticky bottom-0 left-0 w-full border-t-[1.2px] border-gray-300 flex flex-col h-[6rem] md:px-[1.5rem] px-[1rem] pt-[1rem]">
               <div className="total_amount w-full font-cooper font-bold text-[1.1rem] flex items-center justify-between">
                 <span className="block font-cooper">Total</span>
-                <span className="block font-cooper text-light-green">
+                <span className="block font-cooper text-carpet-green">
                   NTotal money
                 </span>
               </div>
-              <div className="menu py-[1rem] w-full flex items-center justify-between gap-[1rem]">
+              <div className="menu pt-[1rem] w-full flex items-center justify-between gap-[1rem]">
                 <Link
                   to={"/cart"}
                   onClick={() => dispatch(cartClose())}
@@ -76,7 +132,7 @@ const CartFilled = ({ cart }) => {
                   Checkout
                 </button>
               </div>
-              <small className="text-gray-400 text-center">
+              <small className="mt-[.35rem] text-gray-400 text-center">
                 Tax included and shipping calculated at checkout
               </small>
             </section>

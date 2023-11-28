@@ -28,6 +28,9 @@ import { ReactComponent as plus } from "./plus.svg";
 import { ReactComponent as minus } from "./minus.svg";
 import { ReactComponent as home } from "./home.svg";
 import { ReactComponent as shelter } from "./shelter.svg";
+import { ReactComponent as plusIcon } from "./plus-icon.svg";
+import { ReactComponent as minusIcon } from "./minus-icon.svg";
+import { ReactComponent as bin } from "./bin.svg";
 
 export const Burger = React.memo(hamburger);
 export const Search = React.memo(search);
@@ -58,3 +61,6 @@ export const Plus = React.memo(plus);
 export const Minus = React.memo(minus);
 export const Home = React.memo(home);
 export const Shelter = React.memo(shelter);
+export const PlusIcon = React.memo(plusIcon);
+export const MinusIcon = React.memo(minusIcon);
+export const Bin = React.memo(bin);
