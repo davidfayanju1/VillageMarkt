@@ -6,7 +6,7 @@ const Login = () => {
   return (
     <div className="md:bg-gray-100 bg-white w-full flex h-screen items-center justify-center">
       <div className="form_container md:w-[27rem] w-full bg-white pt-[2rem] pb-[1.4rem] px-[1.4rem] rounded-[8px]">
-        <h1 className="text-center md:text-[2rem] text-[1.1rem] mb-[2rem]">
+        <h1 className="text-center md:text-[2rem] text-[1.8rem] mb-[2rem]">
           Village Markt
         </h1>
         <div className="container-element mb-[1.5rem]">
@@ -25,7 +25,7 @@ const Login = () => {
           />
           <button
             type="submit"
-            className="w-full text-center flex items-center text-white justify-center bg-blue-700 outline-none py-[.5rem] rounded-[4px]"
+            className="w-full text-center flex items-center text-white justify-center bg-accent-blue outline-none py-[.5rem] rounded-[4px]"
           >
             Continue
           </button>
