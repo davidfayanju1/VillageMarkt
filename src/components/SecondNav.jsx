@@ -48,7 +48,7 @@ const SecondNav = () => {
     transition: { duration: 0.2 },
   };
 
-  const cart = [{}];
+  const cart = [];
 
   return (
     <AnimatePresence mode="wait" initial={false}>

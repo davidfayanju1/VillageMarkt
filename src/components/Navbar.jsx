@@ -23,7 +23,7 @@ const Navbar = () => {
 
   const dispatch = useDispatch();
 
-  const cart = [{}];
+  const cart = [];
 
   // nav color change logic
   useEffect(() => {
