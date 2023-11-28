@@ -23,6 +23,8 @@ const Navbar = () => {
 
   const dispatch = useDispatch();
 
+  const cart = [{}];
+
   // nav color change logic
   useEffect(() => {
     const handleScroll = () => {
@@ -80,11 +82,18 @@ const Navbar = () => {
           <button onClick={() => dispatch(navOpen())}>
             {fixed ? <Search /> : <SearchWhite />}
           </button>
-          <button className="hidden md:block">
+          <Link to={"/login"} className="hidden md:block">
             {fixed ? <UserDark /> : <User />}
-          </button>
-          <button onClick={() => dispatch(cartOpen())}>
+          </Link>
+          <button onClick={() => dispatch(cartOpen())} className="relative">
             {fixed ? <CartDark /> : <Cart />}
+            <span
+              className={`bg-carpet-green text-white text-[.8rem] absolute ${
+                cart.length > 0 ? "flex" : "hidden"
+              } items-center justify-center h-[.8rem] p-[.7rem] w-[.8rem] rounded-full right-[-10px] bottom-[-10px]`}
+            >
+              {cart.length}
+            </span>
           </button>
         </div>
       </hgroup>

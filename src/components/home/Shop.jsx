@@ -48,7 +48,7 @@ const Shop = () => {
         </button>
       </div>
 
-      <section className="md:mt-[8rem] mt-[4rem] flex flex-col items-center justify-center md:mb-[6rem] mb-[4rem] w-full">
+      <section className="md:mt-[8rem] mt-[4rem] flex flex-col items-center justify-center md:mb-[6rem] pb-[4rem] w-full">
         <hgroup className="md:max-w-[85%] w-[90%] flex flex-col items-center justify-center text-center">
           <span className="block text-light-green text-center mb-[1rem] md:text-[1.05rem]">
             SHOP WITH VILLAGE MARKT
@@ -66,7 +66,7 @@ const Shop = () => {
         </hgroup>
         <section className="more_collection_button flex  items-center justify-center w-full mt-[6rem]">
           <Link
-            to={"/collections/all"}
+            to={"/collections"}
             className="block bg-accent-green hover:opacity-[.8] hover:border-solid hover:border-[2px] hover:border-gray-400 hover:transition-all hover:delay-[.25s] hover:ease-in-out transition-all delay-[.25s] ease-in-out font-cooper text-white font-semibold text-[1.1rem] max-w-[8rem] rounded-full py-[.7rem] w-[90%] text-center"
           >
             Shop Now

@@ -49,7 +49,7 @@ const CartFilled = ({ cart }) => {
                 />
               </div>
             </section>
-            <section className="cards overflow-y-scroll md:h-[52vh] h-screen overflow-hidden p-[1.5rem]">
+            <section className="cards overflow-y-scroll md:h-[52vh] h-[90vh] overflow-hidden p-[1.5rem]">
               {cart.map((item) => (
                 <div className="item_card" key={item.id}>
                   <span className="block">Cart items LELEYII SEHH!!!</span>

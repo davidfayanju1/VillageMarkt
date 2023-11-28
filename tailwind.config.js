@@ -23,6 +23,7 @@ export default {
         cream: "rgba(255, 254, 249, 0.97)",
         "black-overlay-2": "rgba(0, 0, 0, 0.5)",
         "accent-green-2": "#FAFAF5",
+        "accent-blue": "rgb(24, 121, 185)",
       },
 
       // backgroundImage: {

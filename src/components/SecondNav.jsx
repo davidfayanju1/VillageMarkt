@@ -48,6 +48,8 @@ const SecondNav = () => {
     transition: { duration: 0.2 },
   };
 
+  const cart = [{}];
+
   return (
     <AnimatePresence mode="wait" initial={false}>
       <motion.hgroup
@@ -73,11 +75,19 @@ const SecondNav = () => {
           <button onClick={() => dispatch(navOpen())}>
             <Search />
           </button>
-          <button className="hidden md:block">
+          <Link to={"/login"} className="hidden md:block">
             <UserDark />
-          </button>
-          <button onClick={() => dispatch(cartOpen())}>
+          </Link>
+          <button onClick={() => dispatch(cartOpen())} className="relative">
             <CartDark />
+
+            <span
+              className={`bg-carpet-green text-white text-[.8rem] absolute ${
+                cart.length > 0 ? "flex" : "hidden"
+              } items-center justify-center h-[.8rem] p-[.7rem] w-[.8rem] rounded-full right-[-10px] bottom-[-10px]`}
+            >
+              {cart.length}
+            </span>
           </button>
         </div>
       </motion.hgroup>
