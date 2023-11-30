@@ -31,6 +31,7 @@ import { ReactComponent as shelter } from "./shelter.svg";
 import { ReactComponent as plusIcon } from "./plus-icon.svg";
 import { ReactComponent as minusIcon } from "./minus-icon.svg";
 import { ReactComponent as bin } from "./bin.svg";
+import { ReactComponent as share } from "./share.svg";
 
 export const Burger = React.memo(hamburger);
 export const Search = React.memo(search);
@@ -64,3 +65,4 @@ export const Shelter = React.memo(shelter);
 export const PlusIcon = React.memo(plusIcon);
 export const MinusIcon = React.memo(minusIcon);
 export const Bin = React.memo(bin);
+export const Share = React.memo(share);
