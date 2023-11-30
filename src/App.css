@@ -4,6 +4,7 @@
 @tailwind utilities;
 body {
   scroll-behavior: smooth;
+  font-family: "DM Sans", sans-serif;
 }
 @font-face {
   font-family: "Cooper Lt BT W08 Regular";
@@ -115,6 +116,23 @@ body {
   transform: rotate(-10deg);
 }
 
+/* boxshadow magic */
+
+.green-button:hover {
+  box-shadow: 0 0 0 3px rgb(216, 216, 216);
+  transition: all 0.25s ease-in-out;
+}
+.textarea {
+  transition: all 0.25s ease-in-out;
+}
+
+.textarea:hover {
+  box-shadow: 0 0 0 3px rgb(216, 216, 216);
+  transition: all 0.25s ease-in-out;
+}
+.textarea:focus {
+  box-shadow: none;
+}
 .mySwiper .swiper-button-next,
 .mySwiper .swiper-button-prev {
   background-color: #284622;
@@ -137,11 +155,11 @@ body {
 }
 
 .slider-statement {
-  -webkit-transform: skewY(-2deg);
-  -moz-transform: skewY(-2deg);
-  -o-transform: skewY(-2deg);
-  -ms-transform: skewY(-2deg);
-  transform: skewY(-2deg);
+  -webkit-transform: skewY(-4deg);
+  -moz-transform: skewY(-4deg);
+  -o-transform: skewY(-4deg);
+  -ms-transform: skewY(-4deg);
+  transform: skewY(-4deg);
 }
 
 .swiper-wrapper {
@@ -155,11 +173,19 @@ body {
 }
 
 .element {
-  -webkit-transform: skew(2deg);
-  -moz-transform: skew(2deg);
-  -o-transform: skew(2deg);
-  -ms-transform: skew(2deg);
-  transform: skew(2deg);
+  -webkit-transform: skew(4deg);
+  -moz-transform: skew(4deg);
+  -o-transform: skew(4deg);
+  -ms-transform: skew(4deg);
+  transform: skew(4deg);
+}
+
+.main-container > button {
+  -webkit-transform: skew(4deg);
+  -moz-transform: skew(4deg);
+  -o-transform: skew(4deg);
+  -ms-transform: skew(4deg);
+  transform: skew(4deg);
 }
 
 .mySwiper .swiper-button-next:hover,

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Bin, Cancel, MinusIcon, PlusIcon } from "../../assets/svgs/svg-icons";
 import { useDispatch, useSelector } from "react-redux";
@@ -27,6 +27,8 @@ const CartFilled = ({ cart }) => {
       document.body.classList.remove("overflow-y-hidden");
     }
   }, [open]);
+
+  const [openNote, setOpenNote] = useState(false);
   return (
     <AnimatePresence mode="wait" initial={false}>
       {open && (
@@ -107,9 +109,24 @@ const CartFilled = ({ cart }) => {
                   </div>
                 </div>
               ))}
-
+              {/* order note */}
               <div className="order_note">
-                <span className="block font-cooper font-bold"></span>
+                <span
+                  className="block hover:text-carpet-green mb-[.6rem] font-cooper font-bold underline cursor-pointer text-[.9rem]"
+                  onClick={() => setOpenNote(!openNote)}
+                >
+                  Add order note
+                </span>
+                {openNote && (
+                  <form>
+                    <textarea
+                      className="w-full textarea placeholder:text-[.86rem] text-dark-green focus:border-dark-green focus:border-[3.5px] placeholder:text-gray-300 border-solid border-[1px] border-gray-300 p-[1rem] outline-none"
+                      cols="10"
+                      rows="5"
+                      placeholder="Add order note here..."
+                    ></textarea>
+                  </form>
+                )}
               </div>
             </section>
 

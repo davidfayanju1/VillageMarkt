@@ -28,7 +28,7 @@ const Bundles = () => {
           <h2 className="mb-[1.5rem] font-cooper text-center md:text-[2.9rem] text-[1.8rem] font-bold text-dark-green">
             Our Bundle Collections
           </h2>
-          <p className="text-[1rem] max-w-[30rem] w-[90%] font-normal text-center">
+          <p className="text-[1rem] max-w-[30rem] w-[90%] font-normal text-center text-dark-green">
             Get it even cheaper when you buy any of our carefully curated
             bundles
           </p>
@@ -46,7 +46,7 @@ const Bundles = () => {
           {products?.map((product) => (
             <Link
               to={`/bundles/${product.name}`}
-              className="card relative h-[22.52rem] md:w-[21.4rem] w-[91%] after:absolute after:top-0 after:left-0 after:w-full after:h-full after:z-[1] after:bg-gradient-to-b after:from-black-overlay-light after:to-black-overlay"
+              className="card relative h-[22.52rem] w-[91%] after:absolute after:top-0 after:left-0 after:w-full after:h-full after:z-[1] after:bg-gradient-to-b after:from-black-overlay-light after:to-black-overlay"
               key={product.name}
             >
               <img

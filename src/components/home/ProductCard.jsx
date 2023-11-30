@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { Bag } from "../../assets/svgs/svg-icons";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -89,20 +90,24 @@ const ProductCard = () => {
               onMouseEnter={() => setChange(element.id)}
               onMouseLeave={() => setChange("")}
             >
-              <img
-                src={change === element.id ? element.url2 : element.url}
-                alt={element.name}
-                className={`h-full w-full object-cover relative mb-[8rem] z-[1] ${
-                  change === element.id
-                    ? "transition-all delay-[.25s] ease-in-out"
-                    : ""
-                }`}
-              />
+              <Link to={`/products/${element.name}`}>
+                <img
+                  src={change === element.id ? element.url2 : element.url}
+                  alt={element.name}
+                  className={`h-full w-full object-cover relative mb-[8rem] z-[1] ${
+                    change === element.id
+                      ? "transition-all delay-[.25s] ease-in-out"
+                      : ""
+                  }`}
+                />
+              </Link>
               <div className="details-container absolute md:top-[62%] md:left-[6%] top-[50%] left-[6%] z-[6] w-[89%]">
-                <small className="text-gray-200">Village Markt</small>
-                <span className="block name font-cooper text-white text-[1.2rem] font-[600]">
-                  {element.name}
-                </span>
+                <Link to={`/products/${element.name}`}>
+                  <small className="text-gray-200">Village Markt</small>
+                  <span className="block name font-cooper text-white text-[1.2rem] font-[600]">
+                    {element.name}
+                  </span>
+                </Link>
                 <span className="block text-white">From {element.price}</span>
                 <div className="flex items-end justify-end w-full">
                   <button className="flex items-center justify-center hover:opacity-[.9] transition-all delay-[.5sec] ease-in-outs h-[2.75rem] w-[2.75rem] rounded-full bg-white border-solid border-[1.5px] border-gray-400 hover:border-gray-500">

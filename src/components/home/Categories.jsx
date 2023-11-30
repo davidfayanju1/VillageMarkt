@@ -36,14 +36,14 @@ const Categories = () => {
     <section className="md:min-h-[70rem] pb-[4rem] bg-primary">
       <section className="flex md:px-[2.6rem] px-[1rem] items-center justify-center mb-[3rem]">
         <hgroup className="md:max-w-[55%] w-full flex flex-col justify-center items-center text-center">
-          <span className="block text-light-green text-center mb-[1rem] md:text-[1.05rem] text-[.9rem]">
+          <span className="block text-light-green text-center mb-[1rem] md:text-[1rem] text-[.9rem]">
             WE HAVE CAREFULLY CURATED SOME AMAZING PRODUCTS WITH LOVE IN OUR
             HEARTS.
           </span>
-          <h2 className="mb-[1.5rem] font-cooper text-center md:text-[2.9rem] text-dark-green text-[1.5rem] font-semibold">
+          <h2 className="mb-[1.5rem] font-cooper text-center md:text-[3.9vw] text-dark-green text-[1.5rem] font-semibold">
             Choose from our extensive range of products categories
           </h2>
-          <p className="text-[1rem] font-normal md:w-[86%] text-center">
+          <p className="text-[1rem] font-normal md:w-[86%] text-center text-dark-green">
             Whether you are a Vegan or a Meat lover. We have all you'll need all
             year round. We are every mothers first home choice
           </p>
@@ -155,7 +155,7 @@ const Categories = () => {
       <section className="more_collection_button flex  items-center justify-center w-full mt-[6rem]">
         <Link
           to={"/collections"}
-          className="block bg-accent-green hover:opacity-[.8] hover:border-solid hover:border-[2px] hover:border-gray-400 hover:transition-all hover:delay-[.25s] hover:ease-in-out transition-all delay-[.25s] ease-in-out font-cooper text-white font-semibold text-[1.1rem] max-w-[13rem] rounded-full py-[.7rem] w-[90%] text-center"
+          className="green-button block bg-accent-green hover:opacity-[.8]  hover:transition-all hover:delay-[.25s] hover:ease-in-out transition-all delay-[.25s] ease-in-out font-cooper text-white font-semibold text-[1.1rem] max-w-[13rem] rounded-full py-[.7rem] w-[90%] text-center"
         >
           View all collections
         </Link>

@@ -2,12 +2,20 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import { createBrowserRouter, useLocation } from "react-router-dom";
 import Home from "./pages/Home";
-import { cart, collections, home, login, products } from "./utils/routes";
+import {
+  cart,
+  collections,
+  details,
+  home,
+  login,
+  products,
+} from "./utils/routes";
 import Products from "./pages/Products";
 import Collections from "./pages/Collections";
 import ErrorPage from "./pages/ErrorPage";
 import Cart from "./pages/Cart";
 import Login from "./pages/Login";
+import ProductDetails from "./pages/ProductDetails";
 
 export const router = createBrowserRouter([
   {
@@ -30,5 +38,9 @@ export const router = createBrowserRouter([
   {
     path: login,
     element: <Login />,
+  },
+  {
+    path: details,
+    element: <ProductDetails />,
   },
 ]);

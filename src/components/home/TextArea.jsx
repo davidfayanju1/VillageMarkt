@@ -10,7 +10,7 @@ const TextArea = () => {
         <h2 className="mb-[1.3rem] font-cooper md:text-[4.5vw] text-[1.5rem] font-[600] text-dark-green">
           Today's Farm Fresh Recommendations
         </h2>
-        <p className="text-[1.1rem] font-normal w-[90%]">
+        <p className="text-[1.1rem] font-normal w-[90%] text-dark-green">
           Our farmers advice and recommend these products for the healthiest
           outcomes
         </p>

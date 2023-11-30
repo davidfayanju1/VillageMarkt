@@ -40,13 +40,13 @@ const Video = () => {
               <div className="button_flex flex flex-wrap items-center justify-center md:w-[50%] w-full gap-[1rem] mt-[3rem]">
                 <Link
                   to={"/products/all"}
-                  className="md:text-[1.1rem] text-white font-bold py-[.7rem] md:px-[2.3rem] px-[1.5rem] flex items-center justify-center bg-dark-green rounded-[25px] font-cooper md:min-w-[7rem]"
+                  className="md:text-[1.1rem] text-white font-bold py-[.7rem] md:px-[2.3rem] px-[1.5rem] flex items-center justify-center bg-accent-green hover:opacity-[.9] transition-all delay-[.25s] ease-in-out rounded-[25px] font-cooper md:min-w-[7rem]"
                 >
                   Discover
                 </Link>
                 <Link
                   to={"/products/"}
-                  className="md:text-[1.1rem] text-dark-green font-bold py-[.7rem] md:px-[2rem] px-[1.5rem] flex items-center justify-center bg-white rounded-[25px] font-cooper md:min-w-[7rem]"
+                  className="md:text-[1.1rem] text-dark-green font-bold py-[.7rem] md:px-[2rem] px-[1.5rem] flex items-center justify-center hover:opacity-[.9] transition-all delay-[.25s] ease-in-out bg-white rounded-[25px] font-cooper md:min-w-[7rem]"
                 >
                   Eat Healthy
                 </Link>

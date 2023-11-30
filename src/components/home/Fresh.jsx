@@ -19,13 +19,13 @@ const Fresh = () => {
           <h2 className="mb-[1.5rem] font-cooper md:text-[3.8vw] text-[1.55rem] font-bold text-dark-green">
             IF IT'S NOT FRESH, IT'S NOT FROM US
           </h2>
-          <p className="text-[.9rem] font-normal md:w-[57%] mb-[3rem]">
+          <p className="text-[.9rem] font-normal md:w-[57%] mb-[3rem] text-dark-green">
             Fuel your body with our delicious and nutritious wholefoods.
             Discover the benefits of healthy eating without sacrificing flavor.
           </p>
           <Link
             to={"/collections"}
-            className="block bg-accent-green hover:opacity-[.8] hover:border-solid hover:border-[2px] hover:border-gray-400 hover:transition-all hover:delay-[.25s] hover:ease-in-out transition-all delay-[.25s] ease-in-out font-cooper text-white font-bold text-[1.1rem] max-w-[7rem] rounded-full py-[.7rem] w-[90%] text-center"
+            className="green-button block bg-accent-green hover:opacity-[.8]  hover:transition-all hover:delay-[.25s] hover:ease-in-out font-cooper text-white font-bold text-[1.1rem] max-w-[7rem] rounded-full py-[.7rem] w-[90%] text-center"
           >
             Indulge
           </Link>

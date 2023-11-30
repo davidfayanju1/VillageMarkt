@@ -5,12 +5,12 @@ import Marquee from "react-fast-marquee";
 const Slider = () => {
   const [toggle, setToggle] = useState(true);
   return (
-    <section className="w-full md:min-h-[45vh] pb-[4rem] relative bg-primary">
+    <section className="w-full relative bg-primary pb-[6rem]">
       <div className="main-container slider-statement relative">
         <Marquee
           behaviour="alternate"
           className="slider-statement cursor-default py-[.6rem] bg-carpet-green relative"
-          speed={120}
+          speed={180}
           play={toggle ? true : false}
         >
           <div className="element flex items-center gap-[5rem]">

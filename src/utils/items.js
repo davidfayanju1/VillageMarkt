@@ -1,0 +1,80 @@
+export const products = [
+  {
+    img: "https://villagemarkt.com/cdn/shop/files/Bakedbeans.png?v=1697471180&width=950",
+    name: "Baked Beans",
+    price: 595,
+    qty: 44,
+  },
+  {
+    img: "https://villagemarkt.com/cdn/shop/files/BamaBig.png?v=1697471618&width=950",
+    name: "Bama Mayonnaise",
+    price: 1500,
+    qty: 4,
+  },
+  {
+    img: "https://villagemarkt.com/cdn/shop/files/Avocado.png?v=1697471134&width=950",
+    name: "Avocado",
+    price: 300,
+    qty: 44,
+  },
+  {
+    img: "https://villagemarkt.com/cdn/shop/files/Banana.png?v=1697472077&width=950",
+    name: "Banana",
+    price: 700,
+    qty: 40,
+  },
+  {
+    img: "https://villagemarkt.com/cdn/shop/files/Bakedbeans.png?v=1697471180&width=950",
+    name: "Baked Beans",
+    price: 595,
+    qty: 44,
+  },
+  {
+    img: "https://villagemarkt.com/cdn/shop/files/Bakedbeans.png?v=1697471180&width=950",
+    name: "Baked Beans",
+    price: 595,
+    qty: 44,
+  },
+  {
+    img: "https://villagemarkt.com/cdn/shop/files/Bakedbeans.png?v=1697471180&width=950",
+    name: "Baked Beans",
+    price: 595,
+    qty: 44,
+  },
+  {
+    img: "https://villagemarkt.com/cdn/shop/files/BamaBig.png?v=1697471618&width=950",
+    name: "Bama Mayonnaise",
+    price: 1500,
+    qty: 4,
+  },
+  {
+    img: "https://villagemarkt.com/cdn/shop/files/BamaBig.png?v=1697471618&width=950",
+    name: "Bama Mayonnaise",
+    price: 1500,
+    qty: 4,
+  },
+  {
+    img: "https://villagemarkt.com/cdn/shop/files/BamaBig.png?v=1697471618&width=950",
+    name: "Bama Mayonnaise",
+    price: 1500,
+    qty: 4,
+  },
+  {
+    img: "https://villagemarkt.com/cdn/shop/files/BamaBig.png?v=1697471618&width=950",
+    name: "Bama Mayonnaise",
+    price: 1500,
+    qty: 4,
+  },
+  {
+    img: "https://villagemarkt.com/cdn/shop/files/BamaBig.png?v=1697471618&width=950",
+    name: "Bama Mayonnaise",
+    price: 1500,
+    qty: 4,
+  },
+  {
+    img: "https://villagemarkt.com/cdn/shop/files/BamaBig.png?v=1697471618&width=950",
+    name: "Bama Mayonnaise",
+    price: 1500,
+    qty: 4,
+  },
+];

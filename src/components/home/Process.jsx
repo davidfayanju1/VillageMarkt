@@ -73,7 +73,7 @@ const Process = () => {
                     alt={stage.stage}
                     className="w-full h-[10rem] object-cover my-[1rem]"
                   />
-                  <p>{stage.details}</p>
+                  <p className="text-dark-green">{stage.details}</p>
                 </div>
               </div>
             </div>
@@ -119,7 +119,7 @@ const Process = () => {
                       alt={stage.stage}
                       className="w-full h-[10rem] object-cover my-[1rem]"
                     />
-                    <p>{stage.details}</p>
+                    <p className="text-dark-green">{stage.details}</p>
                   </div>
                 </div>
               </div>

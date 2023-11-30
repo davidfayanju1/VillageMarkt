@@ -8,12 +8,12 @@ const Shop = () => {
   return (
     <section className="md:py-[3rem] bg-primary">
       {/* marquee */}
-      <div className="main-container relative">
+      <div className="relative">
         <Marquee
           behaviour="alternate"
           scrollamount="10"
           className="cursor-default py-[.6rem] bg-carpet-green relative"
-          speed={120}
+          speed={180}
           play={toggle ? true : false}
         >
           <div className="flex items-center gap-[5rem]">
@@ -67,7 +67,7 @@ const Shop = () => {
         <section className="more_collection_button flex  items-center justify-center w-full mt-[6rem]">
           <Link
             to={"/collections"}
-            className="block bg-accent-green hover:opacity-[.8] hover:border-solid hover:border-[2px] hover:border-gray-400 hover:transition-all hover:delay-[.25s] hover:ease-in-out transition-all delay-[.25s] ease-in-out font-cooper text-white font-semibold text-[1.1rem] max-w-[8rem] rounded-full py-[.7rem] w-[90%] text-center"
+            className="green-button block bg-accent-green hover:opacity-[.8] transition-all delay-[.25s] ease-in-out font-cooper text-white font-semibold text-[1.1rem] max-w-[8rem] rounded-full py-[.7rem] w-[90%] text-center"
           >
             Shop Now
           </Link>
