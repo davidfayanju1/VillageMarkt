@@ -43,7 +43,7 @@ const ProductDetails = () => {
           </ul>
         </nav>
 
-        <div className="product_details_container">
+        <div className="product_details_container  md:w-[97%] w-full">
           {products.map(
             (product) =>
               product.name === id && (
