@@ -1,7 +1,15 @@
 import React from "react";
-import { useParams, NavLink } from "react-router-dom";
+import { useParams, NavLink, Link } from "react-router-dom";
 import useTitle from "../utils/useTitle";
-import { ArrowRight, Share } from "../assets/svgs/svg-icons";
+import {
+  ArrowRight,
+  Custom,
+  Leaf,
+  Pickup,
+  Share,
+  ThumbsUp,
+  Tick,
+} from "../assets/svgs/svg-icons";
 import SecondLayout from "../layout/SecondLayout";
 import { products } from "../utils/items";
 
@@ -12,8 +20,8 @@ const ProductDetails = () => {
 
   return (
     <SecondLayout>
-      <div className="page-container min-h-screen bg-primary md:px-[3.3rem] px-[1.2rem] py-[1.7rem]">
-        <nav className="md:mb-[5rem] mb-[4rem]">
+      <div className="page-container min-h-screen md:px-[3.3rem] px-[1.2rem] py-[1.7rem] pb-[15rem] bg-primary">
+        <nav className="md:mb-[1rem]">
           <ul className="flex items-center gap-[.5rem]">
             <li>
               <NavLink
@@ -43,21 +51,22 @@ const ProductDetails = () => {
           </ul>
         </nav>
 
-        <div className="product_details_container  md:w-[97%] w-full">
+        {/* products */}
+        <div className="product_details_container md:w-[97%] w-full">
           {products.map(
             (product) =>
               product.name === id && (
                 <div className="product_details">
-                  <div className="details_flex flex items-center gap-[2rem] justify-between md:flex-row flex-col">
+                  <div className="details_flex flex gap-[2rem] items-start justify-between md:flex-row flex-col">
                     <div className="img_container md:w-[50%] w-full">
                       <img
                         src={product.img}
                         alt={product.name}
-                        className="w-[30rem] object-cover"
+                        className="md:w-[30rem] w-full  object-cover"
                       />
                     </div>
 
-                    <div className="details_container md:w-[50%] w-full self-start mt-[1.6rem]">
+                    <section className="details_container md:w-[50%] w-full md:mt-[2rem]">
                       <span className="block text-gray-400 mb-[1.5rem]">
                         Village Markt
                       </span>
@@ -76,7 +85,7 @@ const ProductDetails = () => {
                         </span>
                         <small className="text-gray-400">Tax included</small>
                       </div>
-                      <div className="menu pt-[1rem] w-full flex items-center justify-between gap-[1rem] flex-col">
+                      <div className="menu_button pt-[1rem] w-full flex items-center justify-between gap-[1rem] flex-col">
                         <button className="md:text-[1rem] text-dark-green hover:border-black hover:border-[1px] hover:transition-all hover:ease-in-out hover:delay-[.25s] font-bold py-[.7rem] w-full flex items-center justify-center bg-transparent border-solid border-[1px] border-gray-300 rounded-[25px] font-cooper">
                           Add to Cart
                         </button>
@@ -84,7 +93,63 @@ const ProductDetails = () => {
                           Checkout
                         </button>
                       </div>
-                    </div>
+
+                      {/* description */}
+
+                      <section className="product_description mt-[4rem]">
+                        <h1 className="title font-cooper mb-[3.7rem] font-bold md:text-[1.25rem] text-[1.1rem] text-dark-green">
+                          Description
+                        </h1>
+
+                        <div className="first_flex flex md:items-center justify-between md:w-[80%] w-full md:flex-row flex-col gap-[2rem]">
+                          <div className="items_container">
+                            <ThumbsUp />
+                            <span className=" mt-[1.1rem] block text-dark-green font-cooper text-[1.2rem] font-bold">
+                              Item Heading
+                            </span>
+                          </div>
+                          <div className="items_container">
+                            <Leaf />
+                            <span className=" mt-[1.1rem] block text-dark-green font-cooper text-[1.2rem] font-bold">
+                              Item Heading
+                            </span>
+                          </div>
+                        </div>
+
+                        <div className="second_flex flex md:items-center justify-between md:w-[80%] w-full md:flex-row flex-col gap-[2rem] mt-[4rem]">
+                          <div className="items_container">
+                            <Custom />
+                            <span className=" mt-[1.1rem] block text-dark-green font-cooper text-[1.2rem] font-bold">
+                              Item Heading
+                            </span>
+                          </div>
+                          <div className="items_container">
+                            <Tick />
+                            <span className=" mt-[1.1rem] block text-dark-green font-cooper text-[1.2rem] font-bold">
+                              Item Heading
+                            </span>
+                          </div>
+                        </div>
+
+                        <div className="pickup bg-carpet-green gap-[1rem] w-full min-h-[12rem] mt-[3rem] flex items-start p-[1.2rem]">
+                          <Pickup />
+                          <div className="items_container">
+                            <hgroup className="font-cooper text-white font-bold text-[1.3rem]">
+                              Pickup available at Village Markt Mainland Store
+                            </hgroup>
+                            <span className="block text-white text-[.9rem] my-[.3rem]">
+                              Usually ready in 24 hours
+                            </span>
+                            <Link
+                              to={`/products/${product.name}`}
+                              className="font-cooper text-white underline text-[.8rem] font-[600]"
+                            >
+                              View store information
+                            </Link>
+                          </div>
+                        </div>
+                      </section>
+                    </section>
                   </div>
                 </div>
               )
