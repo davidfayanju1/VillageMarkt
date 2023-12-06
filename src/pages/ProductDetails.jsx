@@ -131,10 +131,10 @@ const ProductDetails = () => {
                           </div>
                         </div>
 
-                        <div className="pickup bg-carpet-green gap-[1rem] w-full min-h-[12rem] mt-[3rem] flex items-start p-[1.2rem]">
+                        <div className="pickup bg-carpet-green gap-[1rem] w-full min-h-[12rem] mt-[3rem] flex items-start justify-center md:p-[1.2rem] p-[1rem]">
                           <Pickup />
                           <div className="items_container">
-                            <hgroup className="font-cooper text-white font-bold text-[1.3rem]">
+                            <hgroup className="font-cooper text-white font-bold md:text-[1.3rem]">
                               Pickup available at Village Markt Mainland Store
                             </hgroup>
                             <span className="block text-white text-[.9rem] my-[.3rem]">
