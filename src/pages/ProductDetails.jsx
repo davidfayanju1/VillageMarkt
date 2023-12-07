@@ -52,19 +52,19 @@ const ProductDetails = () => {
         </nav>
 
         {/* products */}
-        <div className="product_details_container md:w-[97%] w-full">
+        <div className="product_details_container md:w-[97%] w-full md:mt-0 mt-[.5rem]">
           {products.map(
             (product) =>
               product.name === id && (
                 <div className="product_details">
                   <div className="details_flex flex gap-[2rem] items-start justify-between md:flex-row flex-col">
-                    <div className="img_container md:w-[50%] w-full">
+                    <figure className="img_container md:w-[50%] w-full">
                       <img
                         src={product.img}
                         alt={product.name}
-                        className="md:w-[30rem] w-full  object-cover"
+                        className="w-full md:h-[35rem] object-cover"
                       />
-                    </div>
+                    </figure>
 
                     <section className="details_container md:w-[50%] w-full md:mt-[2rem]">
                       <span className="block text-gray-400 mb-[1.5rem]">
@@ -116,7 +116,7 @@ const ProductDetails = () => {
                           </div>
                         </div>
 
-                        <div className="second_flex flex md:items-center justify-between md:w-[80%] w-full md:flex-row flex-col gap-[2rem] mt-[4rem]">
+                        <div className="second_flex flex md:items-center justify-between md:w-[80%] w-full md:flex-row flex-col gap-[2rem] md:mt-[4rem] mt-[2rem]">
                           <div className="items_container">
                             <Custom />
                             <span className=" mt-[1.1rem] block text-dark-green font-cooper text-[1.2rem] font-bold">
@@ -131,13 +131,15 @@ const ProductDetails = () => {
                           </div>
                         </div>
 
-                        <div className="pickup bg-carpet-green gap-[1rem] w-full min-h-[12rem] mt-[3rem] flex items-start justify-center md:p-[1.2rem] p-[1rem]">
-                          <Pickup />
+                        <div className="pickup bg-carpet-green md:gap-[1rem] gap-[.5rem] w-full min-h-[12rem] mt-[3rem] flex items-start justify-center md:p-[1.2rem] p-[1.4rem]">
+                          <div className="svg_container">
+                            <Pickup />
+                          </div>
                           <div className="items_container">
-                            <hgroup className="font-cooper text-white font-bold md:text-[1.3rem]">
+                            <hgroup className="font-cooper text-white font-bold md:text-[1.2rem] text-[1.1rem]">
                               Pickup available at Village Markt Mainland Store
                             </hgroup>
-                            <span className="block text-white text-[.9rem] my-[.3rem]">
+                            <span className="block text-white text-[.9rem] md:my-[.3rem] my-[.55rem]">
                               Usually ready in 24 hours
                             </span>
                             <Link
