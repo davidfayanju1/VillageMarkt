@@ -22,9 +22,9 @@ const ProductsGrid = () => {
       qty: 4,
     },
     {
-      img: "https://villagemarkt.com/cdn/shop/files/Avocado.png?v=1697471134&width=950",
-      name: "Avocado",
-      price: "N300.00",
+      img: "https://villagemarkt.com/cdn/shop/files/BangaPalmoil4litres.png?v=1697472227&width=950",
+      name: "Banga Palm Oil",
+      price: "N4, 350.00",
       qty: 44,
     },
     {
@@ -134,7 +134,7 @@ const ProductsGrid = () => {
 
   return (
     <>
-      <section className="w-full grid xl:grid-cols-[repeat(auto-fit,_minmax(450px,_1fr))] md:grid-cols-[repeat(auto-fit,_minmax(200px,_1fr))] grid-cols-[repeat(auto-fit,_minmax(100px,_1fr))] gap-[2rem] md:px-[3.3rem] px-[1.5rem] pb-[8rem] md:pt-[3rem] bg-primary">
+      <section className="w-full grid xl:grid-cols-[repeat(auto-fit,_minmax(300px,_1fr))] md:grid-cols-[repeat(auto-fit,_minmax(200px,_1fr))] grid-cols-[repeat(auto-fit,_minmax(120px,_1fr))] gap-[2rem] md:px-[3.3rem] px-[1.5rem] pb-[8rem] md:pt-[3rem] bg-primary">
         {values.map((element) => (
           <div
             className="product_card"
