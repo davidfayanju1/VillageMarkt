@@ -127,7 +127,7 @@ const Collections = () => {
                   {product.category}
                 </span>
                 <Link
-                  to={`/product/${product.category}`}
+                  to={`/collections/${product.category}`}
                   className="text-white underline font-cooper font-[600] md:text-[.95rem] text-[.9rem]"
                 >
                   View {product.quantity} products
