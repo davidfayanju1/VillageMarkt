@@ -131,7 +131,7 @@ const ProductDetails = () => {
                           </div>
                         </div>
 
-                        <div className="pickup bg-carpet-green md:gap-[1rem] gap-[.5rem] w-full min-h-[12rem] mt-[3rem] flex items-start justify-center md:p-[1.2rem] p-[1.4rem]">
+                        <div className="store_pickup relative bg-carpet-green md:gap-[1rem] gap-[.5rem] w-full min-h-[12rem] mt-[3rem] flex items-start justify-center md:p-[1.2rem] p-[1.4rem]">
                           <div className="svg_container">
                             <Pickup />
                           </div>

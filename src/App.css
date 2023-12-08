@@ -29,6 +29,35 @@ body {
   transition: transform ease-in-out 0.25s;
 }
 
+.store_pickup::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2rem;
+  height: 2rem;
+  display: block;
+  background: linear-gradient(
+    45deg,
+    rgba(4, 50, 47, 0.2) 50%,
+    rgb(255, 254, 249) 50%
+  );
+}
+.footer_fold::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2rem;
+  height: 2rem;
+  display: block;
+  background: linear-gradient(
+    45deg,
+    rgba(255, 254, 249, 0.3) 50%,
+    rgb(255, 254, 249) 50%
+  );
+}
+
 .asterisk_content {
   overflow: hidden;
   clip-path: polygon(

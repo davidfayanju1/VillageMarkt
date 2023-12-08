@@ -71,7 +71,7 @@ const Footer = () => {
         </div>
 
         <div className="collection">
-          <span className="block mb-[1.4rem] font-cooper text-[1rem] font-bold">
+          <span className="block mb-[1.4rem] font-cooper text-[1rem] font-bold text-dark-green">
             Collection
           </span>
           <Link to={"/search"} className="block mb-[1rem] hover:underline">
@@ -99,7 +99,7 @@ const Footer = () => {
           </Link>
         </div>
 
-        <div className="newsletter">
+        <div className="newsletter footer_fold relative">
           <div className="new-letter mb-[2rem] md:w-[16rem] min-h-[10rem] py-[2rem] px-[1.3rem] bg-dark-green">
             <h2 className="title font-cooper font-bold text-[1rem] text-white mb-[.8rem]">
               Newsletter

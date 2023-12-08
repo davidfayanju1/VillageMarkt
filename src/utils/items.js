@@ -18,6 +18,12 @@ export const products = [
     qty: 44,
   },
   {
+    img: "https://villagemarkt.com/cdn/shop/files/BangaPalmoil4litres.png?v=1697472227&width=950",
+    name: "Banga Palm Oil",
+    price: 4350,
+    qty: 44,
+  },
+  {
     img: "https://villagemarkt.com/cdn/shop/files/Banana.png?v=1697472077&width=950",
     name: "Banana",
     price: 700,
