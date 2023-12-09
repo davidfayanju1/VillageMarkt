@@ -13,7 +13,7 @@ const CollectionsDetails = () => {
 
   return (
     <SecondLayout>
-      <div className="page_container min-h-screen">
+      <div className="page_container min-h-screen bg-primary">
         <CollectionsFilter id={id} />
         <CollectionsGrid />
       </div>

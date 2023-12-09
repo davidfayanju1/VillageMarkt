@@ -3,13 +3,13 @@ import { NavLink } from "react-router-dom";
 import { ArrowRight, Down, Filter } from "../../assets/svgs/svg-icons";
 import { useDispatch } from "react-redux";
 import { filterOpen } from "../../redux/slices/toggleFilter";
+import { collections } from "../../utils/items";
 
 const CollectionsFilter = ({ id }) => {
   const dispatch = useDispatch();
-
   return (
     <section>
-      <nav className="mb-[2.5rem] md:px-[4rem] mt-[1rem]">
+      <nav className="md:mb-[2.5rem] mb-[1rem] md:px-[4rem] pt-[1rem] px-[1.2rem]">
         <ul className="flex items-center gap-[.5rem]">
           <li>
             <NavLink
@@ -39,16 +39,27 @@ const CollectionsFilter = ({ id }) => {
         </ul>
       </nav>
 
-      <div className="page_title flex items-center justify-between md:flex-row flex-col-reverse md:pl-[5rem] gap-[2rem]">
-        <h1 className="font-cooper font-bold md:text-[2.6rem] text-[1.5rem]">
-          {id}
-        </h1>
-        <figure className="md:w-[50%] w-full bg-gray-100">
-          <img src={"ok"} className="w-full h-[16rem] object-cover" alt={id} />
-        </figure>
-      </div>
+      <section>
+        {collections.map(
+          (item) =>
+            item.category === id && (
+              <div className="page_title flex items-center justify-between md:flex-row flex-col-reverse md:pl-[5rem] md:gap-[2rem] gap-[1rem]">
+                <h1 className="font-cooper font-bold md:text-[2.6rem] text-[1.5rem]">
+                  {item.category}
+                </h1>
+                <figure className="md:w-[50%] w-full bg-gray-100">
+                  <img
+                    src={item.img}
+                    className="w-full h-[16rem] object-cover"
+                    alt={id}
+                  />
+                </figure>
+              </div>
+            )
+        )}
+      </section>
 
-      <section className="filter flex md:flex-row flex-col gap-[2rem] items-center md:justify-between justify-center md:px-[5.5rem] md:mt-[5rem] mt-[2rem] mb-[2rem] px-[1.5rem]">
+      <section className="filter flex md:flex-row flex-col gap-[2rem] items-center md:justify-between justify-center md:px-[5.5rem] md:mt-[5rem] mt-[2rem] mb-[2rem] px-[1rem]">
         <button
           onClick={() => dispatch(filterOpen())}
           className="font-cooper font-semibold md:w-[7rem] w-full text-[1.1rem] filter border-solid border-[2px] border-gray-300 rounded-full text-center transition-all ease-in-out delay-100"

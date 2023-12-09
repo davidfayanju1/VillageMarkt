@@ -112,7 +112,7 @@ const CartFilled = ({ cart }) => {
               {/* order note */}
               <div className="order_note">
                 <span
-                  className="block hover:text-carpet-green mb-[.6rem] font-cooper font-bold underline cursor-pointer text-[.9rem]"
+                  className="inlin-block hover:text-carpet-green font-cooper font-bold underline cursor-pointer text-[.9rem]"
                   onClick={() => setOpenNote(!openNote)}
                 >
                   Add order note
@@ -120,7 +120,7 @@ const CartFilled = ({ cart }) => {
                 {openNote && (
                   <form>
                     <textarea
-                      className="w-full textarea placeholder:text-[.86rem] text-dark-green focus:border-dark-green focus:border-[3.5px] placeholder:text-gray-300 border-solid border-[1px] border-gray-300 p-[1rem] outline-none"
+                      className="w-full mt-[.6rem] textarea placeholder:text-[.86rem] text-dark-green focus:border-dark-green focus:border-[3.5px] placeholder:text-gray-300 border-solid border-[1px] border-gray-300 p-[1rem] outline-none"
                       cols="10"
                       rows="5"
                       placeholder="Add order note here..."

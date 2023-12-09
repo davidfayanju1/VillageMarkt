@@ -6,7 +6,7 @@ const CollectionsGrid = () => {
   const values = [{}, {}, {}, {}, {}, {}];
   return (
     <>
-      <section className="w-full grid xl:grid-cols-[repeat(auto-fit,_minmax(300px,_1fr))] md:grid-cols-[repeat(auto-fit,_minmax(200px,_1fr))] grid-cols-[repeat(auto-fit,_minmax(120px,_1fr))] gap-[2rem] md:px-[3.3rem] px-[1.5rem] pb-[8rem] md:pt-[3rem] bg-primary">
+      <section className="w-full grid xl:grid-cols-[repeat(auto-fit,_minmax(250px,_1fr))] md:grid-cols-[repeat(auto-fit,_minmax(200px,_1fr))] grid-cols-[repeat(auto-fit,_minmax(120px,_1fr))] md:gap-[2rem] gap-[1.5rem] md:px-[3.3rem] px-[1rem] pb-[8rem] md:pt-[3rem]">
         {values.map((element) => (
           <div className="product_card" key={Math.random()}>
             <div className="img_container relative md:min-h-[24rem] h-[11rem] overflow-hidden">
