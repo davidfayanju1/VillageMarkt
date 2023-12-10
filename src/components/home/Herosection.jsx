@@ -22,8 +22,8 @@ const Herosection = () => {
         </div>
       </div>
       <motion.div
-        initial={{ top: -20, opacity: 0 }}
-        whileInView={{ top: 100, opacity: 1 }}
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
         className="hero_text z-[500] absolute md:top-[19.7%] top-[32%] md:left-[5.5%] left-[4%] md:w-[55%] w-[95%]"
       >
         <h1 className="mb-[2rem] font-cooper text-white md:text-[6.5vw] text-[2rem] font-semibold">
