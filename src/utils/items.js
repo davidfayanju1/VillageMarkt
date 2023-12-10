@@ -89,7 +89,7 @@ export const collections = [
   {
     img: "https://villagemarkt.com/cdn/shop/collections/Frame_178.jpg?v=1697539612&width=550",
     category: "Bundles",
-    quantity: 3,
+    quantity: 0,
   },
   {
     img: "https://villagemarkt.com/cdn/shop/collections/Titus_sardines.png?v=1697527403&width=550",

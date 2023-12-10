@@ -1,9 +1,20 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const TextArea = () => {
+  const animateSection = {
+    initial: { opacity: 0 },
+    whileInView: { opacity: 1 },
+    // exit: { opacity: 0, transition: { delay: 0.5 } },
+    transition: { duration: 3 },
+  };
+
   return (
     <section className="md:px-[4rem] px-[1rem] py-[3.5rem] bg-primary">
-      <hgroup className="md:w-[55%] w-[93%] flex items-start justify-center flex-col">
+      <motion.hgroup
+        {...animateSection}
+        className="md:w-[55%] w-[93%] flex items-start justify-center flex-col"
+      >
         <span className="block text-light-green mb-[1rem] md:text-[1.37rem]">
           GET THESE AND MORE DELIVERED TO YOUR DOORSTEP
         </span>
@@ -14,7 +25,7 @@ const TextArea = () => {
           Our farmers advice and recommend these products for the healthiest
           outcomes
         </p>
-      </hgroup>
+      </motion.hgroup>
     </section>
   );
 };
