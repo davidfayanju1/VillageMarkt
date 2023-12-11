@@ -29,6 +29,10 @@ body {
   transition: transform ease-in-out 0.25s;
 }
 
+.pause_button {
+  box-shadow: 0 0 0 3px rgba(4, 50, 47, 0.16);
+}
+
 .store_pickup::before {
   content: "";
   position: absolute;

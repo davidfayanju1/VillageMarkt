@@ -13,7 +13,7 @@ const Fresh = () => {
               </span>
             </div>
           </div>
-          <span className="block text-light-green mb-[1rem] md:text-[1.05rem] text-[.9rem]">
+          <span className="block text-light-green mb-[1rem] md:text-[1.05rem] text-[1rem]">
             CAREFULLY HAND-PICKED BY QUALITY FARMERS AND DEDICATED FOODIES LOL.
           </span>
           <h2 className="mb-[1.5rem] font-cooper md:text-[3.8vw] text-[1.55rem] font-bold text-dark-green">

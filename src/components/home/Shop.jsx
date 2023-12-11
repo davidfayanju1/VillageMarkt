@@ -42,7 +42,7 @@ const Shop = () => {
         </Marquee>
         <button
           onClick={() => setToggle(!toggle)}
-          className="z-[10] absolute md:top-[8px] top-[13%] right-[5%] flex items-center justify-center hover:opacity-[.9] transition-all delay-[.5sec] md:h-[2.75rem] md:w-[2.75rem] p-[.2rem] rounded-full bg-white border-solid border-[1.5px] border-gray-400 hover:border-gray-500"
+          className="pause_button z-[10] absolute md:top-[8px] top-[13%] right-[5%] flex items-center justify-center hover:opacity-[.9] transition-all delay-[.5sec] md:h-[2.75rem] md:w-[2.75rem] p-[.2rem] rounded-full bg-white border-solid border-[1.5px] hover:border-gray-500"
         >
           {toggle ? <Pause /> : <Play />}
         </button>
@@ -67,7 +67,7 @@ const Shop = () => {
         <section className="more_collection_button flex  items-center justify-center w-full mt-[6rem]">
           <Link
             to={"/collections"}
-            className="green-button block bg-accent-green hover:opacity-[.8] transition-all delay-[.25s] ease-in-out font-cooper text-white font-semibold text-[1.1rem] max-w-[8rem] rounded-full py-[.7rem] w-[90%] text-center"
+            className="green-button  block bg-accent-green hover:opacity-[.8] transition-all delay-[.25s] ease-in-out font-cooper text-white font-semibold text-[1.1rem] max-w-[8rem] rounded-full py-[.7rem] w-[90%] text-center"
           >
             Shop Now
           </Link>

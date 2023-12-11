@@ -5,8 +5,7 @@ const TextArea = () => {
   const animateSection = {
     initial: { opacity: 0 },
     whileInView: { opacity: 1 },
-    // exit: { opacity: 0, transition: { delay: 0.5 } },
-    transition: { duration: 2.5 },
+    transition: { duration: 1.5 },
   };
 
   return (

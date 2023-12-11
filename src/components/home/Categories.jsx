@@ -7,6 +7,7 @@ import { Pagination, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import { motion } from "framer-motion";
 
 const Categories = () => {
   const productsCategories = [
@@ -32,11 +33,20 @@ const Categories = () => {
     },
   ];
 
+  const animateSection = {
+    initial: { opacity: 0 },
+    whileInView: { opacity: 1 },
+    transition: { duration: 1.8 },
+  };
+
   return (
     <section className="md:min-h-[70rem] pb-[4rem] bg-primary">
       <section className="flex md:px-[2.6rem] px-[1rem] items-center justify-center mb-[3rem]">
-        <hgroup className="md:max-w-[55%] w-full flex flex-col justify-center items-center text-center">
-          <span className="block text-light-green text-center mb-[1rem] md:text-[1rem] text-[.9rem]">
+        <motion.hgroup
+          {...animateSection}
+          className="md:max-w-[55%] w-full flex flex-col justify-center items-center text-center"
+        >
+          <span className="block text-light-green text-center mb-[1rem] md:text-[1rem] text-[1rem]">
             WE HAVE CAREFULLY CURATED SOME AMAZING PRODUCTS WITH LOVE IN OUR
             HEARTS.
           </span>
@@ -47,7 +57,7 @@ const Categories = () => {
             Whether you are a Vegan or a Meat lover. We have all you'll need all
             year round. We are every mothers first home choice
           </p>
-        </hgroup>
+        </motion.hgroup>
       </section>
       {/* product categories */}
       <div className="flex items-start justify-start md:px-[3.3rem] mb-[-3rem] w-full">
