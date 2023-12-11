@@ -50,7 +50,7 @@ const Shop = () => {
 
       <section className="md:mt-[8rem] mt-[4rem] flex flex-col items-center justify-center md:mb-[6rem] pb-[4rem] w-full">
         <hgroup className="md:max-w-[85%] w-[90%] flex flex-col items-center justify-center text-center">
-          <span className="block text-light-green text-center mb-[1rem] md:text-[1.05rem]">
+          <span className="block text-carpet-green text-center mb-[1rem] md:text-[1.05rem]">
             SHOP WITH VILLAGE MARKT
           </span>
           <h2 className="mb-[1.5rem] md:w-[90%] w-[95%] font-cooper text-center md:text-[3.9vw] text-[1.65rem] font-bold text-dark-green">

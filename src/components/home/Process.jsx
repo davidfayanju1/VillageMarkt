@@ -48,7 +48,7 @@ const Process = () => {
   return (
     <section className="py-[4rem] bg-primary md:px-[4rem] w-full">
       <hgroup className="flex flex-col items-center justify-center md:mb-[6rem] mb-[4rem]">
-        <span className="block text-light-green mb-[1rem] md:text-[1.05rem] text-[.9rem]">
+        <span className="block text-carpet-green mb-[1rem] md:text-[1.05rem] text-[.9rem]">
           WE ALWAYS HAVE YOU IN MIND
         </span>
         <h2 className="mb-[1.5rem] font-cooper md:text-[3.8vw] text-[1.5rem] font-bold text-dark-green">

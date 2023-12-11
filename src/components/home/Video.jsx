@@ -26,7 +26,7 @@ const Video = () => {
         <div className="details-container absolute md:top-[12%] top-[190px] left-[6%] z-[6] w-[89%]">
           <section className="flex items-center justify-center mb-[6rem] w-full">
             <hgroup className="w-full flex flex-col items-center justify-center text-center">
-              <span className="block text-light-green text-center mb-[1rem] md:text-[1.05rem]">
+              <span className="block text-carpet-green text-center mb-[1rem] md:text-[1.05rem]">
                 HEALTHY WHOLEFOODS FROM THE FARM
               </span>
               <h2 className="mb-[1.5rem] text-white font-cooper text-center md:text-[4vw] text-[1.8rem] md:font-bold font-normal">

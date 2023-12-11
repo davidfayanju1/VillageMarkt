@@ -21,7 +21,7 @@ const TopNav = () => {
         speed={800}
       >
         <SwiperSlide>
-          <p className="text-dark-green w-full text-center md:font-normal font-light">
+          <p className="text-dark-green w-full text-center font-normal">
             From Farm To Your Doorstep
           </p>
         </SwiperSlide>

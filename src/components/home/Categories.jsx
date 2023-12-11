@@ -46,7 +46,7 @@ const Categories = () => {
           {...animateSection}
           className="md:max-w-[55%] w-full flex flex-col justify-center items-center text-center"
         >
-          <span className="block text-light-green text-center mb-[1rem] md:text-[1rem] text-[1rem]">
+          <span className="block text-carpet-green text-center mb-[1rem] md:text-[1.2rem] text-[1rem]">
             WE HAVE CAREFULLY CURATED SOME AMAZING PRODUCTS WITH LOVE IN OUR
             HEARTS.
           </span>
@@ -88,7 +88,7 @@ const Categories = () => {
                   {product.category}
                 </span>
                 <Link
-                  to={`/product/${product.category}`}
+                  to={`/collections/${product.category}`}
                   className="text-white underline font-cooper text-[1rem] font-bold"
                 >
                   View {product.quantity} products

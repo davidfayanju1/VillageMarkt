@@ -22,7 +22,7 @@ const Bundles = () => {
     <div className="md:min-h-[58rem] bg-primary md:pb-[10rem] pb-[7rem]">
       <section className="flex items-center justify-center w-full">
         <hgroup className="md:max-w-[55%] w-full flex flex-col items-center justify-center text-center">
-          <span className="block text-light-green text-center mb-[1rem] md:text-[1.05rem]">
+          <span className="block text-carpet-green text-center mb-[1rem] md:text-[1.05rem]">
             SAVE ON BUNDLES
           </span>
           <h2 className="mb-[1.5rem] font-cooper text-center md:text-[2.9rem] text-[1.8rem] font-bold text-dark-green">
