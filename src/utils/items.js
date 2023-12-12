@@ -113,7 +113,7 @@ export const collections = [
   },
   {
     img: "https://villagemarkt.com/cdn/shop/collections/Tomatoes.png?v=1697479679&width=550",
-    category: "Tomatoes and Peppers",
+    category: "Tomatoes and Pepper",
     quantity: 16,
   },
   {

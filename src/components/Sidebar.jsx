@@ -66,35 +66,35 @@ const Sidebar = () => {
   const links = [
     {
       name: "Grains",
-      link: "/collection/grains",
+      link: "/collections/Grains",
     },
     {
       name: "Oils",
-      link: "/collection/oils",
+      link: "/collections/Oils",
     },
     {
-      name: "proteins",
-      link: "/collection/protein",
+      name: "Proteins",
+      link: "/collections/Protein",
     },
     {
       name: "Sea Foods",
-      link: "/collection/seafoods",
+      link: "/collections/Sea foods",
     },
     {
       name: "Soup Seeds",
-      link: "/collection/soup-seeds",
+      link: "/collections/Soup Seeds",
     },
     {
       name: "Spices",
-      link: "/collection/spices",
+      link: "/collections/Spices",
     },
     {
       name: "Tomatoes and Peppers",
-      link: "/collection/tomatoes-and-peppers",
+      link: "/collections/tomatoes-and-peppers",
     },
     {
       name: "Tubers",
-      link: "/collection/tubers",
+      link: "/collections/tubers",
     },
   ];
   return (
@@ -110,7 +110,7 @@ const Sidebar = () => {
             className="bg-primary overflow-x-hidden absolute top-0 left-0 h-screen pb-[3rem] md:w-[27rem] w-full z-[10000] overflow-y-scroll"
           >
             <div className="content w-full">
-              <div className="stroke bg-primary sticky top-0 left-0 z-[2] md:w-[26.1rem] w-full after:block after:w-full after:h-[.03rem] after:bg-gray-400">
+              <div className="stroke bg-primary sticky top-0 left-0 z-[10] md:w-[26.1rem] w-full after:block after:w-full after:h-[.03rem] after:bg-gray-400">
                 <div className="menu md:px-[2rem] px-[1rem] py-[1rem] w-full flex items-center justify-between">
                   <span className="block font-cooper text-[1.2rem] font-bold text-dark-green">
                     Menu
@@ -173,9 +173,9 @@ const Sidebar = () => {
                       {links.map((link) => (
                         <Link
                           to={link.link}
+                          onClick={() => dispatch(toggleClose())}
                           key={link.name}
                           className="block p-[.7rem] text-dark-green hover:bg-accent-green-2 text-[1.05rem]"
-                          onClick={() => dispatch(toggleClose())}
                         >
                           {link.name}
                         </Link>
