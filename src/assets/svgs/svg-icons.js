@@ -37,6 +37,7 @@ import { ReactComponent as leaf } from "./leaf.svg";
 import { ReactComponent as custom } from "./custom.svg";
 import { ReactComponent as tick } from "./tick.svg";
 import { ReactComponent as pickup } from "./pickup.svg";
+import { ReactComponent as check } from "./check.svg";
 
 export const Burger = React.memo(hamburger);
 export const Search = React.memo(search);
@@ -76,3 +77,4 @@ export const Leaf = React.memo(leaf);
 export const Custom = React.memo(custom);
 export const Tick = React.memo(tick);
 export const Pickup = React.memo(pickup);
+export const Check = React.memo(check);

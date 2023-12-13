@@ -33,6 +33,15 @@ body {
   box-shadow: 0 0 0 3px rgba(4, 50, 47, 0.16);
 }
 
+.check_button {
+  transition: all 0.25s ease-in-out;
+}
+
+.check_button:hover {
+  box-shadow: 0 0 0 3px rgba(4, 50, 47, 0.16);
+  transition: all 0.25s ease-in-out;
+}
+
 .store_pickup::before {
   content: "";
   position: absolute;

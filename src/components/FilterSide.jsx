@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useDispatch, useSelector } from "react-redux";
-import { Cancel, Minus, Plus } from "../assets/svgs/svg-icons";
+import { Cancel, Check, Minus, Plus } from "../assets/svgs/svg-icons";
 import { filterClose } from "../redux/slices/toggleFilter";
 
 const FilterSide = () => {
@@ -69,13 +69,37 @@ const FilterSide = () => {
                   <div className="details">
                     {!toggleSvg && (
                       <div className="availability_details pt-[2rem]">
-                        <div className="container-element mb-[1.2rem] flex items-center gap-[.5rem]">
-                          <input type="checkbox" />
+                        <div className="filter-box mb-[1.2rem] flex items-center gap-[.5rem]">
+                          <div className="flex relative gap-[0.65rem] items-center justify-center">
+                            <input
+                              type="checkbox"
+                              id="filter"
+                              className="check_button w-[1.5rem] h-[1.5rem] appearance-none rounded-none shrink-0 checked:bg-white border-solid border-gray-300 dark:border-accent-8 dark:bg-cream  border-[1px] focus:outline-none peer cursor-pointer"
+                            />
+                            <label
+                              htmlFor="filter"
+                              className="text-lighter text-base font-light leading-3 cursor-pointer"
+                            ></label>
+                            <Check className="hidden bg-dark-green rounded-none w-[1.5rem] h-[1.5rem] peer-checked:block absolute pointer-events-none left-0" />
+                          </div>
                           <span className="title block text-dark-green text-[1rem]">{`In stock (${118})`}</span>
                         </div>
                         <div className="container-element flex items-center gap-[.5rem]">
-                          <input type="checkbox" />
-                          <span className="title block text-dark-green text-[1rem]">{`Out of stock (${29})`}</span>
+                          <div className="filter-box mb-[1.2rem] flex items-center gap-[.5rem]">
+                            <div className="flex relative gap-[0.65rem] items-center justify-center">
+                              <input
+                                type="checkbox"
+                                id="filter"
+                                className="check_button w-[1.5rem] h-[1.5rem] appearance-none rounded-none shrink-0 checked:bg-white border-solid border-gray-300 dark:border-accent-8 dark:bg-cream  border-[1px] focus:outline-none peer cursor-pointer"
+                              />
+                              <label
+                                htmlFor="filter"
+                                className="text-lighter text-base font-light leading-3 cursor-pointer"
+                              ></label>
+                              <Check className="hidden bg-dark-green rounded-none w-[1.5rem] h-[1.5rem] peer-checked:block absolute pointer-events-none left-0" />
+                            </div>
+                            <span className="title block text-dark-green text-[1rem]">{`Out of stock (${18})`}</span>
+                          </div>
                         </div>
                       </div>
                     )}

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Bag,
   PaginationLeft,
@@ -6,6 +6,7 @@ import {
 } from "../../assets/svgs/svg-icons";
 import { Link } from "react-router-dom";
 import Pagination from "./Pagination";
+import { commerce } from "../../lib/commerce";
 
 const ProductsGrid = () => {
   const products = [
@@ -131,6 +132,22 @@ const ProductsGrid = () => {
 
     window.scrollTo(0, 0);
   };
+
+  const [commerceProducts, setcommerceProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const fetchProducts = async () => {
+    try {
+      const { data } = await commerce.products.list();
+      setcommerceProducts(data);
+      setLoading(false);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    fetchProducts();
+  }, []);
 
   return (
     <>
