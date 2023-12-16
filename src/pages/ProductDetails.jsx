@@ -70,15 +70,19 @@ const ProductDetails = () => {
         {/* products */}
 
         {commerceProducts.length === 0 ? (
-          <section className="product_spinner mb-[3rem] flex items-center justify-center text-center">
+          <section
+            role="status"
+            className="product_spinner mb-[3rem] flex items-center justify-center text-center"
+          >
             <Loader />
+            <span class="sr-only">Loading...</span>
           </section>
         ) : (
           <div className="product_details_container md:w-[97%] w-full md:mt-0 mt-[.5rem]">
             {commerceProducts.map(
               (product) =>
                 product.name === id && (
-                  <div className="product_details">
+                  <div className="product_details" key={product.name}>
                     <div className="details_flex flex gap-[2rem] items-start justify-between md:flex-row flex-col">
                       <figure className="img_container md:w-[50%] w-full">
                         <img

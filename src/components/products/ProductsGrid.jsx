@@ -109,7 +109,7 @@ const ProductsGrid = () => {
               </div>
             </div>
           ))}
-        </sec tion>
+        </section>
       )}
       {/* pagination */}
       <section className="pagination">
