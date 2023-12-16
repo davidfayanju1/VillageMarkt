@@ -69,8 +69,8 @@ const FilterSection = () => {
           <span className="block product_number text-gray-400 md:w-[10rem] w-[40%]">
             {144} Products
           </span>
-          <div className="relative md:min-w-[13rem] w-[60%]">
-            <select className="sort-component py-[.8rem] px-[1rem] w-full appearance-none hover:border-[3px] transition-all delay-[.25s] ease-in-out border-solid border-gray-300 border-[1px] p-[.5rem] flex items-center justify-center bg-transparent">
+          <div className="relative md:min-w-[13rem] w-[60%] filter_button">
+            <select className="sort-component  py-[.8rem] px-[1rem] w-full outline-none appearance-none transition-all delay-[.25s] ease-in-out border-solid border-gray-300 border-[1px] p-[.5rem] flex items-center justify-center bg-transparent">
               {/* <option value="" hidden selected></option> */}
               <option value="alphabetically" selected>
                 Aphabetically, A-Z
