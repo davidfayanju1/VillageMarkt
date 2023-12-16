@@ -8,6 +8,7 @@ import {
 import { Link } from "react-router-dom";
 import Pagination from "./Pagination";
 import { commerce } from "../../lib/commerce";
+import ClipLoader from "react-spinners/ClipLoader";
 
 const ProductsGrid = () => {
   // asynchronous
@@ -72,11 +73,11 @@ const ProductsGrid = () => {
   return (
     <>
       {commerceProducts.length === 0 ? (
-        <section className="product_spinner mb-[3rem] flex items-center justify-center text-center">
-          <Loader />
+        <section className="product_spinner bg-primary flex items-center justify-center text-center h-screen">
+          <ClipLoader />
         </section>
       ) : (
-        <section className="w-full grid xl:grid-cols-[repeat(auto-fit,_minmax(300px,_1fr))] md:grid-cols-[repeat(auto-fit,_minmax(200px,_1fr))] grid-cols-[repeat(auto-fit,_minmax(120px,_1fr))] gap-[1rem] md:px-[3.3rem] px-[1.5rem] pb-[8rem] md:pt-[3rem] bg-primary">
+        <section className="w-full grid xl:grid-cols-[repeat(auto-fit,_minmax(300px,_1fr))] md:grid-cols-[repeat(auto-fit,_minmax(200px,_1fr))] grid-cols-[repeat(auto-fit,_minmax(120px,_1fr))] gap-[1rem] md:px-[3.3rem] px-[1rem] pb-[8rem] md:pt-[3rem] bg-primary">
           {values.map((element, index) => (
             <div
               key={index}
@@ -84,7 +85,7 @@ const ProductsGrid = () => {
               //   onMouseEnter={() => setChange(element.id)}
               //   onMouseLeave={() => setChange("")}
             >
-              <div className="img_container relative md:min-h-[24rem] h-[12.5rem] overflow-hidden">
+              <div className="img_container relative md:min-h-[24rem] h-[12.7rem] overflow-hidden">
                 <Link to={`/products/${element.name}`}>
                   <img
                     src={element.image.url}

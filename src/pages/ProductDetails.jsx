@@ -14,6 +14,7 @@ import {
 import SecondLayout from "../layout/SecondLayout";
 import { products } from "../utils/items";
 import { commerce } from "../lib/commerce";
+import ClipLoader from "react-spinners/ClipLoader";
 
 const ProductDetails = () => {
   const { id } = useParams();
@@ -72,10 +73,9 @@ const ProductDetails = () => {
         {commerceProducts.length === 0 ? (
           <section
             role="status"
-            className="product_spinner mb-[3rem] flex items-center justify-center text-center"
+            className="product_spinner h-screen bg-primary flex items-center justify-center text-center"
           >
-            <Loader />
-            <span class="sr-only">Loading...</span>
+            <ClipLoader />
           </section>
         ) : (
           <div className="product_details_container md:w-[97%] w-full md:mt-0 mt-[.5rem]">
@@ -96,7 +96,7 @@ const ProductDetails = () => {
                         <span className="block text-gray-400 mb-[1.5rem]">
                           Village Markt
                         </span>
-                        <div className="name_container flex items-center justify-between md:mb-[3rem] mb-[1rem] bg-slate-600">
+                        <div className="name_container flex items-center justify-between md:mb-[3rem] mb-[1rem]">
                           <h1 className="md:text-[3rem] text-[1.5rem] font-bold font-cooper text-dark-green">
                             {product.name}
                           </h1>
