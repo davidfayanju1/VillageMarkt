@@ -37,8 +37,8 @@ const ProductDetails = () => {
   }, [loading]);
   return (
     <SecondLayout>
-      <div className="page-container min-h-screen md:px-[3.3rem] px-[1.2rem] py-[1.7rem] pb-[15rem] bg-primary">
-        <nav className="md:mb-[1rem]">
+      <div className="page-container min-h-screen py-[1.7rem] pb-[15rem] bg-primary">
+        <nav className="md:mb-[1rem] md:px-[3.3rem] px-[1.2rem]">
           <ul className="flex items-center gap-[.5rem]">
             <li>
               <NavLink
@@ -92,7 +92,7 @@ const ProductDetails = () => {
                         />
                       </figure>
 
-                      <section className="details_container md:w-[50%] w-full md:mt-[2rem]">
+                      <section className="details_container md:px-[3.3rem] px-[1.2rem] md:w-[50%] w-full md:mt-[2rem]">
                         <span className="block text-gray-400 mb-[1.5rem]">
                           Village Markt
                         </span>
