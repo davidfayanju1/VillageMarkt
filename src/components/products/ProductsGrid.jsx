@@ -10,86 +10,6 @@ import Pagination from "./Pagination";
 import { commerce } from "../../lib/commerce";
 
 const ProductsGrid = () => {
-  const products = [
-    {
-      img: "https://villagemarkt.com/cdn/shop/files/Bakedbeans.png?v=1697471180&width=950",
-      name: "Baked Beans",
-      price: "N595.00",
-      qty: 44,
-    },
-    {
-      img: "https://villagemarkt.com/cdn/shop/files/BamaBig.png?v=1697471618&width=950",
-      name: "Bama Mayonnaise",
-      price: "N1,500.00",
-      qty: 4,
-    },
-    {
-      img: "https://villagemarkt.com/cdn/shop/files/BangaPalmoil4litres.png?v=1697472227&width=950",
-      name: "Banga Palm Oil",
-      price: "N4, 350.00",
-      qty: 44,
-    },
-    {
-      img: "https://villagemarkt.com/cdn/shop/files/Banana.png?v=1697472077&width=950",
-      name: "Banana",
-      price: "N700.00",
-      qty: 40,
-    },
-    {
-      img: "https://villagemarkt.com/cdn/shop/files/Bakedbeans.png?v=1697471180&width=950",
-      name: "Baked Beans",
-      price: "N595.00",
-      qty: 44,
-    },
-    {
-      img: "https://villagemarkt.com/cdn/shop/files/Bakedbeans.png?v=1697471180&width=950",
-      name: "Baked Beans",
-      price: "N595.00",
-      qty: 44,
-    },
-    {
-      img: "https://villagemarkt.com/cdn/shop/files/Bakedbeans.png?v=1697471180&width=950",
-      name: "Baked Beans",
-      price: "N595.00",
-      qty: 44,
-    },
-    {
-      img: "https://villagemarkt.com/cdn/shop/files/BamaBig.png?v=1697471618&width=950",
-      name: "Bama Mayonnaise",
-      price: "N1,500.00",
-      qty: 4,
-    },
-    {
-      img: "https://villagemarkt.com/cdn/shop/files/BamaBig.png?v=1697471618&width=950",
-      name: "Bama Mayonnaise",
-      price: "N1,500.00",
-      qty: 4,
-    },
-    {
-      img: "https://villagemarkt.com/cdn/shop/files/BamaBig.png?v=1697471618&width=950",
-      name: "Bama Mayonnaise",
-      price: "N1,500.00",
-      qty: 4,
-    },
-    {
-      img: "https://villagemarkt.com/cdn/shop/files/BamaBig.png?v=1697471618&width=950",
-      name: "Bama Mayonnaise",
-      price: "N1,500.00",
-      qty: 4,
-    },
-    {
-      img: "https://villagemarkt.com/cdn/shop/files/BamaBig.png?v=1697471618&width=950",
-      name: "Bama Mayonnaise",
-      price: "N1,500.00",
-      qty: 4,
-    },
-    {
-      img: "https://villagemarkt.com/cdn/shop/files/BamaBig.png?v=1697471618&width=950",
-      name: "Bama Mayonnaise",
-      price: "N1,500.00",
-      qty: 4,
-    },
-  ];
   // asynchronous
   const [loading, setLoading] = useState(true);
   const [commerceProducts, setcommerceProducts] = useState([]);
@@ -189,7 +109,7 @@ const ProductsGrid = () => {
               </div>
             </div>
           ))}
-        </section>
+        </sec tion>
       )}
       {/* pagination */}
       <section className="pagination">
