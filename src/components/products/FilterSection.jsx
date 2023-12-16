@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import { ArrowRight, Down, Filter } from "../../assets/svgs/svg-icons";
 import { useDispatch } from "react-redux";
 import { filterOpen } from "../../redux/slices/toggleFilter";
-const FilterSection = () => {
+const FilterSection = ({ commerceProducts }) => {
   const dispatch = useDispatch();
 
   return (
@@ -67,7 +67,7 @@ const FilterSection = () => {
 
         <div className="sort md:w-[20rem] w-full flex items-center md:justify-center justify-between gap-[1rem]">
           <span className="block product_number text-gray-400 md:w-[10rem] w-[40%]">
-            {144} Products
+            {commerceProducts.length}  Products
           </span>
           <div className="relative md:min-w-[13rem] w-[60%] filter_button">
             <select className="sort-component  py-[.8rem] px-[1rem] w-full outline-none appearance-none transition-all delay-[.25s] ease-in-out border-solid border-gray-300 border-[1px] p-[.5rem] flex items-center justify-center bg-transparent">

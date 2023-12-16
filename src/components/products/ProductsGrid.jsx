@@ -10,24 +10,7 @@ import Pagination from "./Pagination";
 import { commerce } from "../../lib/commerce";
 import ClipLoader from "react-spinners/ClipLoader";
 
-const ProductsGrid = () => {
-  // asynchronous
-  const [loading, setLoading] = useState(true);
-  const [commerceProducts, setcommerceProducts] = useState([]);
-  const fetchProducts = async () => {
-    try {
-      const { data } = await commerce.products.list();
-      setLoading(false);
-      setcommerceProducts(data);
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
-  useEffect(() => {
-    fetchProducts();
-  }, [loading]);
-
+const ProductsGrid = ({ commerceProducts }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const [display, setDisplay] = useState(12);
   const [activePage, setActivePage] = useState(1);
@@ -73,7 +56,7 @@ const ProductsGrid = () => {
   return (
     <>
       {commerceProducts.length === 0 ? (
-        <section className="product_spinner bg-primary flex items-center justify-center text-center h-screen">
+        <section className="product_spinner bg-primary flex items-start justify-center text-center h-screen">
           <ClipLoader />
         </section>
       ) : (
