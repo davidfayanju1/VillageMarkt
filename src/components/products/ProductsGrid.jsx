@@ -151,13 +151,13 @@ const ProductsGrid = () => {
   };
   return (
     <>
-      <section className="w-full grid xl:grid-cols-[repeat(auto-fit,_minmax(300px,_1fr))] md:grid-cols-[repeat(auto-fit,_minmax(200px,_1fr))] grid-cols-[repeat(auto-fit,_minmax(120px,_1fr))] gap-[2rem] md:px-[3.3rem] px-[1.5rem] pb-[8rem] md:pt-[3rem] bg-primary">
-        {commerceProducts.length === 0 ? (
-          <section className="product_spinner flex items-center justify-center text-center">
-            <Loader />
-          </section>
-        ) : (
-          values.map((element, index) => (
+      {commerceProducts.length === 0 ? (
+        <section className="product_spinner mb-[3rem] flex items-center justify-center text-center">
+          <Loader />
+        </section>
+      ) : (
+        <section className="w-full grid xl:grid-cols-[repeat(auto-fit,_minmax(300px,_1fr))] md:grid-cols-[repeat(auto-fit,_minmax(200px,_1fr))] grid-cols-[repeat(auto-fit,_minmax(120px,_1fr))] gap-[2rem] md:px-[3.3rem] px-[1.5rem] pb-[8rem] md:pt-[3rem] bg-primary">
+          {values.map((element, index) => (
             <div
               key={index}
               className="product_card"
@@ -188,9 +188,9 @@ const ProductsGrid = () => {
                 </Link>
               </div>
             </div>
-          ))
-        )}
-      </section>
+          ))}
+        </section>
+      )}
       {/* pagination */}
       <section className="pagination">
         <div className="pagination pb-[8rem] bg-primary flex items-center justify-center gap-[.8rem]">

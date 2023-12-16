@@ -7,7 +7,7 @@ const FilterSection = () => {
   const dispatch = useDispatch();
 
   return (
-    <section className="min-h-[60vh] bg-primary md:px-[4rem] py-[1rem] px-[1.4rem]">
+    <section className="md:min-h-[60vh] md:px-[4rem] pt-[1rem] pb-[2.5rem] bg-primary px-[1.4rem]">
       <nav className="md:mb-[5rem] mb-[4rem]">
         <ul className="flex items-center gap-[.5rem]">
           <li>
