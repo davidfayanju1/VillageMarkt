@@ -76,7 +76,7 @@ const ProductsGrid = () => {
           <Loader />
         </section>
       ) : (
-        <section className="w-full grid xl:grid-cols-[repeat(auto-fit,_minmax(300px,_1fr))] md:grid-cols-[repeat(auto-fit,_minmax(200px,_1fr))] grid-cols-[repeat(auto-fit,_minmax(120px,_1fr))] gap-[2rem] md:px-[3.3rem] px-[1.5rem] pb-[8rem] md:pt-[3rem] bg-primary">
+        <section className="w-full grid xl:grid-cols-[repeat(auto-fit,_minmax(300px,_1fr))] md:grid-cols-[repeat(auto-fit,_minmax(200px,_1fr))] grid-cols-[repeat(auto-fit,_minmax(120px,_1fr))] gap-[1rem] md:px-[3.3rem] px-[1.5rem] pb-[8rem] md:pt-[3rem] bg-primary">
           {values.map((element, index) => (
             <div
               key={index}
@@ -84,7 +84,7 @@ const ProductsGrid = () => {
               //   onMouseEnter={() => setChange(element.id)}
               //   onMouseLeave={() => setChange("")}
             >
-              <div className="img_container relative md:min-h-[24rem] h-[11rem] overflow-hidden">
+              <div className="img_container relative md:min-h-[24rem] h-[12.5rem] overflow-hidden">
                 <Link to={`/products/${element.name}`}>
                   <img
                     src={element.image.url}

@@ -96,7 +96,7 @@ const ProductDetails = () => {
                         <span className="block text-gray-400 mb-[1.5rem]">
                           Village Markt
                         </span>
-                        <div className="name_container flex items-center justify-between md:mb-[3rem] mb-[1rem]">
+                        <div className="name_container flex items-center justify-between md:mb-[3rem] mb-[1rem] bg-slate-600">
                           <h1 className="md:text-[3rem] text-[1.5rem] font-bold font-cooper text-dark-green">
                             {product.name}
                           </h1>
