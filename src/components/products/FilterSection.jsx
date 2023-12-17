@@ -4,41 +4,7 @@ import { ArrowRight, Down, Filter } from "../../assets/svgs/svg-icons";
 import { useDispatch } from "react-redux";
 import { filterOpen } from "../../redux/slices/toggleFilter";
 const FilterSection = ({ commerceProducts, sortArray }) => {
-  // const dispatch = useDispatch();
-  // const [filtered, setFiltered] = useState([]);
-  // // sort
-
-  // const sortArray = (type) => {
-  //   const types = {
-  //     alphabetically: "alphabetically",
-  //     reverseAphabetically: "reverse alphabetically",
-  //     featured: "featured",
-  //     bestSelling: "best selling",
-  //     price: "price",
-  //     reversePrice: "reverse price",
-  //     date: "date",
-  //     reverseDate: "reverse date",
-  //   };
-
-  //   // const sortProperty = types[type];
-
-  //   if (commerceProducts.length > 0) {
-  //     if (type === types.alphabetically) {
-  //       commerceProducts.sort((a, b) => {
-  //         if (a.name < b.name) {
-  //           return -1;
-  //         }
-  //         if (a.name > b.name) {
-  //           return 1;
-  //         }
-  //         return 0;
-  //       });
-  //     } else {
-  //       console.log(types.alphabetically, type);
-  //     }
-  //   }
-  //   setFiltered(commerceProducts);
-  // };
+  const dispatch = useDispatch();
 
   return (
     <section className="md:min-h-[60vh] md:px-[4rem] pt-[1rem] pb-[2.5rem] bg-primary px-[1.4rem]">
@@ -113,8 +79,8 @@ const FilterSection = ({ commerceProducts, sortArray }) => {
               <option value="reverse alphabetically">Aphabetically, Z-A</option>
               <option value="featured">Featured</option>
               <option value="best selling">Best Selling</option>
-              <option value="price">Price low to high</option>
-              <option value="reverse price">Price high to low</option>
+              <option value="price">Price high to low</option>
+              <option value="reverse price">Price low to high</option>
               <option value="date">Date, old to new</option>
               <option value="reverse date">Date, new to old</option>
             </select>

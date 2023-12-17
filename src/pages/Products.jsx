@@ -17,8 +17,6 @@ const Products = () => {
       const { data } = await commerce.products.list();
       setLoading(false);
       setcommerceProducts(data);
-      // commerceProducts.sort((a, b) => a.name.localeCompare(b.name));
-      // setFiltered(commerceProducts);
     } catch (error) {
       console.log(error);
     }
@@ -44,6 +42,14 @@ const Products = () => {
     } else if (type === types.reverseAphabetically) {
       fetchProducts();
       commerceProducts.sort((a, b) => a.name.localeCompare(b.name)).reverse();
+      setFiltered(commerceProducts);
+    } else if (type === types.price) {
+      fetchProducts();
+      commerceProducts.sort((a, b) => b.price.raw - a.price.raw);
+      setFiltered(commerceProducts);
+    } else if (type === types.reversePrice) {
+      fetchProducts();
+      commerceProducts.sort((a, b) => b.price.raw - a.price.raw).reverse();
       setFiltered(commerceProducts);
     }
   };
