@@ -17,8 +17,8 @@ const Products = () => {
       const { data } = await commerce.products.list();
       setLoading(false);
       setcommerceProducts(data);
-      commerceProducts.sort((a, b) => a.name.localeCompare(b.name));
-      setFiltered(commerceProducts);
+      // commerceProducts.sort((a, b) => a.name.localeCompare(b.name));
+      // setFiltered(commerceProducts);
     } catch (error) {
       console.log(error);
     }
@@ -37,21 +37,20 @@ const Products = () => {
   };
 
   const sortArray = (type) => {
-    if (commerceProducts.length > 0) {
-      if (type && type === types.alphabetically) {
-        commerceProducts.sort((a, b) => a.name.localeCompare(b.name));
-      } else if (type === types.reverseAphabetically) {
-        commerceProducts.sort((a, b) => a.name.localeCompare(b.name)).reverse();
-      }
+    if (type && type === types.alphabetically) {
+      fetchProducts();
+      commerceProducts.sort((a, b) => a.name.localeCompare(b.name));
+      setFiltered(commerceProducts);
+    } else if (type === types.reverseAphabetically) {
+      fetchProducts();
+      commerceProducts.sort((a, b) => a.name.localeCompare(b.name)).reverse();
+      setFiltered(commerceProducts);
     }
-    setFiltered(commerceProducts);
   };
-  // useEffect(() => {
-  //   sortArray("alphabetically");
-  // }, [commerceProducts]);
 
   useEffect(() => {
     fetchProducts();
+    sortArray("alphabetically");
   }, [loading]);
   return (
     <SecondLayout>
