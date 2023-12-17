@@ -53,7 +53,8 @@ const ProductsGrid = ({ commerceProducts }) => {
 
     window.scrollTo(0, 0);
   };
-  return (
+
+    return (
     <>
       {commerceProducts.length === 0 ? (
         <section className="product_spinner bg-primary flex items-start justify-center text-center h-screen">

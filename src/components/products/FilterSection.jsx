@@ -1,10 +1,44 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { ArrowRight, Down, Filter } from "../../assets/svgs/svg-icons";
 import { useDispatch } from "react-redux";
 import { filterOpen } from "../../redux/slices/toggleFilter";
-const FilterSection = ({ commerceProducts }) => {
-  const dispatch = useDispatch();
+const FilterSection = ({ commerceProducts, sortArray }) => {
+  // const dispatch = useDispatch();
+  // const [filtered, setFiltered] = useState([]);
+  // // sort
+
+  // const sortArray = (type) => {
+  //   const types = {
+  //     alphabetically: "alphabetically",
+  //     reverseAphabetically: "reverse alphabetically",
+  //     featured: "featured",
+  //     bestSelling: "best selling",
+  //     price: "price",
+  //     reversePrice: "reverse price",
+  //     date: "date",
+  //     reverseDate: "reverse date",
+  //   };
+
+  //   // const sortProperty = types[type];
+
+  //   if (commerceProducts.length > 0) {
+  //     if (type === types.alphabetically) {
+  //       commerceProducts.sort((a, b) => {
+  //         if (a.name < b.name) {
+  //           return -1;
+  //         }
+  //         if (a.name > b.name) {
+  //           return 1;
+  //         }
+  //         return 0;
+  //       });
+  //     } else {
+  //       console.log(types.alphabetically, type);
+  //     }
+  //   }
+  //   setFiltered(commerceProducts);
+  // };
 
   return (
     <section className="md:min-h-[60vh] md:px-[4rem] pt-[1rem] pb-[2.5rem] bg-primary px-[1.4rem]">
@@ -67,14 +101,16 @@ const FilterSection = ({ commerceProducts }) => {
 
         <div className="sort md:w-[20rem] w-full flex items-center md:justify-center justify-between gap-[1rem]">
           <span className="block product_number text-gray-400 md:w-[10rem] w-[40%]">
-            {commerceProducts.length}  Products
+            {commerceProducts.length} Products
           </span>
           <div className="relative md:min-w-[13rem] w-[60%] filter_button">
-            <select className="sort-component  py-[.8rem] px-[1rem] w-full outline-none appearance-none transition-all delay-[.25s] ease-in-out border-solid border-gray-300 border-[1px] p-[.5rem] flex items-center justify-center bg-transparent">
-              {/* <option value="" hidden selected></option> */}
-              <option value="alphabetically" selected>
-                Aphabetically, A-Z
-              </option>
+            <select
+              onChange={(e) => sortArray(e.target.value)}
+              className="sort-component  py-[.8rem] px-[1rem] w-full outline-none appearance-none transition-all delay-[.25s] ease-in-out border-solid border-gray-300 border-[1px] p-[.5rem] flex items-center justify-center bg-transparent"
+              // defaultValue="alphabetically"
+            >
+              {/* <option value="" disabled></option> */}
+              <option value="alphabetically">Aphabetically, A-Z</option>
               <option value="reverse alphabetically">Aphabetically, Z-A</option>
               <option value="featured">Featured</option>
               <option value="best selling">Best Selling</option>
