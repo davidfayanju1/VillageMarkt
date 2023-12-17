@@ -35,7 +35,11 @@ const Products = () => {
   };
 
   const sortArray = (type) => {
-    if (type && type === types.alphabetically) {
+    if (
+      type === types.alphabetically ||
+      type === types.featured ||
+      type === types.bestSelling
+    ) {
       fetchProducts();
       commerceProducts.sort((a, b) => a.name.localeCompare(b.name));
       setFiltered(commerceProducts);
