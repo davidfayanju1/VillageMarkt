@@ -110,7 +110,9 @@ const FilterSection = ({ commerceProducts, sortArray }) => {
               // defaultValue="alphabetically"
             >
               {/* <option value="" disabled></option> */}
-              <option value="alphabetically">Aphabetically, A-Z</option>
+              <option value="alphabetically" selected>
+                Aphabetically, A-Z
+              </option>
               <option value="reverse alphabetically">Aphabetically, Z-A</option>
               <option value="featured">Featured</option>
               <option value="best selling">Best Selling</option>

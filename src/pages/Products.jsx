@@ -21,46 +21,38 @@ const Products = () => {
     }
   };
 
-  const [filtered, setFiltered] = useState([]);
   // sort
-  const sortArray = (type) => {
-    const types = {
-      alphabetically: "alphabetically",
-      reverseAphabetically: "reverse alphabetically",
-      featured: "featured",
-      bestSelling: "best selling",
-      price: "price",
-      reversePrice: "reverse price",
-      date: "date",
-      reverseDate: "reverse date",
-    };
-
-    // const sortProperty = types[type];
-
-    if (commerceProducts.length > 0) {
-      if (type === types.alphabetically) {
-        commerceProducts.sort((a, b) => {
-          if (a.name < b.name) {
-            return -1;
-          }
-          if (a.name > b.name) {
-            return 1;
-          }
-          return 0;
-        });
-      }
-    }
-    setFiltered(commerceProducts);
-    console.log(filtered);
+  const [filtered, setFiltered] = useState([]);
+  const types = {
+    alphabetically: "alphabetically",
+    reverseAphabetically: "reverse alphabetically",
+    featured: "featured",
+    bestSelling: "best selling",
+    price: "price",
+    reversePrice: "reverse price",
+    date: "date",
+    reverseDate: "reverse date",
   };
 
   useEffect(() => {
     fetchProducts();
   }, [loading]);
 
+  const sortArray = (type) => {
+    if (commerceProducts.length > 0) {
+      if (type === types.alphabetically) {
+        commerceProducts.sort((a, b) => a.name.localeCompare(b.name));
+      } else if (type === types.reverseAphabetically) {
+        commerceProducts.sort((a, b) => a.name.localeCompare(b.name)).reverse();
+      }
+    }
+    setFiltered(commerceProducts);
+  };
   useEffect(() => {
     sortArray("alphabetically");
   }, [commerceProducts]);
+
+  // useEffect(() => {}, [filtered]);
 
   return (
     <SecondLayout>
@@ -68,7 +60,7 @@ const Products = () => {
         commerceProducts={commerceProducts}
         sortArray={sortArray}
       />
-      <ProductsGrid commerceProducts={commerceProducts} filtered={filtered} />
+      <ProductsGrid filtered={filtered} commerceProducts={commerceProducts} />
     </SecondLayout>
   );
 };

@@ -10,7 +10,7 @@ import Pagination from "./Pagination";
 import { commerce } from "../../lib/commerce";
 import ClipLoader from "react-spinners/ClipLoader";
 
-const ProductsGrid = ({ commerceProducts }) => {
+const ProductsGrid = ({ filtered: commerceProducts }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const [display, setDisplay] = useState(12);
   const [activePage, setActivePage] = useState(1);
@@ -54,7 +54,7 @@ const ProductsGrid = ({ commerceProducts }) => {
     window.scrollTo(0, 0);
   };
 
-    return (
+  return (
     <>
       {commerceProducts.length === 0 ? (
         <section className="product_spinner bg-primary flex items-start justify-center text-center h-screen">
