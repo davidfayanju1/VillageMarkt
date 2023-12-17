@@ -11,18 +11,20 @@ const Products = () => {
   // asynchronous
   const [loading, setLoading] = useState(true);
   const [commerceProducts, setcommerceProducts] = useState([]);
+  const [filtered, setFiltered] = useState([]);
   const fetchProducts = async () => {
     try {
       const { data } = await commerce.products.list();
       setLoading(false);
       setcommerceProducts(data);
+      commerceProducts.sort((a, b) => a.name.localeCompare(b.name));
+      setFiltered(commerceProducts);
     } catch (error) {
       console.log(error);
     }
   };
 
   // sort
-  const [filtered, setFiltered] = useState([]);
   const types = {
     alphabetically: "alphabetically",
     reverseAphabetically: "reverse alphabetically",
@@ -34,13 +36,9 @@ const Products = () => {
     reverseDate: "reverse date",
   };
 
-  useEffect(() => {
-    fetchProducts();
-  }, [loading]);
-
   const sortArray = (type) => {
     if (commerceProducts.length > 0) {
-      if (type === types.alphabetically) {
+      if (type && type === types.alphabetically) {
         commerceProducts.sort((a, b) => a.name.localeCompare(b.name));
       } else if (type === types.reverseAphabetically) {
         commerceProducts.sort((a, b) => a.name.localeCompare(b.name)).reverse();
@@ -48,12 +46,13 @@ const Products = () => {
     }
     setFiltered(commerceProducts);
   };
+  // useEffect(() => {
+  //   sortArray("alphabetically");
+  // }, [commerceProducts]);
+
   useEffect(() => {
-    sortArray("alphabetically");
-  }, [commerceProducts]);
-
-  // useEffect(() => {}, [filtered]);
-
+    fetchProducts();
+  }, [loading]);
   return (
     <SecondLayout>
       <FilterSection

@@ -107,12 +107,9 @@ const FilterSection = ({ commerceProducts, sortArray }) => {
             <select
               onChange={(e) => sortArray(e.target.value)}
               className="sort-component  py-[.8rem] px-[1rem] w-full outline-none appearance-none transition-all delay-[.25s] ease-in-out border-solid border-gray-300 border-[1px] p-[.5rem] flex items-center justify-center bg-transparent"
-              // defaultValue="alphabetically"
+              defaultValue="alphabetically"
             >
-              {/* <option value="" disabled></option> */}
-              <option value="alphabetically" selected>
-                Aphabetically, A-Z
-              </option>
+              <option value="alphabetically">Aphabetically, A-Z</option>
               <option value="reverse alphabetically">Aphabetically, Z-A</option>
               <option value="featured">Featured</option>
               <option value="best selling">Best Selling</option>
