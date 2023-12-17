@@ -81,8 +81,8 @@ const FilterSection = ({ commerceProducts, sortArray }) => {
               <option value="best selling">Best Selling</option>
               <option value="price">Price high to low</option>
               <option value="reverse price">Price low to high</option>
-              <option value="date">Date, old to new</option>
-              <option value="reverse date">Date, new to old</option>
+              <option value="date">Date, new to old</option>
+              <option value="reverse date">Date, old to new</option>
             </select>
             <Down className="absolute top-[15px] right-[9.6px]" />
           </div>

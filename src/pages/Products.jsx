@@ -51,7 +51,17 @@ const Products = () => {
       fetchProducts();
       commerceProducts.sort((a, b) => b.price.raw - a.price.raw).reverse();
       setFiltered(commerceProducts);
+    } else if (type === types.date) {
+      fetchProducts();
+      commerceProducts.sort((a, b) => b.created - a.created);
+      setFiltered(commerceProducts);
+    } else if (type === types.reverseDate) {
+      fetchProducts();
+      commerceProducts.sort((a, b) => b.created - a.created).reverse();
+      setFiltered(commerceProducts);
     }
+
+    // console.log(filtered[0].created);
   };
 
   useEffect(() => {
