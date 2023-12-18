@@ -118,22 +118,42 @@ const FilterSide = () => {
                   <div className="details">
                     {!toggleSecondSvg && (
                       <div className="price_details">
-                        <input type="range" className="w-full" />
+                        <div className="range_section relative py-[1rem]">
+                          <input
+                            type="range"
+                            min={0}
+                            max={1000}
+                            className="thumb thumb-2"
+                          />
+                          <input
+                            type="range"
+                            min={0}
+                            max={1000}
+                            className="thumb thumb-3"
+                          />
+                          <div className="range_slider">
+                            <div className="slider_track" />
+                            <div className="slider_range" />
+                          </div>
+                        </div>
                         <div className="input_flex flex items-center gap-[.5rem] justify-between">
                           <div className="group w-[48%]">
                             <label htmlFor="from">From</label>
                             <input
-                              type="text"
-                              placeholder="N"
-                              className="w-full focus:border-dark-green focus:border-[3.4px] placeholder:text-dark-green hover:border-[3px] bg-transparent outline-none border-solid border-gray-300 border-[1px] p-[.8rem]"
+                              type="number"
+                              placeholder="0.00"
+                              className="w-full text-right textarea focus:border-dark-green focus:border-[3.4px] placeholder:text-gray-300 bg-transparent outline-none border-solid border-gray-300 border-[1px] p-[.8rem]"
                             />
                           </div>
-                          <div className="group w-[48%]">
-                            <label htmlFor="from">From</label>
+                          <div className="group w-[48%] relative">
+                            <span className="block absolute top-[40px] left-[13px]">
+                              N
+                            </span>
+                            <label htmlFor="from">To</label>
                             <input
-                              type="text"
-                              placeholder="N"
-                              className="w-full focus:border-dark-green focus:border-[3.4px] placeholder:text-dark-green hover:border-[3px] bg-transparent outline-none border-solid border-gray-300 border-[1px] p-[.8rem]"
+                              type="number"
+                              placeholder="30000.00"
+                              className="w-full textarea text-right focus:border-dark-green focus:border-[3.4px] placeholder:text-gray-300 bg-transparent outline-none border-solid border-gray-300 border-[1px] p-[.8rem] pl-[2rem]"
                             />
                           </div>
                         </div>
