@@ -67,17 +67,6 @@ body {
   z-index: 2;
 }
 
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-input[type="number"] {
-  -moz-appearance: textfield;
-  appearance: textfield;
-}
-
 .slider_range {
   background-color: brown;
   width: 100%;
@@ -117,6 +106,18 @@ input[type="number"] {
   margin-top: 4px;
   pointer-events: all;
   position: relative;
+}
+
+/* input number arrow display none */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
 }
 
 .store_pickup::before {

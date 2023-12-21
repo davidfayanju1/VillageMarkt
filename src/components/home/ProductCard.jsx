@@ -41,13 +41,13 @@ const ProductCard = () => {
       url2: "https://img.freepik.com/free-photo/baby-carrots_1339-7954.jpg?size=626&ext=jpg",
       price: "N600.00",
     },
-    {
-      id: 5,
-      name: "Cucumber",
-      url: "https://villagemarkt.com/cdn/shop/files/Cucumber.png?v=1697473953&width=750",
-      url2: "https://villagemarkt.com/cdn/shop/files/cllcy790500040gmm6yik2e4r.jpg?v=1697473953&width=750",
-      price: "N400.00",
-    },
+    // {
+    //   id: 5,
+    //   name: "Cucumber",
+    //   url: "https://villagemarkt.com/cdn/shop/files/Cucumber.png?v=1697473953&width=750",
+    //   url2: "https://villagemarkt.com/cdn/shop/files/cllcy790500040gmm6yik2e4r.jpg?v=1697473953&width=750",
+    //   price: "N400.00",
+    // },
   ];
 
   return (

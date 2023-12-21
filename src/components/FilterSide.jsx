@@ -137,12 +137,15 @@ const FilterSide = () => {
                           </div>
                         </div>
                         <div className="input_flex flex items-center gap-[.5rem] justify-between">
-                          <div className="group w-[48%]">
+                          <div className="group w-[48%] relative  ">
+                            <span className="block absolute top-[40px] left-[13px]">
+                              N
+                            </span>
                             <label htmlFor="from">From</label>
                             <input
                               type="number"
                               placeholder="0.00"
-                              className="w-full text-right textarea focus:border-dark-green focus:border-[3.4px] placeholder:text-gray-300 bg-transparent outline-none border-solid border-gray-300 border-[1px] p-[.8rem]"
+                              className="w-full text-right textarea focus:border-dark-green focus:border-[3.4px] placeholder:text-gray-300 bg-transparent outline-none border-solid border-gray-300 border-[1px] p-[.8rem] pl-[2rem]"
                             />
                           </div>
                           <div className="group w-[48%] relative">
@@ -153,7 +156,7 @@ const FilterSide = () => {
                             <input
                               type="number"
                               placeholder="30000.00"
-                              className="w-full textarea text-right focus:border-dark-green focus:border-[3.4px] placeholder:text-gray-300 bg-transparent outline-none border-solid border-gray-300 border-[1px] p-[.8rem] pl-[2rem]"
+                              className="w-full rounded-none textarea text-right focus:border-dark-green focus:border-[3.4px] placeholder:text-gray-300 bg-transparent outline-none border-solid border-gray-300 border-[1px] p-[.8rem] pl-[2rem]"
                             />
                           </div>
                         </div>

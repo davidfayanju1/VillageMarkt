@@ -11,6 +11,7 @@ import { toggleOpen } from "../redux/slices/toggleSlice";
 import { AnimatePresence, motion } from "framer-motion";
 import { navOpen } from "../redux/slices/navToggle";
 import { cartOpen } from "../redux/slices/cartToggle";
+import { commerce } from "../lib/commerce";
 
 const SecondNav = () => {
   const [fixed, setFixed] = useState(false);
@@ -40,7 +41,6 @@ const SecondNav = () => {
   }, [prevScroll]);
 
   //   animation
-
   const animatenav = {
     initial: { y: "-100%" },
     animate: { y: 0 },
@@ -48,7 +48,21 @@ const SecondNav = () => {
     transition: { duration: 0.2 },
   };
 
-  const cart = [];
+  const [cart, setCart] = useState({});
+  const [loading, setLoading] = useState(true);
+  const fetchCart = async () => {
+    try {
+      setLoading(false);
+      const itemsCart = await commerce.cart.retrieve();
+      setCart(itemsCart);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    fetchCart();
+  }, [cart]);
 
   return (
     <AnimatePresence mode="wait" initial={false}>
@@ -83,10 +97,10 @@ const SecondNav = () => {
 
             <span
               className={`bg-carpet-green text-white text-[.8rem] absolute ${
-                cart.length > 0 ? "flex" : "hidden"
+                cart && cart.total_unique_items > 0 ? "flex" : "hidden"
               } items-center justify-center h-[.8rem] p-[.7rem] w-[.8rem] rounded-full right-[-10px] bottom-[-10px]`}
             >
-              {cart.length}
+              {cart ? cart.total_unique_items : "..."}
             </span>
           </button>
         </div>

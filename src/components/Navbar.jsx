@@ -14,16 +14,14 @@ import { useDispatch } from "react-redux";
 import { toggleOpen } from "../redux/slices/toggleSlice";
 import { navOpen } from "../redux/slices/navToggle";
 import { cartOpen } from "../redux/slices/cartToggle";
-
+import { commerce } from "../lib/commerce";
 const Navbar = () => {
   const [fixed, setFixed] = useState(false);
   const [prevScroll, setPrevScroll] = useState(window.scrollY);
   const [top, setTop] = useState(true);
   const [hover, setHover] = useState(true);
-
+  const [loading, setLoading] = useState(true);
   const dispatch = useDispatch();
-
-  const cart = [];
 
   // nav color change logic
   useEffect(() => {
@@ -48,6 +46,22 @@ const Navbar = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, [prevScroll]);
+
+  // fetch cart
+  const [cart, setCart] = useState({});
+  const fetchCart = async () => {
+    try {
+      const itemsCart = await commerce.cart.retrieve();
+      setCart(itemsCart);
+      setLoading(false);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    fetchCart();
+  }, [cart]);
 
   return (
     <nav>
@@ -89,10 +103,10 @@ const Navbar = () => {
             {fixed ? <CartDark /> : <Cart />}
             <span
               className={`bg-carpet-green text-white text-[.8rem] absolute ${
-                cart.length > 0 ? "flex" : "hidden"
+                cart && cart.total_unique_items > 0 ? "flex" : "hidden"
               } items-center justify-center h-[.8rem] p-[.7rem] w-[.8rem] rounded-full right-[-10px] bottom-[-10px]`}
             >
-              {cart.length}
+              {cart.total_unique_items}
             </span>
           </button>
         </div>
