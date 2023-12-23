@@ -4,8 +4,9 @@ import { Bin, Cancel, MinusIcon, PlusIcon } from "../../assets/svgs/svg-icons";
 import { useDispatch, useSelector } from "react-redux";
 import { cartClose } from "../../redux/slices/cartToggle";
 import { Link } from "react-router-dom";
+import ClipLoader from "react-spinners/ClipLoader";
 
-const CartFilled = ({ cart }) => {
+const CartFilled = ({ cart, loading }) => {
   const { open } = useSelector((store) => store.cartToggle);
   const dispatch = useDispatch();
   const panel = {
@@ -43,7 +44,7 @@ const CartFilled = ({ cart }) => {
             <section className="bg-primary w-full after:block after:w-full after:h-[.03rem] after:bg-gray-400">
               <div className="menu md:px-[1.5rem] px-[1rem] py-[1rem] w-full flex items-center justify-between">
                 <span className="block font-cooper text-[1.2rem] font-bold text-dark-green">
-                  {`Cart (${cart.length})`}
+                  {`Cart (${cart && cart.length})`}
                 </span>
                 <Cancel
                   onClick={() => dispatch(cartClose())}
@@ -66,49 +67,55 @@ const CartFilled = ({ cart }) => {
                   <span className="block text-dark-green">N100.00NGN</span>
                 </div>
               </div>
-              {cart.map((item) => (
-                <div
-                  className="item_card mb-[1.4rem] after:mt-[2rem] after:w-full after:h-[.05rem] after:bg-gray-200 after:block"
-                  key={item.id}
-                >
-                  <div className="card_details flex items-start justify-between">
-                    <div className="items-container">
-                      <div className="image_container flex items-start gap-[.8rem]">
-                        <img
-                          src={item.img}
-                          alt={item.name}
-                          className="w-[5rem] h-[5rem] object-cover"
-                        />
-                        <div className="details_container">
-                          <span className="block text-gray-400 text-[.8rem]">
-                            Village Markt
-                          </span>
-                          <span className="price font-cooper font-bold text-dark-green">
-                            {item.name}
-                          </span>
-                          <div className="icons mt-[2rem] flex gap-[.3rem]">
-                            <div className="plus_minus w-[9rem] border-solid rounded-full border-gray-300 border-[1px] flex items-center justify-between px-[.9rem] py-[.2rem]">
-                              <button>
-                                <MinusIcon />
-                              </button>
-                              <span className="block">{item.qty}</span>
-                              <button>
-                                <PlusIcon />
+              {loading ? (
+                <div>
+                  <ClipLoader />
+                </div>
+              ) : (
+                cart.map((item) => (
+                  <div
+                    className="item_card mb-[1.4rem] after:mt-[2rem] after:w-full after:h-[.05rem] after:bg-gray-200 after:block"
+                    key={item.id}
+                  >
+                    <div className="card_details flex items-start justify-between">
+                      <div className="items-container">
+                        <div className="image_container flex items-start gap-[.8rem]">
+                          <img
+                            src={item.image.url}
+                            alt={item.name}
+                            className="w-[5rem] h-[5rem] object-cover"
+                          />
+                          <div className="details_container">
+                            <span className="block text-gray-400 text-[.8rem]">
+                              Village Markt
+                            </span>
+                            <span className="price font-cooper font-bold text-dark-green">
+                              {item.name}
+                            </span>
+                            <div className="icons mt-[2rem] flex gap-[.3rem]">
+                              <div className="plus_minus w-[9rem] border-solid rounded-full border-gray-300 border-[1px] flex items-center justify-between px-[.9rem] py-[.2rem]">
+                                <button>
+                                  <MinusIcon />
+                                </button>
+                                <span className="block">{item.qty}</span>
+                                <button>
+                                  <PlusIcon />
+                                </button>
+                              </div>
+                              <button className="delete_icon border-solid border-[1px] border-gray-300 rounded-full w-[2.6rem] h-[2.6rem] flex items-center justify-center hover:border-black hover:transition-all hover:ease-in-out hover:delay-[.25s] transition-all ease-in-out delay-[.25s]">
+                                <Bin />
                               </button>
                             </div>
-                            <button className="delete_icon border-solid border-[1px] border-gray-300 rounded-full w-[2.6rem] h-[2.6rem] flex items-center justify-center hover:border-black hover:transition-all hover:ease-in-out hover:delay-[.25s] transition-all ease-in-out delay-[.25s]">
-                              <Bin />
-                            </button>
                           </div>
                         </div>
                       </div>
-                    </div>
-                    <div className="price text-carpet-green font-semibold text-[1rem]">
-                      N{item.price}.00NGN
+                      <div className="price text-carpet-green font-semibold text-[1rem]">
+                        {item.price.formatted_with_symbol}
+                      </div>
                     </div>
                   </div>
-                </div>
-              ))}
+                ))
+              )}
               {/* order note */}
               <div className="order_note">
                 <span
