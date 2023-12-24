@@ -84,7 +84,7 @@ const ProductDetails = () => {
                 product.name === id && (
                   <div className="product_details" key={product.name}>
                     <div className="details_flex flex gap-[2rem] items-start justify-between md:flex-row flex-col">
-                      <figure className="img_container md:w-[50%] w-full">
+                      <figure className="img_container md:w-[50%] w-full md:pl-[3.2rem]">
                         <img
                           src={product.image.url}
                           alt={product.name}

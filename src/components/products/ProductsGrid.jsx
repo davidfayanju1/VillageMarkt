@@ -32,6 +32,10 @@ const ProductsGrid = ({ filtered: commerceProducts }) => {
   const handleChange = (i) => {
     setCurrentPage(i);
     setActivePage(i);
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   };
 
   // prev
@@ -58,7 +62,6 @@ const ProductsGrid = ({ filtered: commerceProducts }) => {
   };
 
   // add to cart
-
   const [cart, setCart] = useState({});
   const [cartLoader, setCartLoader] = useState(false);
   const [cartError, setCartError] = useState("");
@@ -76,7 +79,7 @@ const ProductsGrid = ({ filtered: commerceProducts }) => {
       setCartNote(true);
     }
   };
-
+  // Add to cart modal
   const [openModal, setOpenModal] = useState(false);
   const [modalResults, setModalResults] = useState([]);
   const handleModal = (id) => {
@@ -138,7 +141,7 @@ const ProductsGrid = ({ filtered: commerceProducts }) => {
       {openModal && (
         <section className="modal">
           <div className="overlay fixed top-0 left-0 w-full h-full bg-black-overlay-2 z-[4000] flex md:items-center md:justify-center">
-            <div className="card py-[1.8rem] md:w-[45rem] w-full min-h-[20rem] absolute bottom-[-4%]">
+            <div className="card md:w-[45rem] w-full min-h-[20rem] absolute md:bottom-[4%] bottom-[0%]">
               <div className="title px-[1rem] bg-primary py-[1.5rem] flex items-center justify-between">
                 <h1 className="font-cooper text-dark-green font-bold text-[1.3rem]">
                   Quick shop
@@ -148,53 +151,55 @@ const ProductsGrid = ({ filtered: commerceProducts }) => {
                 </button>
               </div>
 
-              <div className="content_container bg-white before:block before:w-full before:h-[.01rem] before:bg-gray-200 after:block after:w-full after:h-[.1rem] after:bg-gray-300">
+              <div className="content_container bg-white before:block before:w-full before:h-[.1rem] before:bg-gray-200">
                 {modalResults.map((item) => (
-                  <div
-                    className="product_card px-[1rem] py-[1rem] "
-                    key={item.id}
-                  >
-                    <div className="flex gap-[1rem] mb-[2rem]">
-                      <figure>
-                        <img
-                          src={item.image.url}
-                          alt={item.name}
-                          className="w-[7rem] h-[7rem]"
-                        />
-                      </figure>
-                      <div className="details_container flex flex-col justify-between">
-                        <span className="block details font-cooper font-bold text-dark-green">
-                          {item.name}
-                        </span>
-                        <span className="block mb-[1.3rem] details font-bold text-dark-green">
-                          {item.price.formatted_with_symbol}
-                        </span>
+                  <section className="container" key={item.id}>
+                    <div className="product_card p-[1rem]">
+                      <div className="flex gap-[1rem] mb-[2rem]">
+                        <figure>
+                          <img
+                            src={item.image.url}
+                            alt={item.name}
+                            className="w-[7rem] h-[7rem]"
+                          />
+                        </figure>
+                        <div className="details_container flex flex-col justify-between">
+                          <span className="block details font-cooper font-bold text-dark-green">
+                            {item.name}
+                          </span>
+                          <span className="block mb-[1.3rem] details font-bold text-dark-green">
+                            {item.price.formatted_with_symbol}
+                          </span>
+                        </div>
+                      </div>
+                      <Link
+                        to={`/products/${item.name}`}
+                        className="font-cooper underline text-dark-green font-bold hover:text-carpet-green text-[.9rem]"
+                      >
+                        View product details
+                      </Link>
+                    </div>
+                    <div className="items_number_container bg-primary before:block before:w-full before:h-[.1rem] before:bg-gray-200">
+                      <div className="item_number py-[2rem] px-[1rem] h-full flex md:items-center justify-between md:flex-row flex-col gap-[2rem]">
+                        <div className="plus_minus w-[9rem] border-solid rounded-full border-gray-300 border-[1px] flex items-center justify-between px-[.9rem] py-[.7rem]">
+                          <button>
+                            <MinusIcon />
+                          </button>
+                          <span className="block">{1}</span>
+                          <button>
+                            <PlusIcon />
+                          </button>
+                        </div>
+                        <button
+                          onClick={() => addToCart(item.id, 1)}
+                          className="add_to_cart md:text-[1rem] text-white font-bold py-[.7rem] md:w-[8rem] flex items-center justify-center bg-accent-green hover:opacity-[.9] hover:transition-all hover:ease-in-out hover:delay-[.25s] hover:border-solid hover:border-[1.4px] hover:border-gray-300 rounded-[25px] font-cooper"
+                        >
+                          Add to cart
+                        </button>
                       </div>
                     </div>
-                    <Link
-                      to={`/products/${item.name}`}
-                      className="font-cooper underline text-dark-green font-bold hover:text-carpet-green text-[.9rem]"
-                    >
-                      View product details
-                    </Link>
-                  </div>
+                  </section>
                 ))}
-              </div>
-              <div className="item_number py-[2rem] px-[1rem] bg-primary flex md:items-center justify-between md:flex-row flex-col gap-[2rem]">
-                <div className="plus_minus w-[9rem] border-solid rounded-full border-gray-300 border-[1px] flex items-center justify-between px-[.9rem] py-[.7rem]">
-                  <button>
-                    <MinusIcon />
-                  </button>
-                  <span className="block">{1}</span>
-                  <button>
-                    <PlusIcon />
-                  </button>
-                </div>
-                {/* <div className="w-full"> */}
-                <button className="md:text-[1rem] text-white font-bold py-[.7rem] md:w-[8rem] flex items-center justify-center bg-accent-green hover:opacity-[.9] hover:transition-all hover:ease-in-out hover:delay-[.25s] hover:border-solid hover:border-[1.4px] hover:border-gray-300 rounded-[25px] font-cooper">
-                  Add to cart
-                </button>
-                {/* </div> */}
               </div>
             </div>
           </div>
