@@ -75,6 +75,7 @@ const ProductsGrid = ({ filtered: commerceProducts }) => {
     } catch (error) {
       setCartError(error);
     } finally {
+      setOpenModal(false);
       setCartLoader(false);
       setCartNote(true);
     }
@@ -191,8 +192,9 @@ const ProductsGrid = ({ filtered: commerceProducts }) => {
                           </button>
                         </div>
                         <button
+                          disabled={cartLoader}
                           onClick={() => addToCart(item.id, 1)}
-                          className="add_to_cart md:text-[1rem] text-white font-bold py-[.7rem] md:w-[8rem] flex items-center justify-center bg-accent-green hover:opacity-[.9] hover:transition-all hover:ease-in-out hover:delay-[.25s] hover:border-solid hover:border-[1.4px] hover:border-gray-300 rounded-[25px] font-cooper"
+                          className="add_to_cart disabled:bg-gray-600 disabled:text-gray-800 md:text-[1rem] text-white font-bold py-[.7rem] md:w-[8rem] flex items-center justify-center bg-accent-green hover:opacity-[.9] hover:transition-all hover:ease-in-out hover:delay-[.25s] hover:border-solid hover:border-[1.4px] hover:border-gray-300 rounded-[25px] font-cooper"
                         >
                           Add to cart
                         </button>
