@@ -18,7 +18,7 @@ const CartPage = () => {
 
   useEffect(() => {
     fetchCart();
-  }, []);
+  }, [cart]);
 
   return (
     <div className="cart_container">

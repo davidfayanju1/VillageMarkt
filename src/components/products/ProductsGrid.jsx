@@ -81,12 +81,20 @@ const ProductsGrid = ({ filtered: commerceProducts }) => {
     }
   };
   // Add to cart modal
+  const [productQty, setProductQty] = useState(1);
   const [openModal, setOpenModal] = useState(false);
   const [modalResults, setModalResults] = useState([]);
   const handleModal = (id) => {
     const results = commerceProducts.filter((item) => item.id === id);
     setModalResults(results);
     setOpenModal(true);
+  };
+
+  const minus = () => {
+    setProductQty(productQty - 1);
+    if (productQty <= 1) {
+      alert("remove product?");
+    }
   };
   return (
     <>
@@ -183,18 +191,18 @@ const ProductsGrid = ({ filtered: commerceProducts }) => {
                     <div className="items_number_container bg-primary before:block before:w-full before:h-[.1rem] before:bg-gray-200">
                       <div className="item_number py-[2rem] px-[1rem] h-full flex md:items-center justify-between md:flex-row flex-col gap-[2rem]">
                         <div className="plus_minus w-[9rem] border-solid rounded-full border-gray-300 border-[1px] flex items-center justify-between px-[.9rem] py-[.7rem]">
-                          <button>
+                          <button onClick={minus}>
                             <MinusIcon />
                           </button>
-                          <span className="block">{1}</span>
-                          <button>
+                          <span className="block">{productQty}</span>
+                          <button onClick={() => setProductQty(productQty + 1)}>
                             <PlusIcon />
                           </button>
                         </div>
                         <button
                           disabled={cartLoader}
                           onClick={() => addToCart(item.id, 1)}
-                          className="add_to_cart disabled:bg-gray-600 disabled:text-gray-800 md:text-[1rem] text-white font-bold py-[.7rem] md:w-[8rem] flex items-center justify-center bg-accent-green hover:opacity-[.9] hover:transition-all hover:ease-in-out hover:delay-[.25s] hover:border-solid hover:border-[1.4px] hover:border-gray-300 rounded-[25px] font-cooper"
+                          className="add_to_cart disabled:bg-gray-500 disabled:text-gray-700 md:text-[1rem] text-white font-bold py-[.7rem] md:w-[8rem] flex items-center justify-center bg-accent-green hover:opacity-[.9] hover:transition-all hover:ease-in-out hover:delay-[.25s] hover:border-solid hover:border-[1.4px] hover:border-gray-300 rounded-[25px] font-cooper"
                         >
                           Add to cart
                         </button>

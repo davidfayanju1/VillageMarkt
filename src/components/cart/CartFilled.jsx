@@ -97,7 +97,7 @@ const CartFilled = ({ cart, loading }) => {
                                 <button>
                                   <MinusIcon />
                                 </button>
-                                <span className="block">{item.qty}</span>
+                                <span className="block">{1}</span>
                                 <button>
                                   <PlusIcon />
                                 </button>
