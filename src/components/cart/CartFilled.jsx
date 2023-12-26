@@ -6,7 +6,7 @@ import { cartClose } from "../../redux/slices/cartToggle";
 import { Link } from "react-router-dom";
 import ClipLoader from "react-spinners/ClipLoader";
 
-const CartFilled = ({ cart, loading }) => {
+const CartFilled = ({ cart, loading, realCart }) => {
   const { open } = useSelector((store) => store.cartToggle);
   const dispatch = useDispatch();
   const panel = {
@@ -30,6 +30,7 @@ const CartFilled = ({ cart, loading }) => {
   }, [open]);
 
   const [openNote, setOpenNote] = useState(false);
+
   return (
     <AnimatePresence mode="wait" initial={false}>
       {open && (
@@ -97,7 +98,7 @@ const CartFilled = ({ cart, loading }) => {
                                 <button>
                                   <MinusIcon />
                                 </button>
-                                <span className="block">{1}</span>
+                                <span className="block">{item.quantity}</span>
                                 <button>
                                   <PlusIcon />
                                 </button>
@@ -110,7 +111,7 @@ const CartFilled = ({ cart, loading }) => {
                         </div>
                       </div>
                       <div className="price text-carpet-green font-semibold text-[1rem]">
-                        {item.price.formatted_with_symbol}
+                        {item.line_total.formatted_with_symbol}
                       </div>
                     </div>
                   </div>
@@ -141,7 +142,7 @@ const CartFilled = ({ cart, loading }) => {
               <div className="total_amount w-full font-cooper font-bold text-[1.1rem] flex items-center justify-between">
                 <span className="block font-cooper">Total</span>
                 <span className="block font-cooper text-carpet-green">
-                  NTotal money
+                  {cart && realCart.subtotal.formatted_with_symbol}
                 </span>
               </div>
               <div className="menu pt-[1rem] w-full flex items-center justify-between gap-[1rem]">

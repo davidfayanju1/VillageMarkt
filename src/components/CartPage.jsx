@@ -25,7 +25,7 @@ const CartPage = () => {
       {cart.length === 0 ? (
         <CartEmpty cart={cart} />
       ) : (
-        <CartFilled cart={cart.line_items} loading={loading} />
+        <CartFilled cart={cart.line_items} loading={loading} realCart={cart} />
       )}
     </div>
   );

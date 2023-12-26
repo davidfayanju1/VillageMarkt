@@ -89,12 +89,19 @@ const ProductsGrid = ({ filtered: commerceProducts }) => {
     setModalResults(results);
     setOpenModal(true);
   };
-
+  const [add, setAdd] = useState(false);
   const minus = () => {
-    setProductQty(productQty - 1);
     if (productQty <= 1) {
-      alert("remove product?");
+      setAdd(true);
+    } else {
+      setProductQty(productQty - 1);
+      setAdd(false);
     }
+  };
+
+  const plus = () => {
+    setProductQty(productQty + 1);
+    setAdd(false);
   };
   return (
     <>
@@ -161,7 +168,7 @@ const ProductsGrid = ({ filtered: commerceProducts }) => {
               </div>
 
               <div className="content_container bg-white before:block before:w-full before:h-[.1rem] before:bg-gray-200">
-                {modalResults.map((item) => (
+                {modalResults?.map((item) => (
                   <section className="container" key={item.id}>
                     <div className="product_card p-[1rem]">
                       <div className="flex gap-[1rem] mb-[2rem]">
@@ -191,17 +198,17 @@ const ProductsGrid = ({ filtered: commerceProducts }) => {
                     <div className="items_number_container bg-primary before:block before:w-full before:h-[.1rem] before:bg-gray-200">
                       <div className="item_number py-[2rem] px-[1rem] h-full flex md:items-center justify-between md:flex-row flex-col gap-[2rem]">
                         <div className="plus_minus w-[9rem] border-solid rounded-full border-gray-300 border-[1px] flex items-center justify-between px-[.9rem] py-[.7rem]">
-                          <button onClick={minus}>
+                          <button onClick={minus} disabled={add}>
                             <MinusIcon />
                           </button>
                           <span className="block">{productQty}</span>
-                          <button onClick={() => setProductQty(productQty + 1)}>
+                          <button onClick={plus}>
                             <PlusIcon />
                           </button>
                         </div>
                         <button
                           disabled={cartLoader}
-                          onClick={() => addToCart(item.id, 1)}
+                          onClick={() => addToCart(item.id, productQty)}
                           className="add_to_cart disabled:bg-gray-500 disabled:text-gray-700 md:text-[1rem] text-white font-bold py-[.7rem] md:w-[8rem] flex items-center justify-center bg-accent-green hover:opacity-[.9] hover:transition-all hover:ease-in-out hover:delay-[.25s] hover:border-solid hover:border-[1.4px] hover:border-gray-300 rounded-[25px] font-cooper"
                         >
                           Add to cart
