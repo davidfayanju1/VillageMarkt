@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { cartClose } from "../../redux/slices/cartToggle";
 import { Link } from "react-router-dom";
 import ClipLoader from "react-spinners/ClipLoader";
+import { commerce } from "../../lib/commerce";
 
 const CartFilled = ({ cart, loading, realCart }) => {
   const { open } = useSelector((store) => store.cartToggle);
@@ -30,7 +31,19 @@ const CartFilled = ({ cart, loading, realCart }) => {
   }, [open]);
 
   const [openNote, setOpenNote] = useState(false);
-
+  // update cart
+  // const [updateLoading, setUpdateLoading] = useState(false);
+  // const updateCart = async (productId, quantity) => {
+  //   try {
+  //     setUpdateLoading(true);
+  //     const { cart } = await commerce.cart.update(productId, { quantity });
+  //     setCart(cart);
+  //   } catch (error) {
+  //     console.log(error);
+  //   } finally {
+  //     setUpdateLoading(false);
+  //   }
+  // };
   return (
     <AnimatePresence mode="wait" initial={false}>
       {open && (
@@ -62,7 +75,9 @@ const CartFilled = ({ cart, loading, realCart }) => {
                 <div className="items_flex flex items-center justify-center gap-[.7rem]">
                   <div className="progressbar overflow-hidden w-[90%] bg-gray-200 rounded-full h-[.55rem]">
                     <div
-                      className={`bar bg-carpet-green rounded-full w-[${100}%] h-full`}
+                      className={`bar bg-carpet-green rounded-full w-[${
+                        realCart.subtotal.raw / 100
+                      }%] h-full`}
                     ></div>
                   </div>
                   <span className="block text-dark-green">N100.00NGN</span>
