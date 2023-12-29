@@ -89,11 +89,11 @@ const FilterSide = () => {
                             <div className="flex relative gap-[0.65rem] items-center justify-center">
                               <input
                                 type="checkbox"
-                                id="filter"
+                                id="filter-second"
                                 className="check_button w-[1.5rem] h-[1.5rem] appearance-none rounded-none shrink-0 checked:bg-white border-solid border-gray-300 dark:border-accent-8 dark:bg-cream  border-[1px] focus:outline-none peer cursor-pointer"
                               />
                               <label
-                                htmlFor="filter"
+                                htmlFor="filter-second"
                                 className="text-lighter text-base font-light leading-3 cursor-pointer"
                               ></label>
                               <Check className="hidden bg-dark-green rounded-none w-[1.5rem] h-[1.5rem] peer-checked:block absolute pointer-events-none left-0" />
@@ -143,6 +143,7 @@ const FilterSide = () => {
                             </span>
                             <label htmlFor="from">From</label>
                             <input
+                              id="from"
                               type="number"
                               placeholder="0.00"
                               className="w-full text-right textarea focus:border-dark-green focus:border-[3.4px] placeholder:text-gray-300 bg-transparent outline-none border-solid border-gray-300 border-[1px] p-[.8rem] pl-[2rem]"
@@ -152,8 +153,9 @@ const FilterSide = () => {
                             <span className="block absolute top-[40px] left-[13px]">
                               N
                             </span>
-                            <label htmlFor="from">To</label>
+                            <label htmlFor="to">To</label>
                             <input
+                              id="to"
                               type="number"
                               placeholder="30000.00"
                               className="w-full rounded-none textarea text-right focus:border-dark-green focus:border-[3.4px] placeholder:text-gray-300 bg-transparent outline-none border-solid border-gray-300 border-[1px] p-[.8rem] pl-[2rem]"

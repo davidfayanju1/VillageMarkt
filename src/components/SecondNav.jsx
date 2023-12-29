@@ -100,7 +100,7 @@ const SecondNav = () => {
                 cart && cart.total_unique_items > 0 ? "flex" : "hidden"
               } items-center justify-center h-[.8rem] p-[.7rem] w-[.8rem] rounded-full right-[-10px] bottom-[-10px]`}
             >
-              {cart ? cart.total_items : "..."}
+              {cart.total_items === 0 && loading === false ? cart.total_items : "..."}
             </span>
           </button>
         </div>

@@ -53,6 +53,7 @@ const SearchModal = () => {
                 type="text"
                 placeholder="Search..."
                 className="outline-none text-[16px] w-[90%] rounded-[2px] focus:border-dark-green focus:border-solid focus:border-[2px] px-[.8rem] py-[.35rem]"
+                autoFocus
               />
               <Cancel
                 onClick={() => dispatch(navClose())}
