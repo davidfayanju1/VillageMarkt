@@ -32,18 +32,18 @@ const CartFilled = ({ cart, loading, realCart }) => {
 
   const [openNote, setOpenNote] = useState(false);
   // update cart
-  // const [updateLoading, setUpdateLoading] = useState(false);
-  // const updateCart = async (productId, quantity) => {
-  //   try {
-  //     setUpdateLoading(true);
-  //     const { cart } = await commerce.cart.update(productId, { quantity });
-  //     setCart(cart);
-  //   } catch (error) {
-  //     console.log(error);
-  //   } finally {
-  //     setUpdateLoading(false);
-  //   }
-  // };
+  const [updateLoading, setUpdateLoading] = useState(false);
+  const updateCart = async (productId, quantity) => {
+    try {
+      setUpdateLoading(true);
+      const { cart } = await commerce.cart.update(productId, { quantity });
+      setCart(cart);
+    } catch (error) {
+      console.log(error);
+    } finally {
+      setUpdateLoading(false);
+    }
+  };
   return (
     <AnimatePresence mode="wait" initial={false}>
       {open && (
@@ -58,7 +58,7 @@ const CartFilled = ({ cart, loading, realCart }) => {
             <section className="bg-primary w-full after:block after:w-full after:h-[.03rem] after:bg-gray-400">
               <div className="menu md:px-[1.5rem] px-[1rem] py-[1rem] w-full flex items-center justify-between">
                 <span className="block font-cooper text-[1.2rem] font-bold text-dark-green">
-                  {`Cart (${cart && cart.length})`}
+                  {`Cart (${cart ? cart.length : 0})`}
                 </span>
                 <Cancel
                   onClick={() => dispatch(cartClose())}
@@ -76,11 +76,11 @@ const CartFilled = ({ cart, loading, realCart }) => {
                   <div className="progressbar overflow-hidden w-[90%] bg-gray-200 rounded-full h-[.55rem]">
                     <div
                       className={`bar bg-carpet-green rounded-full w-[${
-                        realCart.subtotal.raw / 100
+                        !realCart ? realCart.subtotal.raw : 100 / 100
                       }%] h-full`}
                     ></div>
                   </div>
-                  <span className="block text-dark-green">N100.00NGN</span>
+                  <span className="block text-dark-green">100.00NGN</span>
                 </div>
               </div>
               {loading ? (
@@ -110,11 +110,19 @@ const CartFilled = ({ cart, loading, realCart }) => {
                             </span>
                             <div className="icons mt-[2rem] flex gap-[.3rem]">
                               <div className="plus_minus w-[9rem] border-solid rounded-full border-gray-300 border-[1px] flex items-center justify-between px-[.9rem] py-[.2rem]">
-                                <button>
+                                <button
+                                  onClick={() =>
+                                    updateCart(item.id, item.quantity - 1)
+                                  }
+                                >
                                   <MinusIcon />
                                 </button>
                                 <span className="block">{item.quantity}</span>
-                                <button>
+                                <button
+                                  onClick={() =>
+                                    updateCart(item.id, item.quantity + 1)
+                                  }
+                                >
                                   <PlusIcon />
                                 </button>
                               </div>
