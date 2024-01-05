@@ -123,30 +123,30 @@ const CartFilled = ({ cart, loading, realCart }) => {
                             <div className="icons mt-[2rem] flex gap-[.3rem]">
                               <button
                                 disabled={updateLoading}
-                                className="plus_minus disabled:bg-slate-200 w-[9rem] border-solid rounded-full border-gray-300 border-[1px] flex items-center justify-between px-[.9rem] py-[.2rem]"
+                                className="plus_minus disabled:border-gray-200 disabled:cursor-not-allowed w-[9rem] border-solid rounded-full border-gray-300 border-[1px] flex items-center justify-between px-[.9rem] py-[.2rem]"
                               >
-                                <button
+                                <span
                                   disabled={updateLoading}
                                   onClick={() =>
                                     updateCart(item.id, item.quantity - 1)
                                   }
                                 >
                                   <MinusIcon />
-                                </button>
+                                </span>
                                 <span className="block">{item.quantity}</span>
-                                <button
+                                <span
                                   disabled={updateLoading}
                                   onClick={() =>
                                     updateCart(item.id, item.quantity + 1)
                                   }
                                 >
                                   <PlusIcon />
-                                </button>
+                                </span>
                               </button>
                               <button
                                 disabled={updateLoading}
                                 onClick={() => removeFromCart(item.id)}
-                                className="delete_icon disabled:bg-slate-200 border-solid border-[1px] border-gray-300 rounded-full w-[2.6rem] h-[2.6rem] flex items-center justify-center hover:border-black hover:transition-all hover:ease-in-out hover:delay-[.25s] transition-all ease-in-out delay-[.25s]"
+                                className="delete_icon disabled:bg-gray-300 border-solid border-[1px] border-gray-300 rounded-full w-[2.6rem] h-[2.6rem] flex items-center justify-center hover:border-black hover:transition-all hover:ease-in-out hover:delay-[.25s] transition-all ease-in-out delay-[.25s]"
                               >
                                 <Bin />
                               </button>

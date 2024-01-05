@@ -103,6 +103,8 @@ const ProductsGrid = ({ filtered: commerceProducts }) => {
     setProductQty(productQty + 1);
     setAdd(false);
   };
+
+  let [color, setColor] = useState("#fffff");
   return (
     <>
       {commerceProducts.length === 0 ? (
@@ -209,9 +211,16 @@ const ProductsGrid = ({ filtered: commerceProducts }) => {
                         <button
                           disabled={cartLoader}
                           onClick={() => addToCart(item.id, productQty)}
-                          className="add_to_cart disabled:bg-gray-500 disabled:text-gray-700 md:text-[1rem] text-white font-bold py-[.7rem] md:w-[8rem] flex items-center justify-center bg-accent-green hover:opacity-[.9] hover:transition-all hover:ease-in-out hover:delay-[.25s] hover:border-solid hover:border-[1.4px] hover:border-gray-300 rounded-[25px] font-cooper"
+                          className="add_to_cart md:text-[1rem] text-white font-bold py-[.9rem] w-[10rem] flex items-center justify-center bg-accent-green hover:opacity-[.9] hover:transition-all hover:ease-in-out hover:delay-[.25s] hover:border-solid hover:border-[1.4px] hover:border-gray-300 rounded-[25px] font-cooper"
                         >
-                          Add to cart
+                          {cartLoader ? (
+                            <span className="flex items-center justify-center gap-[.5rem]">
+                              <ClipLoader color={color} size={18} />
+                              Add to Cart
+                            </span>
+                          ) : (
+                            <p>Add to Cart</p>
+                          )}
                         </button>
                       </div>
                     </div>
