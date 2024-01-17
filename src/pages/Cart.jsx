@@ -46,8 +46,6 @@ const Cart = () => {
     fetchCart();
   }, [cart]);
 
-  console.log(cart);
-
   return (
     <SecondLayout>
       <section className="cart-page min-h-screen bg-primary md:p-[2.8rem] p-[1.3rem]">
@@ -57,7 +55,9 @@ const Cart = () => {
           </section>
         ) : (
           <section className=" w-full">
-            <hgroup className="font-cooper mb-[3rem] font-bold md:text-[3rem] text-[1.3rem] text-center text-dark-green">{`Your cart (${cart.line_items.length})`}</hgroup>
+            <hgroup className="font-cooper mb-[3rem] font-bold md:text-[3rem] text-[1.3rem] text-center text-dark-green">{`Your cart (${
+              cart && cart.line_items.length
+            })`}</hgroup>
 
             <section className="flex items-start justify-between md:flex-row flex-col gap-[2.4rem] w-full">
               <div className="mobile_view md:hidden w-full flex flex-col gap-[2rem]">

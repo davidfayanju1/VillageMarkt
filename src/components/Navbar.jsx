@@ -103,7 +103,7 @@ const Navbar = () => {
             {fixed ? <CartDark /> : <Cart />}
             <span
               className={`bg-carpet-green text-white text-[.8rem] absolute ${
-                cart && cart.total_unique_items > 0 ? "flex" : "hidden"
+                cart && cart.total_items > 0 ? "flex" : "hidden"
               } items-center justify-center h-[.8rem] p-[.7rem] w-[.8rem] rounded-full right-[-10px] bottom-[-10px]`}
             >
               {cart.total_items}

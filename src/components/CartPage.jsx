@@ -22,7 +22,7 @@ const CartPage = () => {
 
   return (
     <div className="cart_container">
-      {cart.length === 0 ? (
+      {cart.total_items === 0 ? (
         <CartEmpty cart={cart} />
       ) : (
         <CartFilled cart={cart.line_items} loading={loading} realCart={cart} />
