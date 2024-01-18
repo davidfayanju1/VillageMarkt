@@ -56,72 +56,73 @@ const Cart = () => {
         ) : (
           <section className=" w-full">
             <hgroup className="font-cooper mb-[3rem] font-bold md:text-[3rem] text-[1.3rem] text-center text-dark-green">{`Your cart (${
-              cart && cart.line_items.length
+              cart && cart.total_items
             })`}</hgroup>
 
             <section className="flex items-start justify-between md:flex-row flex-col gap-[2.4rem] w-full">
               <div className="mobile_view md:hidden w-full flex flex-col gap-[2rem]">
-                {cart.line_items?.map((item) => (
-                  <div
-                    className="items_card min-h-[8rem] border-b-[1px] border-gray-200 pb-[2rem]"
-                    key={item.id}
-                  >
-                    <div className="product_card flex items-start justify-between">
-                      <div className="flex items-start justify-start text-left gap-[.6rem] w-[40%]">
-                        <img
-                          src={item.image.url}
-                          alt={item.name}
-                          className="w-[5rem] h-[5rem] object-cover"
-                        />
-                        <div className="details_container flex flex-col gap-[3.3rem]">
-                          <div className="text_container">
-                            <span className="block text-gray-400 text-[.8rem]">
-                              Village Markt
-                            </span>
-                            <span className="price font-cooper font-bold text-dark-green">
-                              {item.name}
-                            </span>
-                          </div>
-                          <div className="icons flex gap-[.3rem]">
-                            <button
-                              disabled={updateLoading}
-                              className="plus_minus disabled:border-gray-200 disabled:cursor-not-allowed w-[6rem] border-solid rounded-full border-gray-300 border-[1px] flex items-center justify-between px-[.9rem]"
-                            >
-                              <span
-                                disabled={updateLoading}
-                                onClick={() =>
-                                  updateCart(item.id, item.quantity - 1)
-                                }
-                              >
-                                <MinusIcon />
+                {cart &&
+                  cart.line_items?.map((item) => (
+                    <div
+                      className="items_card min-h-[8rem] border-b-[1px] border-gray-200 pb-[2rem]"
+                      key={item.id}
+                    >
+                      <div className="product_card flex items-start justify-between">
+                        <div className="flex items-start justify-start text-left gap-[.6rem] w-[40%]">
+                          <img
+                            src={item.image.url}
+                            alt={item.name}
+                            className="w-[5rem] h-[5rem] object-cover"
+                          />
+                          <div className="details_container flex flex-col gap-[3.3rem]">
+                            <div className="text_container">
+                              <span className="block text-gray-400 text-[.8rem]">
+                                Village Markt
                               </span>
-                              <span className="block">{item.quantity}</span>
-                              <span
-                                disabled={updateLoading}
-                                onClick={() =>
-                                  updateCart(item.id, item.quantity + 1)
-                                }
-                              >
-                                <PlusIcon />
+                              <span className="price font-cooper font-bold text-dark-green">
+                                {item.name}
                               </span>
-                            </button>
-                            <button
-                              disabled={updateLoading}
-                              onClick={() => removeFromCart(item.id)}
-                              className="delete_icon disabled:bg-gray-300 border-solid border-[1px] border-gray-300 rounded-full w-[2.6rem] h-[2.6rem] flex items-center justify-center hover:border-black hover:transition-all hover:ease-in-out hover:delay-[.25s] transition-all ease-in-out delay-[.25s]"
-                            >
-                              <Bin />
-                            </button>
+                            </div>
+                            <div className="icons flex gap-[.3rem]">
+                              <button
+                                disabled={updateLoading}
+                                className="plus_minus disabled:border-gray-200 disabled:cursor-not-allowed w-[6rem] border-solid rounded-full border-gray-300 border-[1px] flex items-center justify-between px-[.9rem]"
+                              >
+                                <span
+                                  disabled={updateLoading}
+                                  onClick={() =>
+                                    updateCart(item.id, item.quantity - 1)
+                                  }
+                                >
+                                  <MinusIcon />
+                                </span>
+                                <span className="block">{item.quantity}</span>
+                                <span
+                                  disabled={updateLoading}
+                                  onClick={() =>
+                                    updateCart(item.id, item.quantity + 1)
+                                  }
+                                >
+                                  <PlusIcon />
+                                </span>
+                              </button>
+                              <button
+                                disabled={updateLoading}
+                                onClick={() => removeFromCart(item.id)}
+                                className="delete_icon disabled:bg-gray-300 border-solid border-[1px] border-gray-300 rounded-full w-[2.6rem] h-[2.6rem] flex items-center justify-center hover:border-black hover:transition-all hover:ease-in-out hover:delay-[.25s] transition-all ease-in-out delay-[.25s]"
+                              >
+                                <Bin />
+                              </button>
+                            </div>
                           </div>
                         </div>
-                      </div>
 
-                      <div className="price text-right text-carpet-green font-semibold text-[1rem]">
-                        {item.line_total.formatted_with_symbol}
+                        <div className="price text-right text-carpet-green font-semibold text-[1rem]">
+                          {item.line_total.formatted_with_symbol}
+                        </div>
                       </div>
                     </div>
-                  </div>
-                ))}
+                  ))}
               </div>
               <div className="desktop_table w-[88%] md:block hidden">
                 <table className="w-full">
@@ -133,68 +134,69 @@ const Cart = () => {
                     </tr>
                   </thead>
                   <tbody>
-                    {cart.line_items?.map((item) => (
-                      <tr
-                        className="card align-middle border-b-[1px] border-t-[1px] h-[7.5rem] border-gray-300"
-                        key={item.id}
-                      >
-                        <td className="align-middle">
-                          <div className="image_container flex items-start gap-[.8rem]">
-                            <img
-                              src={item.image.url}
-                              alt={item.name}
-                              className="w-[5rem] h-[5rem] object-cover"
-                            />
-                            <div className="details_container">
-                              <span className="block text-gray-400 text-[.8rem]">
-                                Village Markt
-                              </span>
-                              <span className="price font-cooper font-bold text-dark-green">
-                                {item.name}
-                              </span>
+                    {cart &&
+                      cart.line_items?.map((item) => (
+                        <tr
+                          className="card align-middle border-b-[1px] border-t-[1px] h-[7.5rem] border-gray-300"
+                          key={item.id}
+                        >
+                          <td className="align-middle">
+                            <div className="image_container flex items-start gap-[.8rem]">
+                              <img
+                                src={item.image.url}
+                                alt={item.name}
+                                className="w-[5rem] h-[5rem] object-cover"
+                              />
+                              <div className="details_container">
+                                <span className="block text-gray-400 text-[.8rem]">
+                                  Village Markt
+                                </span>
+                                <span className="price font-cooper font-bold text-dark-green">
+                                  {item.name}
+                                </span>
+                              </div>
                             </div>
-                          </div>
-                        </td>
-                        <td className="align-middle">
-                          <div className="icons flex gap-[.3rem]">
-                            <button
-                              disabled={updateLoading}
-                              className="plus_minus disabled:border-gray-200 disabled:cursor-not-allowed w-[9rem] border-solid rounded-full border-gray-300 border-[1px] flex items-center justify-between px-[.9rem] py-[.2rem]"
-                            >
-                              <span
+                          </td>
+                          <td className="align-middle">
+                            <div className="icons flex gap-[.3rem]">
+                              <button
                                 disabled={updateLoading}
-                                onClick={() =>
-                                  updateCart(item.id, item.quantity - 1)
-                                }
+                                className="plus_minus disabled:border-gray-200 disabled:cursor-not-allowed w-[9rem] border-solid rounded-full border-gray-300 border-[1px] flex items-center justify-between px-[.9rem] py-[.2rem]"
                               >
-                                <MinusIcon />
-                              </span>
-                              <span className="block">{item.quantity}</span>
-                              <span
+                                <span
+                                  disabled={updateLoading}
+                                  onClick={() =>
+                                    updateCart(item.id, item.quantity - 1)
+                                  }
+                                >
+                                  <MinusIcon />
+                                </span>
+                                <span className="block">{item.quantity}</span>
+                                <span
+                                  disabled={updateLoading}
+                                  onClick={() =>
+                                    updateCart(item.id, item.quantity + 1)
+                                  }
+                                >
+                                  <PlusIcon />
+                                </span>
+                              </button>
+                              <button
                                 disabled={updateLoading}
-                                onClick={() =>
-                                  updateCart(item.id, item.quantity + 1)
-                                }
+                                onClick={() => removeFromCart(item.id)}
+                                className="delete_icon disabled:bg-gray-300 border-solid border-[1px] border-gray-300 rounded-full w-[2.6rem] h-[2.6rem] flex items-center justify-center hover:border-black hover:transition-all hover:ease-in-out hover:delay-[.25s] transition-all ease-in-out delay-[.25s]"
                               >
-                                <PlusIcon />
-                              </span>
-                            </button>
-                            <button
-                              disabled={updateLoading}
-                              onClick={() => removeFromCart(item.id)}
-                              className="delete_icon disabled:bg-gray-300 border-solid border-[1px] border-gray-300 rounded-full w-[2.6rem] h-[2.6rem] flex items-center justify-center hover:border-black hover:transition-all hover:ease-in-out hover:delay-[.25s] transition-all ease-in-out delay-[.25s]"
-                            >
-                              <Bin />
-                            </button>
-                          </div>
-                        </td>
-                        <td>
-                          <div className="price text-right text-carpet-green font-semibold text-[1rem]">
-                            {item.line_total.formatted_with_symbol}
-                          </div>
-                        </td>
-                      </tr>
-                    ))}
+                                <Bin />
+                              </button>
+                            </div>
+                          </td>
+                          <td>
+                            <div className="price text-right text-carpet-green font-semibold text-[1rem]">
+                              {item.line_total.formatted_with_symbol}
+                            </div>
+                          </td>
+                        </tr>
+                      ))}
                   </tbody>
                 </table>
               </div>
@@ -207,7 +209,7 @@ const Cart = () => {
                     <div className="progressbar overflow-hidden w-[90%] bg-gray-200 rounded-full h-[.55rem]">
                       <div
                         className={`bar bg-carpet-green rounded-full w-[${
-                          !cart ? cart.subtotal.raw : 100 / 100
+                          cart && !cart ? cart.subtotal.raw : 100 / 100
                         }%] h-full`}
                       ></div>
                     </div>
