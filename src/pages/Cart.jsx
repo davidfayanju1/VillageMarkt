@@ -56,7 +56,7 @@ const Cart = () => {
         ) : (
           <section className=" w-full">
             <hgroup className="font-cooper mb-[3rem] font-bold md:text-[3rem] text-[1.3rem] text-center text-dark-green">{`Your cart (${
-              cart && cart.total_items
+              cart === undefined ? 0 : cart.total_items
             })`}</hgroup>
 
             <section className="flex items-start justify-between md:flex-row flex-col gap-[2.4rem] w-full">
