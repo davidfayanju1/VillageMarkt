@@ -71,7 +71,9 @@ const Products = () => {
   useEffect(() => {
     fetchProducts();
     sortArray("alphabetically");
+    console.log(commerceProducts);
   }, [loading]);
+
   return (
     <SecondLayout>
       <FilterSection

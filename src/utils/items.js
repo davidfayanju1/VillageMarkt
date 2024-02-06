@@ -93,12 +93,12 @@ export const collections = [
   },
   {
     img: "https://villagemarkt.com/cdn/shop/collections/Titus_sardines.png?v=1697527403&width=550",
-    category: "Canned foods",
+    category: "Canned Foods",
     quantity: 14,
   },
   {
     img: "https://villagemarkt.com/cdn/shop/collections/Fresh_Shrimp.png?v=1697479556&width=550",
-    category: "Seafoods",
+    category: "SeaFoods",
     quantity: 10,
   },
   {
@@ -143,7 +143,7 @@ export const collections = [
   },
   {
     img: "https://villagemarkt.com/cdn/shop/collections/Goat_meat.png?v=1697479476",
-    category: "Protein",
+    category: "Proteins",
     quantity: 20,
   },
 ];

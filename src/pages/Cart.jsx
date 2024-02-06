@@ -49,7 +49,7 @@ const Cart = () => {
   return (
     <SecondLayout>
       <section className="cart-page min-h-screen bg-primary md:p-[2.8rem] p-[1.3rem]">
-        {loading ? (
+        {loading || updateLoading ? (
           <section className="text-center">
             <ClipLoader />
           </section>
