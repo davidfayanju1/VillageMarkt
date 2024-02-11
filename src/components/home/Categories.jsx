@@ -28,7 +28,7 @@ const Categories = () => {
     },
     {
       img: "https://villagemarkt.com/cdn/shop/collections/Goat_meat.png?v=1697479476",
-      category: "Protein",
+      category: "Proteins",
       quantity: 20,
     },
   ];

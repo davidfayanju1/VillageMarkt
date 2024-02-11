@@ -29,7 +29,7 @@ const ProductCard = () => {
     },
     {
       id: 4,
-      name: "Carrots",
+      name: "Carrots - 0.5KG",
       url: "https://villagemarkt.com/cdn/shop/files/Carrots.png?v=1697471036&width=750",
       url2: "https://img.freepik.com/free-photo/baby-carrots_1339-7954.jpg?size=626&ext=jpg",
       price: "N600.00",
