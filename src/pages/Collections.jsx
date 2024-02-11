@@ -1,12 +1,32 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import useTitle from "../utils/useTitle";
 import { Link, NavLink } from "react-router-dom";
 import { ArrowRight } from "../assets/svgs/svg-icons";
 import SecondLayout from "../layout/SecondLayout";
 import { collections } from "../utils/items";
+import { commerce } from "../lib/commerce";
+import ClipLoader from "react-spinners/ClipLoader";
 
 const Collections = () => {
   useTitle("Collections-Village Markt");
+
+  const [loading, setLoading] = useState(true);
+  const [categories, setCategories] = useState([]);
+  const fetchCategories = async () => {
+    try {
+      const { data } = await commerce.categories.list();
+      setLoading(false);
+      setCategories(data);
+      // console.log(data[1].assets[0].url);
+      console.log(categories);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    fetchCategories();
+  }, [loading]);
 
   return (
     <SecondLayout>
@@ -47,31 +67,37 @@ const Collections = () => {
         </hgroup>
 
         <div className="products grid xl:grid-cols-[repeat(auto-fit,_minmax(250px,_1fr))] md:grid-cols-[repeat(auto-fit,_minmax(200px,_1fr))] grid-cols-[repeat(auto-fit,_minmax(135px,_1fr))] md:gap-[2rem] gap-[.8rem]">
-          {collections.map((product) => (
-            <div
-              className="card_overlay relative overflow-hidden cursor-pointer md:h-[22rem] h-[16rem] before:absolute before:top-0 before:left-0 before:w-full before:h-full before:z-[2] before:content-[''] before:bg-gradient-to-b before:from-black-overlay-light before:to-black-overlay"
-              key={product.category}
-            >
-              <div className="image-container w-full h-full overflow-hidden">
-                <img
-                  src={product.img}
-                  alt={product.category}
-                  className="image hover:scale-[1.1] transition-transform delay-[0.25sec] ease-in-out h-full w-full object-cover relative z-[1]"
-                />
+          {categories.length === 0 ? (
+            <section className="product_spinner bg-primary flex items-start justify-center text-center h-screen">
+              <ClipLoader />
+            </section>
+          ) : (
+            categories?.map((product) => (
+              <div
+                className="card_overlay relative overflow-hidden cursor-pointer md:h-[22rem] h-[16rem] before:absolute before:top-0 before:left-0 before:w-full before:h-full before:z-[2] before:content-[''] before:bg-gradient-to-b before:from-black-overlay-light before:to-black-overlay"
+                key={product.name}
+              >
+                <div className="image-container w-full h-full overflow-hidden">
+                  <img
+                    src={product.assets[0].url}
+                    alt={product.name}
+                    className="image hover:scale-[1.1] transition-transform delay-[0.25sec] ease-in-out h-full w-full object-cover relative z-[1]"
+                  />
+                </div>
+                <div className="details-container absolute md:top-[76%] top-[70%] left-[7.5%] z-[6] w-[89%] text-left">
+                  <span className="block name font-cooper text-white md:text-[1.1rem] text-[.85rem] font-[600]">
+                    {product.name}
+                  </span>
+                  <Link
+                    to={`/collections/${product.name}`}
+                    className="text-white underline font-cooper font-[600] md:text-[.95rem] text-[.9rem]"
+                  >
+                    View {product.products} products
+                  </Link>
+                </div>
               </div>
-              <div className="details-container absolute md:top-[76%] top-[70%] left-[7.5%] z-[6] w-[89%] text-left">
-                <span className="block name font-cooper text-white md:text-[1.1rem] text-[.85rem] font-[600]">
-                  {product.category}
-                </span>
-                <Link
-                  to={`/collections/${product.category}`}
-                  className="text-white underline font-cooper font-[600] md:text-[.95rem] text-[.9rem]"
-                >
-                  View {product.quantity} products
-                </Link>
-              </div>
-            </div>
-          ))}
+            ))
+          )}
         </div>
       </section>
     </SecondLayout>

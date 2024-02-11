@@ -1,13 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Bag } from "../../assets/svgs/svg-icons";
+import ClipLoader from "react-spinners/ClipLoader";
 
-const CollectionsGrid = ({ commerceProducts, id }) => {
-    console.log(commerceProducts)
+const CollectionsGrid = ({ commerceProducts, id, loading }) => {
   return (
     <>
       <section className="w-full grid xl:grid-cols-[repeat(auto-fit,_minmax(250px,_1fr))] md:grid-cols-[repeat(auto-fit,_minmax(200px,_1fr))] grid-cols-[repeat(auto-fit,_minmax(120px,_1fr))] md:gap-[2rem] gap-[1.5rem] md:px-[3.3rem] px-[1rem] pb-[8rem] md:pt-[3rem]">
-        {commerceProducts &&
+        {commerceProducts.length === 0 ? (
+          <section className="product_spinner bg-primary flex items-start justify-center text-center h-screen">
+            <ClipLoader />
+          </section>
+        ) : (
           commerceProducts.map(
             (element) =>
               element.categories[0].name === id && (
@@ -37,7 +41,8 @@ const CollectionsGrid = ({ commerceProducts, id }) => {
                   </div>
                 </div>
               )
-          )}
+          )
+        )}
       </section>
     </>
   );

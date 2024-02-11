@@ -27,15 +27,17 @@ const CollectionsDetails = () => {
 
   useEffect(() => {
     fetchProducts();
-    // console.log(commerceProducts[10].categories[0].name);
-    console.log(id);
   }, [loading]);
 
   return (
     <SecondLayout>
       <div className="page_container min-h-screen bg-primary">
         <CollectionsFilter id={id} />
-        <CollectionsGrid commerceProducts={commerceProducts} id={id} />
+        <CollectionsGrid
+          commerceProducts={commerceProducts}
+          id={id}
+          loading={loading}
+        />
       </div>
     </SecondLayout>
   );
