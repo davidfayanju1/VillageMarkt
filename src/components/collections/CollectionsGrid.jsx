@@ -4,6 +4,8 @@ import { Bag } from "../../assets/svgs/svg-icons";
 import ClipLoader from "react-spinners/ClipLoader";
 
 const CollectionsGrid = ({ commerceProducts, id, loading }) => {
+  
+  console.log(commerceProducts);
   return (
     <>
       <section className="w-full grid xl:grid-cols-[repeat(auto-fit,_minmax(250px,_1fr))] md:grid-cols-[repeat(auto-fit,_minmax(200px,_1fr))] grid-cols-[repeat(auto-fit,_minmax(120px,_1fr))] md:gap-[2rem] gap-[1.5rem] md:px-[3.3rem] px-[1rem] pb-[8rem] md:pt-[3rem]">

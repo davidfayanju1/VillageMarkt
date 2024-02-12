@@ -35,6 +35,7 @@ const ProductDetails = () => {
   useEffect(() => {
     fetchProducts();
   }, [loading]);
+
   return (
     <SecondLayout>
       <div className="page-container min-h-screen py-[1.7rem] pb-[15rem] bg-primary">
